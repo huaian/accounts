@@ -1,0 +1,1 @@
+define("dojox/gfx/canvas_attach",["dojo/_base/lang","dojo/_base/kernel","dojox/gfx/canvas"],function(a,t,e){return a.getObject("dojox.gfx.canvas_attach",!0),t.experimental("dojox.gfx.canvas_attach"),e.attachSurface=e.attachNode=function(){return null},e});

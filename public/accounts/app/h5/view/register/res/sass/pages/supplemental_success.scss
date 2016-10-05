@@ -1,0 +1,9 @@
+@charset "utf-8";
+.supplemental_success_ico{
+  width:rem-calc(210px);
+  height: rem-calc(240px);
+  background-position: rem-calc(0) rem-calc(-$mascotLIst-chaoren-position);
+  display: inline-block;
+  background-color: rgba(251,249,254,1);
+  margin-bottom: rem-calc(20px);
+}

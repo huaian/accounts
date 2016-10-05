@@ -1,0 +1,1 @@
+define("dojox/store/LocalDB",["./db/has!indexeddb?./db/IndexedDB:./db/SQL"],function(d){return d});

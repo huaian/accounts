@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-ngModelOptions-directive-blur/app",["dojo","dijit","dojox"],function(e,o,n){!function(e){"use strict";e.module("optionsExample",[]).controller("ExampleController",["$scope",function(e){e.user={name:"John",data:""},e.cancel=function(o){27==o.keyCode&&e.userForm.userName.$rollbackViewValue()}}])}(window.angular)});

@@ -1,0 +1,34 @@
+<!--<div class="hd hd_title">
+<h1 class="page_title">外访任务列表</h1>
+<a class="mobile_back">返回</a>
+</div>-->
+<div class="weui_cells" style="margin-top:0px;">
+  <div class='cui-box align-center weui_cell'>
+    <div class="cui-flx1">收入</div>
+    <div class="cui-flx1">消费</div>
+    <div class="cui-flx1">结余</div>
+  </div>
+  <div class='cui-box align-center weui_cell' v-on:click="goCustomerDetail(taskItem,$event)">
+    <div class="cui-flx1 smaller_font">{{sumIncomes}}</div>
+    <div class="cui-flx1 smaller_font"> {{sumExpenses}}</div>
+    <div class="cui-flx1 smaller_font">{{sumIncomes - sumExpenses}}</div>
+  </div>
+</div>
+<br>
+<div class="weui-cells weui-cells_form">
+  <div class="weui-cell">
+    <div class="weui-cell__hd"><label for="" class="weui-label">开始日期</label></div>
+    <div class="weui-cell__bd">
+      <input class="weui-input" type="date" value="" v-model="formData.startDate" >
+    </div>
+  </div>
+  <div class="weui-cell">
+    <div class="weui-cell__hd"><label for="" class="weui-label">结束日期</label></div>
+    <div class="weui-cell__bd">
+      <input class="weui-input" type="date" value="" placeholder="" v-model="formData.endDate" >
+    </div>
+  </div>
+  <div class="weui_btn_area">
+    <a class="weui_btn weui_btn_primary" href="javascript:" id="subscribe_borrow" v-on:click="search($event)">查询</a><!--将事件作为参数传递-->
+  </div>
+</div>

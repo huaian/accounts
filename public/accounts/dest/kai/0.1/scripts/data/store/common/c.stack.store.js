@@ -1,0 +1,1 @@
+define("data/store/common/c.stack.store",["common/c.class.inherit","data/store/c.local.store","data/storage/c.local.storage","cutil/c.util.common"],function(t,o,c,i){var a=(c.localStorage,new t.Class(o,{__propertys__:function(){this.key="HISTORY_STACK",this.lifeTime="1D"},initialize:function($super,t){_.isFunction($super)&&$super(t)}}));return a});

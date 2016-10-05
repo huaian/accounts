@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example94/script",["dojo","dijit","dojox"],function(e,o,t){!function(e){"use strict";e.module("switchExample",["ngAnimate"]).controller("ExampleController",["$scope",function(e){e.items=["settings","home","other"],e.selection=e.items[0]}])}(window.angular)});

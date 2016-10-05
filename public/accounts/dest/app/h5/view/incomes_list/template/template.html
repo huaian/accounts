@@ -1,0 +1,44 @@
+<!--<div class="hd hd_title">
+  <h1 class="page_title">历史记录</h1>
+  <a class="mobile_back">返回</a>
+</div>-->
+<!--
+{
+"_id" : ObjectId("57f2553103e48f5c3d3e65ad"),
+"userName" : "zhangyan",
+"incomeType" : "reward",
+"date" : "2016-10-11",
+"amount" : "2313",
+"contactRemark" : "1313"
+}
+--->
+<a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary" v-on:click="gotoIncomes(accountId,$event)">新增</a>
+<div class="page__bd">
+        <section  v-for="incomeItem in incomeList" v-on:click="goCollectionDetail(collectionRecord)">
+        <div class="weui-form-preview">
+            <div class="weui-form-preview__hd">
+                <label class="weui-form-preview__label">金额</label>
+                <em class="weui-form-preview__value">¥{{incomeItem.amount || '&nbsp;'}}</em>
+            </div>
+            <div class="weui-form-preview__bd">
+                <p>
+                    <label class="weui-form-preview__label">时间</label>
+                    <span class="weui-form-preview__value">{{incomeItem.date || '&nbsp;'}}</span>
+                </p>
+                <p>
+                    <label class="weui-form-preview__label">类型</label>
+                    <span class="weui-form-preview__value">{{incomeItem.typeDesc || '&nbsp;'}}</span>
+                </p>
+                <p>
+                    <label class="weui-form-preview__label">备注</label>
+                    <span class="weui-form-preview__value">{{incomeItem.remark || '&nbsp;'}}</span>
+                </p>
+            </div>
+            <div class="weui-form-preview__ft">
+                <a  v-on:click="delete(incomeItem._id)" class="weui-form-preview__btn weui-form-preview__btn_default" href="javascript:">删除</a>
+                <a  v-on:click="edit(incomeItem._id)" class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">编辑</a>
+            </div>
+        </div>
+        <br>
+        </section>
+    </div>

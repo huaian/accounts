@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example110/script",["dojo","dijit","dojox"],function(o,l,e){!function(o){"use strict";o.module("logExample",[]).controller("LogController",["$scope","$log",function(o,l){o.$log=l,o.message="Hello World!"}])}(window.angular)});

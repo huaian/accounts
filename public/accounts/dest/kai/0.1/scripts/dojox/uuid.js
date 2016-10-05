@@ -1,0 +1,1 @@
+define("dojox/uuid",["dojox/uuid/_base"],function(u){return u});

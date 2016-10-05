@@ -1,0 +1,1 @@
+define("dstore/Tree",["dojo/_base/declare"],function(t){return t(null,{constructor:function(){this.root=this},mayHaveChildren:function(t){return"hasChildren"in t?t.hasChildren:!0},getRootCollection:function(){return this.root.filter({parent:null})},getChildren:function(t){return this.root.filter({parent:this.getIdentity(t)})}})});

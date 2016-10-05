@@ -1,0 +1,1 @@
+define("util/less/test/browser/runner-browser",["dojo","dijit","dojox"],function(s,e,t){describe("less.js browser tests",function(){testLessEqualsInDocument()})});

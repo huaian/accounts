@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example11/script",["dojo","dijit","dojox"],function(o,e,n){!function(o){"use strict";o.module("docsBindExample",[]).controller("Controller",["$scope",function(o){o.name="Max Karl Ernst Ludwig Planck (April 23, 1858 – October 4, 1947)"}])}(window.angular)});

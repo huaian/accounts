@@ -1,0 +1,121 @@
+@charset "utf-8";
+i, em, cite { font-style: normal; }
+.swiper-pagination-bullet-active{
+  background-color: $main-color;
+}
+/*首页区块*/
+.headerLogo{padding: rem-calc(30px);background-color: #fff;}
+.headerLogo img{width:rem-calc(372px); height:rem-calc(50px);}
+
+.stepCon{border-bottom:solid 1px #f1f1f1; margin-bottom:rem-calc(25px); text-align:center;background-color: #fff;}
+.stepCon img{margin: rem-calc(10px) rem-calc(33px); width: rem-calc(581px);}
+
+/*计算器区块*/
+.descriptionArea{ padding:0 rem-calc(22px) 0 rem-calc(30px)}
+.descriptionCon{padding:rem-calc(15px) rem-calc(30px) rem-calc(25px) rem-calc(25px); background:url(../img/jsq_bg.jpg) no-repeat 0 0; background-size:100% 99%;}
+.descriptionCon p{ font-size:rem-calc(24px); margin-bottom: rem-calc(10px); color:#595858;}
+.loanAmount p,.LoanAmount .prePrice{ margin-bottom:rem-calc(10px); }
+.loanAmount .prePrice{
+  text-align:center;
+  display:-moz-box; /* Firefox */
+  display:-webkit-box; /* Safari and Chrome */
+  display:-ms-flexbox; /* Internet Explorer 10 */
+  display:box;
+  width: 100%;
+}
+.monthlyRepayment div{height: rem-calc(92px); position:relative; padding-left: rem-calc(10px); font-size: rem-calc(68px); background: url(../img/count_bg.png) no-repeat; color: #FFF; background-size:100%;}
+.monthlyRepayment div p{ position:absolute; left:rem-calc(20px); top:rem-calc(45px); color:#FFF; font-size:rem-calc(24px);}
+.monthlyRepayment div em{ width:rem-calc(450px); height:rem-calc(92px); line-height:rem-calc(100px); display:block; text-align:right; padding-right:rem-calc(30px);}
+.monthlyRepayment div span{ font-size:rem-calc(24px); position:absolute; right:rem-calc(15px); bottom:rem-calc(15px);}
+.dotLine{padding-bottom:rem-calc(10px);margin-bottom: rem-calc(30px); background:url(../img/dot_line.png) repeat-x 0 bottom;}
+.prePrice span{
+  display: block;
+  font-size:rem-calc(18px);
+  color:#666;
+  -moz-box-flex:1; /* Firefox */
+  -webkit-box-flex:1; /* Safari and Chrome */
+  -ms-flex:1; /* Internet Explorer 10 */
+  box-flex:1;}
+.prePrice span.last{ margin-right:0;}
+/*进度条*/
+.progressArea{ height:rem-calc(70px); width:100%;}
+.progressCon{ position:relative; padding-top:rem-calc(25px);}
+.progressDot{ position:absolute; top:rem-calc(22px); width:rem-calc(10px); height:rem-calc(10px); @include border-radius(rem-calc(100%));}
+.dotBlue{ left:0; background:$main-color;}
+.dotGray{right:0; background:#e5e6eb;}
+.progressHorizontal{ width:100%; height:rem-calc(5px); background:#e5e6eb;}
+.progressHandle{background:$main-color; height:rem-calc(5px); max-width:100%; position:relative; left:0; top:0;}
+.priceSum{ width:rem-calc(80px); height:rem-calc(120px);position:absolute; text-align:center; z-index:10; color:#FFF; padding-top:rem-calc(6px); left:rem-calc(250px); top:rem-calc(-79px); background:url(../img/price_bg.png) no-repeat; background-size:rem-calc(75px) rem-calc(120px); cursor:pointer; font-size:rem-calc(22px);}
+.loanPeriod a{ width:rem-calc(114px);color: #888; height:rem-calc(44px); line-height:rem-calc(44px); @include border-radius(rem-calc(5px)); display:inline-block; text-align:center; font-size:rem-calc(24px); margin-right:rem-calc(12px); background:#DDD;}
+.loanPeriod a.last{ margin-right:0}
+.loanPeriod a:hover,.loanPeriod .cur{ background:$main-color; color:#FFF;}
+.loanPeriod .monthArea{ margin-bottom:rem-calc(25px); text-align:center}
+.orderBtn a,.orderIt a,.btn-blue{ width:rem-calc(300px); height:rem-calc(52px); display:block; margin:rem-calc(20px) auto; font-size:rem-calc(24px); letter-spacing:rem-calc(2px); @include border-radius(rem-calc(5px)); line-height:rem-calc(52px);background:$main-color; color:#FFF; text-align:center;}
+.orderBtn p{ font-size:rem-calc(22px); text-align:center; color:#666;}
+/*计算器区块 结束*/
+.footerTel{ height:rem-calc(30px);padding:rem-calc(15px) 0; background:$main-color; color:#FFF; text-align:center; font-size:rem-calc(28px);}
+.footerTel span{width:rem-calc(27px);height:rem-calc(38px);display:inline-block; background:url(../img/telbg.png) no-repeat 0 rem-calc(5px); padding-right:rem-calc(10px);background-size:rem-calc(27px) rem-calc(29px);}
+.footerTel a{color:#FFF;}
+
+
+/*省市区选择 address*/
+.address-dialog{
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  left: 100%;
+  top: 0;
+  transition:left .3s;
+  transform:translate(0,0);
+  overflow-y: scroll;
+  background-color: #fff;
+  z-index: 9;
+}
+.addressArea{
+  transition:left .3s;
+  transform:translate(0,0);
+  position: relative;
+}
+.addressArea li{
+  width: 100%;
+  padding: rem-calc(10px) rem-calc(30px);
+  box-sizing: border-box;
+  line-height: rem-calc(80px);
+  border-bottom:solid 1px #DDD;
+  background-color: #fff;
+  position: relative;
+}
+/*.addressArea li:hover,.addressArea li:active{
+  background-color: #20a2e2;
+  color: #ffffff;
+}*/
+.addressArea li::before {
+  content: "";
+  border-color: transparent  transparent  transparent  #888;
+  border-style: solid;
+  border-width: rem-calc(15px);
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: rem-calc(10px);
+  top: rem-calc(33px); }
+
+.addressArea li::after {
+  content: "";
+  border-color: transparent transparent transparent  #fff;
+  border-style: solid;
+  border-width: rem-calc(15px);
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: rem-calc(12px);
+  top: rem-calc(33px); }
+
+.city-list,.area-list{
+  left: 100%;
+}
+
+
+
+
+   

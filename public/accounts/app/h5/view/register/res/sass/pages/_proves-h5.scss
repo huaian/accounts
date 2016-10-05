@@ -1,0 +1,70 @@
+@charset "utf-8";
+$max-width: 640px;
+/*证明*/
+/*tab切换区块*/
+.proveTitle{ color:$main-color; font-weight:400; font-size:rem-calc(36px); text-align:center;padding-bottom:rem-calc(20px); margin: rem-calc(20px)}
+
+/*材料证明 开始*/
+.tabArea .swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.tabArea  .swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.tabArea  .swipe-wrap > figure {
+  float: left;
+  width: rem-calc(640px);
+  position: absolute;
+  margin: 0;
+  //display: none;
+  @include  transition(all 300ms);
+  left: rem-calc(640px);
+
+}
+.tabArea  #slider {
+  max-width: $max-width;;/* 设置最大的宽度 */
+  margin: 0px auto;
+  height: rem-calc(940px);
+
+}
+.tabArea  .silderCon{ position:relative; height:auto; overflow:hidden;}
+.tabArea  .silderCon img{ max-width:100%;}
+
+.tabArea .silderCon #position {
+  height:rem-calc(60px);
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.tabArea .silderCon #position li {
+  display: inline-block;
+  width:32%;
+  height:rem-calc(60px);
+  cursor: pointer;
+  background-color: #fff;
+  @include border-radius(0);
+  margin:0;
+  padding:0;
+  opacity: 1;
+}
+.tabArea .silderCon #position li  h3{font-size:rem-calc(24px);  background:#EEE; cursor:pointer; color:#999; height:rem-calc(50px); line-height:rem-calc(50px); }
+.tabArea .silderCon #position li.on {
+  background:url(../images/cur_bg1.png) no-repeat center rem-calc(50px);
+  background-size:rem-calc(22px) rem-calc(9px);
+}
+.tabArea .silderCon #position li.on h3{color:#FFF;height:rem-calc(50px);background:$main-color;}
+/*微信公众号链接*/
+.footerWx,.footerWx:link{margin: 0px rem-calc(30px) rem-calc(20px) rem-calc(30px); display: inline-block; width:rem-calc(580px); background-color:#afafaf; color: #fff; text-align: center;  line-height: rem-calc(50px);box-shadow:0 2px 3px #DDD; @include border-radius(rem-calc(5px));font-size: rem-calc(24px); }
+
+.wxCon{line-height: rem-calc(35px);}
+/*材料证明 结束*/
+

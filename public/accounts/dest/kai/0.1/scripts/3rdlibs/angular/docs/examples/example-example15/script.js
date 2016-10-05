@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example15/script",["dojo","dijit","dojox"],function(e,t,r){!function(e){"use strict";e.module("docsRestrictDirective",[]).controller("Controller",["$scope",function(e){e.customer={name:"Naomi",address:"1600 Amphitheatre"}}]).directive("myCustomer",function(){return{restrict:"E",templateUrl:"my-customer.html"}})}(window.angular)});

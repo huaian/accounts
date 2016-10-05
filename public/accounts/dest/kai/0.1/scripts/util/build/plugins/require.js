@@ -1,0 +1,1 @@
+define("util/build/plugins/require",[],function(){return{start:function(e,n,r){var u=[r.amdResources["dojo/require"]];return e.split(",").map(function(e){var i=r.amdResources[e];i?u.push(i):r.log("legacyMissingDependency",["reference module",n.mid,"dependency",e])}),u}}});

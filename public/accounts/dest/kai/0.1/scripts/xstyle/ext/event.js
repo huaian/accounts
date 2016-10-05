@@ -1,0 +1,1 @@
+define("xstyle/ext/event",["../main"],function(n){var e,t=!!document.addEventListener;return e={onProperty:function(t,i,o){n.addRenderer(t,i,o,function(n){e.on(n,t.slice(2),function(n){})})},on:t?function(n,e,t){n.addEventListener(e,t,!1)}:function(n,e,t){n.attachEvent(e,t)}}});

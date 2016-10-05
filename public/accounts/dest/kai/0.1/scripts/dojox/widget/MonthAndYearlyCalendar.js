@@ -1,0 +1,1 @@
+define("dojox/widget/MonthAndYearlyCalendar",["dojo/_base/declare","./_CalendarBase","./_CalendarMonthYear"],function(e,a,d){return e("dojox.widget.MonthAndYearlyCalendar",[a,d],{})});

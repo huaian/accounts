@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example9/app",["dojo","dijit","dojox"],function(e,i,o){!function(e){"use strict";var i=e.module("spicyApp2",[]);i.controller("SpicyController",["$scope",function(e){e.customSpice="wasabi",e.spice="very",e.spicy=function(i){e.spice=i}}])}(window.angular)});

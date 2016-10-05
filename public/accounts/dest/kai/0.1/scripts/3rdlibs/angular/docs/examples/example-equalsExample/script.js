@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-equalsExample/script",["dojo","dijit","dojox"],function(e,l,o){!function(e){"use strict";e.module("equalsExample",[]).controller("ExampleController",["$scope",function(l){l.user1={},l.user2={},l.result,l.compare=function(){l.result=e.equals(l.user1,l.user2)}}])}(window.angular)});

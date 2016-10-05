@@ -1,0 +1,1 @@
+define("dojox/fx",["./fx/_base"],function(e){return e});

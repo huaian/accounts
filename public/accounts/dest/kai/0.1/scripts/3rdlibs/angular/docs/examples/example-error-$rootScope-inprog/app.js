@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-error-$rootScope-inprog/app",["dojo","dijit","dojox"],function(o,n,e){!function(o){"use strict";o.module("app",[]).directive("setFocusIf",function(){return function(o,n,e){o.$watch(e.setFocusIf,function(o){o&&n[0].focus()})}})}(window.angular)});

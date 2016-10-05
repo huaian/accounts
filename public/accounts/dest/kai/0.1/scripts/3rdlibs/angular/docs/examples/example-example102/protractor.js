@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example102/protractor",["dojo","dijit","dojox"],function(e,t,n){it("should jsonify filtered objects",function(){expect(element(by.id("default-spacing")).getText()).toMatch(/\{\n  "name": ?"value"\n}/),expect(element(by.id("custom-spacing")).getText()).toMatch(/\{\n    "name": ?"value"\n}/)})});

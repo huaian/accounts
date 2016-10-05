@@ -1,0 +1,1 @@
+define("dojox/mobile/Video",["dojo/_base/declare","dojo/sniff","./Audio"],function(e,o,i){return e("dojox.mobile.Video",i,{width:"200px",height:"150px",_tag:"video",_getEmbedRegExp:function(){return o("ff")?/video\/mp4/i:o("ie")>=9?/video\/webm/i:null}})});

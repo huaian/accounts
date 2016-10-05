@@ -1,0 +1,1 @@
+define([],function(){"use strict";var t=[{host:"",protocol:"http",domain:"192.168.1.7:3000",path:"accounts",preventAlert:!1,isDefault:!0,envCode:"LOCAL",trackerPostUrl:{viewLifecycle:"http://gg.ctcfin.com/vl.gif",performance:"http://gg.ctcfin.com/perf.gif",ubt:"http://gg.ctcfin.com/ubt.gif",error:"http://gg.ctcfin.com/error.gif"}}];return t});

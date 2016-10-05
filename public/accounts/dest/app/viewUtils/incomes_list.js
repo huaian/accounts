@@ -1,0 +1,1 @@
+define(["appRestStore/incomes","dojo/_base/lang","cutil/c.util.common","cutil/c.util.validate"],function(t,e,n,o){"use strict";var c={deleteIncome:function(e){var n=this;t.incomes.remove(e).then(function(t){n.showToast({text:"删除成功",callback:function(){n.reload()}})})}};return c});

@@ -1,0 +1,44 @@
+<!--<div class="hd hd_title">
+  <h1 class="page_title">赏金猎人</h1>
+  <a class="mobile_back">返回</a>
+</div>-->
+<div class="hd" style="text-align:center;">
+    <img src="{{baseUrl}}h5/res/img/cuishou_mobile/logo.png" width="40%" title="" alt="">
+  </div>
+<div class="weui_cells mobile_index">
+  <section class='weui_panel'>
+    <div class='cui-box weui_cell'>
+      <div class="cui-flx4" v-on:click="gotoIncomesList($event)">
+        <a href="javascript:;" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>收入</p>
+        </a>
+      </div>
+      <div class="cui-flx1">
+      </div>
+      <div class="cui-flx4" v-on:click="gotoExpensesList($event)">
+        <a href="javascript:;" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>支出</p>
+        </a>
+      </div>
+    </div>
+    <div class='cui-box weui_cell'>
+      <div class="cui-flx4" v-on:click="gotoStatistics(accountId,$event)">
+        <a href="javascript:;" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>本月实时</p>
+        </a>
+      </div>
+      <div class="cui-flx1">
+      </div>
+      <div class="cui-flx4">
+        <a href="javascript:;" v-on:click="gotoStatisticsSearch($event)" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>历史查询</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+<img class="bottom_announce" v-on:click="gotoSystemNotification($event)" src="{{baseUrl}}h5/res/img/cuishou_mobile/announce.jpg" width="100%" title="系统通知" alt="系统通知">

@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example117/script",["dojo","dijit","dojox"],function(e,i,n){!function(e){"use strict";e.module("ngSwipeRightExample",["ngTouch"])}(window.angular)});

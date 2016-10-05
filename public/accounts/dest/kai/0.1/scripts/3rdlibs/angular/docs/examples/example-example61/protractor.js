@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example61/protractor",["dojo","dijit","dojox"],function(e,n,t){it("should check ng-bind",function(){var e=element(by.model("name"));expect(element(by.binding("name")).getText()).toBe("Whirled"),e.clear(),e.sendKeys("world"),expect(element(by.binding("name")).getText()).toBe("world")})});

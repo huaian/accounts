@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-heroComponentSimple/index",["dojo","dijit","dojox"],function(n,o,e){!function(n){"use strict";n.module("heroApp",[]).controller("mainCtrl",function(){this.hero={name:"Spawn"}})}(window.angular)});

@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example41/script",["dojo","dijit","dojox"],function(e,n,i){!function(e){"use strict";var n=e.module("myApp",[]);n.filter("greet",function(){return function(e){return"Hello, "+e+"!"}})}(window.angular)});

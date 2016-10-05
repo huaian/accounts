@@ -1,0 +1,1 @@
+define("dojox/mvc",["./mvc/_base"],function(e){return e});

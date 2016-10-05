@@ -1,0 +1,1 @@
+define("util/doh/tests/scopeTest",["doh/runner"],function(o){var d=this;o.register("scope",function(o){o.is(d.dojo,void 0,"dojo global was defined"),o.isNot(d.dohDojo,void 0,"dohDojo global was not defined"),o.isNot(require("dohDojo"),void 0,"dohDojo module was not defined")})});

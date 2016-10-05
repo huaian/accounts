@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example29/script",["dojo","dijit","dojox"],function(e,n,o){!function(e){"use strict";e.module("oneTimeBidingExampleApp",[]).controller("EventController",["$scope",function(e){var n=0,o=["Igor","Misko","Chirayu","Lucas"];e.clickMe=function(i){e.name=o[n%o.length],n++}}])}(window.angular)});

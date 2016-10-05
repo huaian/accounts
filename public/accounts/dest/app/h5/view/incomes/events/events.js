@@ -1,0 +1,1 @@
+define(["dojo/on","viewUtils/login","cutil/c.util.validate"],function(i,n,t){"use strict";var e={subscribeTopics:function(){},bindEvents:function(){var i=this;i.bind({})}};return{eventBinder:e}});

@@ -1,0 +1,1 @@
+define("dojo/NodeList-html",["./query","./_base/lang","./html"],function(t,e,n){var o=t.NodeList;return e.extend(o,{html:function(t,e){var o=new n._ContentSetter(e||{});return this.forEach(function(e){o.node=e,o.set(t),o.tearDown()}),this}}),o});

@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example115/script",["dojo","dijit","dojox"],function(e,i,n){!function(e){"use strict";e.module("ngClickExample",["ngTouch"])}(window.angular)});

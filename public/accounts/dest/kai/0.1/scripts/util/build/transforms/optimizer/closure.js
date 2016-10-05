@@ -1,0 +1,1 @@
+define("util/build/transforms/optimizer/closure",["../../buildControl","require","../../fs","../../fileUtils","./stripConsole","dojo/_base/lang","dojo/has"],function(o,n,r,e,i,s,t){throw new Error("Unknown host environment: only nodejs and rhino are supported by closure optimizer.")});

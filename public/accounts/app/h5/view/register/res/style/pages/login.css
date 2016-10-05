@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* line 2, ../../sass/pages/login.scss */
+#pc-login {
+  /*login 背景图*/ }
+  /* line 4, ../../sass/pages/login.scss */
+  #pc-login .login-back {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: #0ca3d2;
+    background-color: rgba(12, 163, 210, 0.7); }
+
+/*login*/
+/* line 15, ../../sass/pages/login.scss */
+.claro .login-dialog {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important; }
+  /* line 25, ../../sass/pages/login.scss */
+  .claro .login-dialog .dijitDialogTitleBar {
+    display: none; }
+  /* line 28, ../../sass/pages/login.scss */
+  .claro .login-dialog .dijitDialogPaneContent {
+    background: none !important;
+    border-top: none !important;
+    padding: inherit !important;
+    position: inherit !important;
+    left: inherit !important;
+    top: inherit !important;
+    position: inherit !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: inherit !important; }
+
+/* line 42, ../../sass/pages/login.scss */
+.login-container {
+  width: 640px;
+  height: 250px;
+  margin-top: -125px;
+  margin-left: -320px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 5; }
+
+/* line 53, ../../sass/pages/login.scss */
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  width: 310px;
+  background: white; }
+
+/* line 61, ../../sass/pages/login.scss */
+.login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px; }
+
+/* line 73, ../../sass/pages/login.scss */
+.login h1 {
+  position: absolute;
+  margin: -40px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf; }
+
+/* line 84, ../../sass/pages/login.scss */
+.login .form-row {
+  margin: 20px 0 0; }
+
+/* line 87, ../../sass/pages/login.scss */
+.login .form-row:first-child {
+  margin-top: 0; }
+
+/* line 91, ../../sass/pages/login.scss */
+.login .form-row.remember_me {
+  float: left;
+  line-height: 31px; }
+
+/* line 95, ../../sass/pages/login.scss */
+.login .form-row.remember_me label {
+  font-size: 12px;
+  color: #777;
+  cursor: pointer; }
+
+/* line 100, ../../sass/pages/login.scss */
+.login .form-row.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle; }
+
+/* line 106, ../../sass/pages/login.scss */
+.login .form-row.submit {
+  text-align: right; }
+
+/* line 110, ../../sass/pages/login.scss */
+:-moz-placeholder {
+  color: #c9c9c9 !important; }
+
+/* line 114, ../../sass/pages/login.scss */
+::-webkit-input-placeholder {
+  color: #ccc; }
+
+/* line 118, ../../sass/pages/login.scss */
+.login .form-row .dijitTextBox {
+  border: none;
+  padding: 0 !important;
+  color: #404040; }
+  /* line 122, ../../sass/pages/login.scss */
+  .login .form-row .dijitTextBox .dijitInputInner {
+    padding: 0 10px !important;
+    background: white;
+    width: 285px !important;
+    line-height: 34px;
+    margin: 5px;
+    height: 34px;
+    border: 1px solid !important;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4 !important;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12); }
+  /* line 137, ../../sass/pages/login.scss */
+  .login .form-row .dijitTextBox .dijitInputContainer {
+    overflow: inherit; }
+  /* line 140, ../../sass/pages/login.scss */
+  .login .form-row .dijitTextBox .dijitPlaceHolder {
+    margin-left: 10px;
+    line-height: 45px;
+    color: #404040; }
+
+/* line 148, ../../sass/pages/login.scss */
+.login .form-row .dijitTextBoxFocused .dijitInputContainer, .login .form-row .dijitTextBoxHover {
+  background: none; }
+
+/* line 153, ../../sass/pages/login.scss */
+.login .form-row .dijitInputInner:focus {
+  border-color: #7dc9e2 !important;
+  outline-color: #dceefc;
+  outline-offset: 0; }
+
+/* line 160, ../../sass/pages/login.scss */
+.login .dijitButton {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15); }
+  /* line 180, ../../sass/pages/login.scss */
+  .login .dijitButton .dijitButtonNode {
+    background-color: inherit !important;
+    border-color: inherit !important;
+    color: inherit !important;
+    padding: inherit !important;
+    box-shadow: none !important;
+    border: none !important; }
+  /* line 188, ../../sass/pages/login.scss */
+  .login .dijitButton .dijitButtonContents {
+    line-height: 28px; }

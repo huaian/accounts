@@ -1,0 +1,1 @@
+define("dojox/charting/bidi/_bidiutils",{reverseMatrix:function(x,i,r,t){var a=r.l-r.r,y=t?-1:1,d=0,m=0,e=1,n=t?i.width+a:0,s=0;x.matrix&&(y*=Math.abs(x.matrix.xx),e=x.matrix.yy,d=x.matrix.xy,m=x.matrix.yx,s=x.matrix.xy),x.setTransform({xx:y,xy:d,yx:m,yy:e,dx:n,dy:s})}});

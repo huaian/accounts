@@ -1,0 +1,1 @@
+define("dojox/mobile/transition",["dojo/_base/Deferred","dojo/_base/config"],function(n,e){if(e.mblCSS3Transition){var o=new n;return require([e.mblCSS3Transition],function(n){o.resolve(n)}),o}return null});

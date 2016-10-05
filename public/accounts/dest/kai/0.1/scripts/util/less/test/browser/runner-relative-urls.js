@@ -1,0 +1,1 @@
+define("util/less/test/browser/runner-relative-urls",["dojo","dijit","dojox"],function(e,s,t){less.relativeUrls=!0,describe("less.js browser test - relative url's",function(){testLessEqualsInDocument()})});

@@ -1,0 +1,1 @@
+define("util/docscripts/tests/alias",["dojo","dijit","dojox"],function(i,t,o){i.provide("util.docscripts.tests.alias"),function(t){i.sampleFunction=function(i,t,o){return""}}(i)});

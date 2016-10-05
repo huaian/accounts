@@ -1,0 +1,1 @@
+define("kaiView/pc/events/login",[],function(){"use strict";var n={subscribeTopics:function(){},bindForMaterialDialog:function(){},bindEvents:function(){}};return{eventBinder:n}});

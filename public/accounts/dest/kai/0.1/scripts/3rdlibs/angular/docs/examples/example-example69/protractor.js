@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example69/protractor",["dojo","dijit","dojox"],function(e,t,c){it("should check ng-click",function(){expect(element(by.binding("count")).getText()).toMatch("0"),element(by.css("button")).click(),expect(element(by.binding("count")).getText()).toMatch("1")})});

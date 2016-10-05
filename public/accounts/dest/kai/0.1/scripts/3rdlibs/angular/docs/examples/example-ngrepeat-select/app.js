@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-ngrepeat-select/app",["dojo","dijit","dojox"],function(e,n,a){!function(e){"use strict";e.module("ngrepeatSelect",[]).controller("ExampleController",["$scope",function(e){e.data={repeatSelect:null,availableOptions:[{id:"1",name:"Option A"},{id:"2",name:"Option B"},{id:"3",name:"Option C"}]}}])}(window.angular)});

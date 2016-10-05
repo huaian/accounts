@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-radio-input-directive/protractor",["dojo","dijit","dojox"],function(e,t,o){it("should change state",function(){var e=element(by.binding("color.name"));expect(e.getText()).toContain("blue"),element.all(by.model("color.name")).get(0).click(),expect(e.getText()).toContain("red")})});

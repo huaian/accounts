@@ -1,0 +1,1 @@
+define("dojox/mobile/dh/PatternFileTypeMap",["dojo/_base/lang"],function(e){var t={};return e.setObject("dojox.mobile.dh.PatternFileTypeMap",t),t.map={".*.html":"html",".*.json":"json"},t.add=function(e,t){this.map[e]=t},t.getContentType=function(e){for(var t in this.map)if(new RegExp(t).test(e))return this.map[t];return null},t});

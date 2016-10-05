@@ -1,0 +1,280 @@
+@charset "utf-8";
+@import "compass/css3";
+$main-color:#f74e61;
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,button,input,textarea{padding:0px; margin:0px; border:none;}
+a{ color:#FFF; text-decoration:none; transition:color 0.3s ease;}
+a:active,a:hover { text-decoration:none;transition:color 0.3s ease;}
+a:focus,input:hover,button:hover,input[type='button']:hover,input,button,select,li{ outline:none;}
+a:link{color:#888;}
+i, em, cite { font-style: normal; }
+li{ vertical-align:bottom; overflow:hidden; list-style-type:none;}
+img{max-width:100%;}
+/* 禁止webkit横屏改变字体大小 */
+html{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+/* clearfix */  
+.clearfix:after{ visibility: hidden;display: block;font-size: 0;content:" ";clear: both;height: 0;}
+.clearfix{ *zoom:1;}
+
+/* 设置HTML5元素为块 */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,option {display:block;padding:0px; margin:0px; border:none;}
+body{background:#FFF; position:relative; font-size:rem-calc(16px); margin:0 auto; padding:0;min-width:320px; max-width:640px; line-height:normal; font-family:Microsoft YaHei, Helvetica, STHeiti STXihei, Microsoft JhengHei,Arial}
+.pd30{padding:rem-calc(30px);} .mgb20{ margin-bottom:rem-calc(20px);}.mgb30{ margin-bottom:rem-calc(30px);}
+
+/*首页区块*/
+.headerLogo img{width:rem-calc(372px); height:rem-calc(50px);}
+/*头部滚动banner*/
+.swipe {  
+    overflow: hidden;  
+    visibility: hidden;  
+    position: relative;  
+}  
+.swipe-wrap {  
+    overflow: hidden;  
+    position: relative;  
+}  
+.swipe-wrap > figure {  
+    float: left;  
+    width: 100%;  
+    position: relative;  
+}  
+#slider {  
+    max-width: $max-width;;/* 设置最大的宽度 */  
+    margin: 0px auto; 
+
+}  
+figure {  
+    margin: 0;/* 对齐，四周宽度都为0，在轮播的时候，以整张图片进行移动 */  
+}  
+.silderCon{ position:relative; height:rem-calc(280px); overflow:hidden; }
+
+.silderCon #position {  
+    text-align: center;  
+    list-style: none;  
+    margin: 0;  
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    bottom: rem-calc(15px);  
+    z-index: 5;
+}  
+.silderCon #position li {  
+    display: inline-block;  
+    width:rem-calc(15px);  
+    height:rem-calc(15px);   
+    @include border-radius(100%);
+    margin: 0 rem-calc(10px);  
+    cursor: pointer;
+    background-color: #fff;
+    opacity: .5;
+}  
+.silderCon #position li.on {  
+    opacity: 1;
+}
+/*头部滚动banner 结束*/
+
+.stepCon{border-bottom:solid 1px #f1f1f1; margin-bottom:rem-calc(25px); text-align:center;}
+.stepCon img{margin: rem-calc(10px) rem-calc(33px); width: rem-calc(581px);}
+
+/*计算器区块*/
+.descriptionArea{ padding:0 rem-calc(22px) 0 rem-calc(30px)}
+.descriptionCon{padding:rem-calc(15px) rem-calc(30px) rem-calc(25px) rem-calc(25px); background:url(../images/jsq_bg.jpg) no-repeat 0 0; background-size:100% 99%;}
+.descriptionCon p{ font-size:rem-calc(24px); margin-bottom: rem-calc(10px); color:#595858;} 
+.LoanAmount p,.LoanAmount .prePrice{ margin-bottom:rem-calc(10px);}
+.LoanAmount .prePrice{ text-align:center}
+.MonthlyRepayment div{height: rem-calc(92px); position:relative; padding-left: rem-calc(10px); font-size: rem-calc(68px); background: url(../images/count_bg.png) no-repeat; color: #FFF; background-size:100%;}
+.MonthlyRepayment div p{ position:absolute; left:rem-calc(20px); top:rem-calc(45px); color:#FFF; font-size:rem-calc(24px);}
+.MonthlyRepayment div em{ width:rem-calc(450px); height:rem-calc(92px); line-height:rem-calc(100px); display:block; text-align:right; padding-right:rem-calc(30px);}
+.MonthlyRepayment div span{ font-size:rem-calc(24px); position:absolute; right:rem-calc(15px); bottom:rem-calc(15px);}
+.dotLine{padding-bottom:rem-calc(10px); background:url(../images/dot_line.png) repeat-x 0 bottom;}
+.prePrice em{ margin-right:23.5%; font-size:rem-calc(18px); color:#666;}
+.prePrice em.last{ margin-right:0;}
+/*进度条*/
+.progressArea{ height:rem-calc(70px); width:100%;}
+.progressCon{ position:relative; padding-top:rem-calc(25px);}
+.progressDot{ position:absolute; top:rem-calc(22px); width:rem-calc(10px); height:rem-calc(10px); @include border-radius(rem-calc(100%));}
+.dotBlue{ left:0; background:$main-color;}
+.dotGray{right:0; background:#e5e6eb;}
+.progressHorizontal{ width:100%; height:rem-calc(5px); background:#e5e6eb;}
+.progressHandle{background:$main-color; height:rem-calc(5px); max-width:100%; position:relative; left:0; top:0;}
+.priceSum{ width:rem-calc(80px); height:rem-calc(120px);position:absolute; text-align:center; z-index:10; color:#FFF; padding-top:rem-calc(6px); left:rem-calc(210px); top:rem-calc(-79px); background:url(../images/price_bg.png) no-repeat; background-size:rem-calc(75px) rem-calc(120px); cursor:pointer; font-size:rem-calc(22px);}
+.LoanPeriod a{ width:rem-calc(114px); height:rem-calc(44px); line-height:rem-calc(44px); @include border-radius(rem-calc(5px)); display:inline-block; text-align:center; font-size:rem-calc(24px); margin-right:rem-calc(12px); background:#DDD;}
+.LoanPeriod a.last{ margin-right:0}
+.LoanPeriod a:hover,.LoanPeriod .cur{ background:$main-color; color:#FFF;}
+.LoanPeriod .monthArea{ margin-bottom:rem-calc(25px); text-align:center}
+.orderBtn a,.orderIt a,.btn-blue{ width:rem-calc(300px); height:rem-calc(52px); display:block; margin:rem-calc(20px) auto; font-size:rem-calc(24px); letter-spacing:rem-calc(2px); @include border-radius(rem-calc(5px)); line-height:rem-calc(52px);background:$main-color; color:#FFF; text-align:center;}
+.orderBtn p{ font-size:rem-calc(22px); text-align:center; color:#666;}
+
+/*计算器区块 结束*/
+
+/*预约区块*/
+.userInfoCon{background:#fbfbfb; border:solid 1px #EEE;padding:rem-calc(28px);}
+.preInformation{ font-size:rem-calc(26px);}
+.preInformation p{ line-height:rem-calc(46px);}
+.preInformation span{min-width:rem-calc(90px); padding-top:rem-calc(10px); display:block; text-align:right; float:left; margin-right:rem-calc(10px); color:#666;font-size:rem-calc(26px);}
+.preInformation b{min-width:rem-calc(26px); height:rem-calc(48px); display:block; float:left; background:url(../images/right.png) no-repeat rem-calc(2px) rem-calc(25px); background-size:rem-calc(21px) rem-calc(21px); margin-left:rem-calc(5px); text-indent:-9999px;}
+.preInformation input,select,.addressCity{font-size:rem-calc(20px); width:rem-calc(310px); max-width:rem-calc(320px);@include border-radius(rem-calc(3px));float:left; border:solid 1px #dddcdd; padding:rem-calc(5px) rem-calc(15px); font-family:'microsoft yahei'; color:#888;-webkit-appearance:none; -moz-appearance:none;}
+.preInformation input{padding:rem-calc(18px) rem-calc(15px);}
+option{font-size:rem-calc(20px); width:rem-calc(320px); max-width:rem-calc(320px);}
+select,.addressCity{background:#FFF url(../images/icon.png) no-repeat 7.15rem -11.2rem; background-size:rem-calc(50px) rem-calc(560px);}
+.preInformation .person input{background:#FFF url(../images/person.png) no-repeat rem-calc(300px) rem-calc(12px); background-size:rem-calc(30px) rem-calc(35px);}
+.preInformation .phone input{background:#FFF url(../images/phone.png) no-repeat rem-calc(308px) rem-calc(15px);background-size:rem-calc(18px) rem-calc(29px)}
+.preInformation .msg{ padding-left:rem-calc(140px);height:rem-calc(40px);}
+.preInformation .msg span,.msg span{font-size:rem-calc(22px); padding-left:rem-calc(25px); padding-top:0; height:rem-calc(40px); line-height:rem-calc(40px);text-align:left; background:url(../images/error.png) no-repeat 0 rem-calc(10px); background-size:rem-calc(19px) rem-calc(19px); color:#ff4f4f;}
+.preInformation .none{ display:none;}
+.orderIt{height:rem-calc(52px);}
+.yuyueCon .userInfoCon{ box-shadow:0 2px 10px #CCC;}
+
+
+.footerTel{ height:rem-calc(30px);padding:rem-calc(15px) 0; background:$main-color; color:#FFF; text-align:center; font-size:rem-calc(28px);}
+.footerTel span{width:rem-calc(27px);height:rem-calc(38px);display:inline-block; background:url(../images/telbg.png) no-repeat 0 rem-calc(5px); padding-right:rem-calc(10px);background-size:rem-calc(27px) rem-calc(29px);}
+.footerTel a{color:#FFF;}
+
+/*证明页面*/
+.wxTitle{ font-size:rem-calc(32px); color:#FFF; height:rem-calc(90px); line-height:rem-calc(90px);
+ background:$main-color; text-align:center; position:relative; font-weight:400;}
+.wxTitle a{ text-indent:-9999px; width:rem-calc(45px); height:rem-calc(35px); display:inline-block; background:url(../images/icon.png) no-repeat; background-size:rem-calc(50px) rem-calc(560px); position:absolute; left:rem-calc(30px); top:rem-calc(30px);}
+/*tab切换区块*/
+.proveTitle{ color:#666; font-weight:400; font-size:rem-calc(28px); padding-bottom:rem-calc(20px);}
+
+/*材料证明 开始*/
+.tabArea .swipe {  
+    overflow: hidden;  
+    visibility: hidden;  
+    position: relative;  
+}  
+.tabArea  .swipe-wrap {  
+    overflow: hidden;  
+    position: relative;  
+}  
+.tabArea  .swipe-wrap > figure {  
+    float: left;  
+    width: 100%;  
+    position: relative;  
+}  
+.tabArea  #slider {  
+    max-width: $max-width;;/* 设置最大的宽度 */  
+    margin: 0px auto; 
+
+}  
+.tabArea  .silderCon{ position:relative; height:auto; overflow:hidden; padding-top:rem-calc(60px);}
+.tabArea  .silderCon img{ max-width:100%;}
+
+.tabArea .silderCon #position {  
+    height:rem-calc(60px); 
+    text-align: center;  
+    list-style: none;  
+    margin: 0;  
+    padding: 0;
+    width: 100%;
+    position:absolute;
+    top:0; 
+    left:0;
+}  
+.tabArea .silderCon #position li {  
+    display: inline-block;  
+    width:32%; 
+    height:rem-calc(60px);  
+    cursor: pointer;
+    background-color: #fff;
+    @include border-radius(0);
+    margin:0;
+    padding:0;
+    opacity: 1;
+}  
+.tabArea .silderCon #position li  h3{font-size:rem-calc(24px);  background:#EEE; cursor:pointer; color:#999; height:rem-calc(50px); line-height:rem-calc(50px); }
+.tabArea .silderCon #position li.on {  
+    background:url(../images/cur_bg1.png) no-repeat center rem-calc(50px);
+    background-size:rem-calc(22px) rem-calc(9px);
+}
+.tabArea .silderCon #position li.on h3{color:#FFF;height:rem-calc(50px);background:$main-color;}
+/*微信公众号链接*/
+.footerWx,.footerWx:link{font-size:rem-calc(35px);margin: 0px rem-calc(30px) rem-calc(20px) rem-calc(30px); display: inline-block; width:rem-calc(580px); background-color:#afafaf; color: #fff; text-align: center;  line-height: rem-calc(50px);box-shadow:0 2px 3px #DDD; @include border-radius(rem-calc(5px));font-size: rem-calc(24px); }
+
+.wxCon{line-height: rem-calc(35px);}
+/*材料证明 结束*/
+
+.tabArea{ margin-bottom:rem-calc(30px);}
+.footerLink { padding-top:0; text-align:center; padding-bottom:rem-calc(30px);}
+.footerLink a{ width:rem-calc(275px); height:rem-calc(55px); line-height:rem-calc(55px); display:inline-block; margin-right:rem-calc(20px); background:#f0f0f0; box-shadow:0 2px 3px #DDD; text-align:center; color:#666; font-size:rem-calc(28px); @include border-radius(rem-calc(5px));}
+.footerLink a.cur{background:$main-color; color:#FFF;}
+.footerLink a.last{ margin-right:0;}
+.footerLink a:hover{color:#FFF;background:$main-color;}
+.footerLink .btn-blue{background:$main-color; color: #fff;}
+
+
+/*申请成功页面*/
+.successTop{background:url(../images/success.png) no-repeat rem-calc(63px) rem-calc(82px); height:rem-calc(110px); padding-top:rem-calc(80px); padding-bottom:rem-calc(85px); padding-left:rem-calc(230px); background-size:rem-calc(132px) rem-calc(113px); }
+.successTop dt{ color:$main-color; padding-bottom:rem-calc(10px); font-size:rem-calc(32px);}
+.successTop dd{ font-size:rem-calc(24px); line-height:rem-calc(30px); color:#666;}
+.successStep{ padding:rem-calc(10px) 0; border-bottom:solid 1px #EEE;border-top:solid 1px #EEE; text-align:center;}
+.successStep img{width:rem-calc(581px); height:rem-calc(65px);padding:rem-calc(12px) rem-calc(30px);}
+.provesLink{ color:$main-color; margin-top:rem-calc(60px); margin-bottom:rem-calc(70px);}
+.provesLink p{ font-size:rem-calc(26px); padding-left:rem-calc(90px); margin-bottom:rem-calc(30px); background:url(../images/icon.png) no-repeat rem-calc(28px) rem-calc(-210px);background-size:rem-calc(50px) rem-calc(560px);}
+.provesLink ul{width:rem-calc(390px); margin:0 auto;}
+.provesLink ul li{ margin-top:rem-calc(30px); position:relative;}
+.provesLink ul li a{ display:block; @include border-radius(rem-calc(5px)); border:solid 2px #EEE;color:$main-color; font-size:rem-calc(32px); line-height:rem-calc(66px); display:block; padding-left:rem-calc(90px);}
+.provesLink ul li span{ width:rem-calc(77px); height:rem-calc(72px);background:$main-color url(../images/icon.png) no-repeat rem-calc(9px) rem-calc(-258px); background-size:rem-calc(50px) rem-calc(560px); position:absolute; right:rem-calc(0); top:rem-calc(0);border:solid rem-calc(2px) $main-color; @include border-top-right-radius(rem-calc(5px)); @include border-bottom-right-radius(rem-calc(5px));}
+.provesLink ul li span.work{background:$main-color url(../images/icon.png) no-repeat rem-calc(7px) rem-calc(-320px);background-size:rem-calc(50px) rem-calc(560px);}
+.provesLink ul li span.money{background:$main-color url(../images/icon.png) no-repeat rem-calc(7px) rem-calc(-385px);background-size:rem-calc(50px) rem-calc(560px);}
+/*常见问题页面*/
+.questionTitle{ font-size:rem-calc(30px); color:$main-color; padding-bottom:rem-calc(20px);}
+.questionCon ul{ border:solid 1px #EEE; border-bottom:0;}
+.questionCon ul li{ bottom-bottom:solid 1px #FFF;}
+.questionCon ul li h2{ height:rem-calc(70px); line-height:rem-calc(70px)  ; font-size:rem-calc(30px); padding-left:25px; font-weight:400;color:#666;background:#FFF url(../images/icon.png) no-repeat 94% rem-calc(-77px); background-size:rem-calc(50px) rem-calc(560px); border-bottom:solid 1px #EEE;}
+.questionCon ul li h2.cur{color:#FFF;background:$main-color url(../images/icon.png) no-repeat 94% rem-calc(-130px); background-size:rem-calc(50px) rem-calc(560px);border-bottom:solid 1px $main-color; }
+.questionCon dl{ padding:rem-calc(25px); color:#666;border-bottom:solid rem-calc(1px) #EEE; display:none;border-bottom:solid 1px #EEE;}
+.questionCon dl dt{font-size:rem-calc(28px); margin-bottom:rem-calc(10px);}
+.questionCon dl dd{font-size:rem-calc(28px); line-height:rem-calc(40px); padding-left:rem-calc(20px);background:url(../images/dot.png) no-repeat rem-calc(5px) rem-calc(10px); background-size:rem-calc(8px) rem-calc(7px); margin-bottom:rem-calc(5px);}
+.questionCon dl.noDots dd{ background:none;}
+
+/*城市选择页面*/
+.addressPage{ position:relative;} 
+.toperFix{ position:fixed; top:0; left:0; width:100%; background:#FFF; z-index:10;}
+/*城市选择页面右侧浮层*/
+.silderBar{width:rem-calc(60px); position:fixed; top:rem-calc(155px); right:0; background:#FFF; opacity:0.7; }
+.silderBar li{ text-align:center; overflow:visible;}
+.silderBar li a{font-size:rem-calc(22px); color:$main-color; position:relative; display:block;}
+.silderBar li a span{ width:rem-calc(60px); height:rem-calc(66px); line-height:rem-calc(66px); opacity:1; display:block; color:#FFF; font-size:rem-calc(42px); padding-left:rem-calc(18px); text-align:left; position:absolute; left:rem-calc(80px); top:rem-calc(-25px);background:url(../images/popDotBg.png) no-repeat ; background-size:rem-calc(76px) rem-calc(66px);}
+.silderBar li a span.block{ display:block;}
+.wxTitle a.cancelChoose{ width:rem-calc(105px); height:rem-calc(50px); line-height:rem-calc(50px); background:none; font-size:rem-calc(24px); border:solid 1px #DDD;@include border-radius(rem-calc(5px)); text-indent:0; color:#FFF; top:rem-calc(21px);} 
+.search{height:rem-calc(50px); margin-top:rem-calc(15px);}
+.searchCon{width:80%; height:rem-calc(50px); margin:0 auto; background:#f7f7f7 url(../images/icon.png) no-repeat rem-calc(5px) rem-calc(-490px); text-indent:rem-calc(10px); background-size:rem-calc(50px) rem-calc(545px); border-radius:rem-calc(20px); padding:0 rem-calc(50px);}
+.searchCon input{width:100%; line-height:rem-calc(50px); background:#f7f7f7; font-size:rem-calc(24px); color:#666;}
+.addressTitle{height:rem-calc(54px); line-height:rem-calc(54px); margin-bottom:rem-calc(18px); color:$main-color;background:#EEE; font-size:rem-calc(24px); padding:0 rem-calc(15px); font-weight:400; border-bottom:solid 1px #DDD;}
+.cityList{ padding-left:rem-calc(18px); margin-top:rem-calc(20px);}
+.cityClass .cityList{display:none;}
+.cityList li{ width:rem-calc(170px); height:rem-calc(55px); float:left; border:solid 1px #DDD;@include border-radius(rem-calc(5px)); margin-bottom:rem-calc(18px); margin-right:rem-calc(18px);}
+.cityList li a{ display:block; line-height:rem-calc(55px); color:#333; text-align:center; font-size:rem-calc(24px);}
+.cityList li a.cur{ background:$main-color; color:#FFF; border:solid 1px $main-color;}
+.addressMain{ margin-top:rem-calc(170px); position:relative;}
+.cityPre .addressTitle{ margin-bottom:0; border-bottom:solid 1px #DDD;}
+
+/*搜索结果页面区块样式*/
+.searchCityRuselt{display:none; margin:rem-calc(20px) 0; margin-top:rem-calc(65px); padding:0 rem-calc(30px)}
+.searchConMove{ width:65%; float:left; margin-left:rem-calc(30px);}
+.searchCancel{ padding-left:rem-calc(20px); display:none; font-size:rem-calc(28px); color:$main-color;line-height:rem-calc(50px);}
+.searchCityRuselt li{ position:relative; padding:rem-calc(8px) 0; height:rem-calc(30px); line-height:rem-calc(30px); color:#333; border-bottom:solid 1px #bcbcbc;}
+.searchCityRuselt li p{line-height:rem-calc(30px); font-size:rem-calc(24px); color:#999; }
+
+/*增加样式0807同意并阅读申请条款*/
+.agreenIt{font-size:rem-calc(20px); margin-top: rem-calc(10px); margin-bottom: rem-calc(20px);}
+.agreenIt span{ color: #ff4f4f;}
+.msg span{background:url(../images/error.png) no-repeat 0 rem-calc(3px);}
+.none{display:none;}
+.msg span{font-size:rem-calc(20px); }
+// 弹出层
+.bodyTo{ overflow:hidden}
+.popArea{ position:absolute; left:0; top:0; z-index:15; width:100%;height:100%; background-color:#FFF; display:none; }
+.textArea{ width:rem-calc(580px); position:fixed; left:50%; top:50%; margin-left:rem-calc(-302px); display:none; margin-top:rem-calc(-420px);z-index:300;background:#FFF; border:solid 1px #DDD; border-radius:rem-calc(10px); padding:rem-calc(10px); _position:absolute;_top:expression(eval(document.documentElement.scrollTop+300));}
+.textAreacon{width:rem-calc(560px); height:rem-calc(730px); overflow-x:hidden; overflow-y:scroll; padding:rem-calc(10px)}
+.textArea h2{color:#333; margin:rem-calc(10px) 0 rem-calc(40px) 0; text-align:left; padding-left:rem-calc(20px);}
+.hideText .close{ width:rem-calc(43px); height:rem-calc(43px); display:block; position:absolute; right:rem-calc(10px); top:rem-calc(20px);overflow:hidden; 
+    cursor:pointer; background:url(../images/close.jpg) no-repeat; background-size:cover; text-indent:-9999px;}
+.textArea h2{ font-size:rem-calc(28px); text-align: center; margin-bottom: rem-calc(20px);}
+.textAreacon dl{ margin-bottom: rem-calc(30px);} 
+.textAreacon dt{ font-size: rem-calc(28px); margin-bottom: rem-calc(15px);} 
+.textAreacon dd{ font-size: rem-calc(26px); line-height: rem-calc(36px);}
+
+
+
+   

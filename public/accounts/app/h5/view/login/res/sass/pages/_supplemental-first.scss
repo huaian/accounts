@@ -1,0 +1,24 @@
+@charset "utf-8";
+.supplemental-tab-con{
+  margin-bottom: rem-calc(40px);
+}
+.js-container-social_security,.js-container-provident_fund{
+  @include transition(all 300ms);
+}
+.js-container-provident_fund{
+  top:rem-calc(-460px);
+}
+.verify_img{
+  width: rem-calc(160px);
+  max-height: rem-calc(60px);
+}
+.supplemental_mascot_qidai{
+  width:rem-calc(200px);
+  height: rem-calc(230px);
+  background-position: rem-calc(0) rem-calc(- $mascotLIst-qidai-position);
+  display: inline-block;
+  background-color: rgba(255,255,255,0);
+}
+.weui_cells_form .weui_cell_ft img{
+    font-size: initial;
+}

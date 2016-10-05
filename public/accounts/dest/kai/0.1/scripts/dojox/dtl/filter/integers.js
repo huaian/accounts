@@ -1,0 +1,1 @@
+define("dojox/dtl/filter/integers",["dojo/_base/lang","../_base"],function(e,t){var n=e.getObject("filter.integers",!0,t);return e.mixin(n,{add:function(e,t){return e=parseInt(e,10),t=parseInt(t,10),isNaN(t)?e:e+t},get_digit:function(e,t){return e=parseInt(e,10),t=parseInt(t,10)-1,t>=0&&(e+="",e=t<e.length?parseInt(e.charAt(t),10):0),isNaN(e)?0:e}}),n});

@@ -1,0 +1,1 @@
+define("dojox/widget/gauge/BarIndicator",["dojo","dijit","dojox","dojo/require!dojox/gauges/BarIndicator"],function(o,d,a){o.provide("dojox.widget.gauge.BarIndicator"),o.require("dojox.gauges.BarIndicator"),a.widget.gauge.BarIndicator=a.gauges.BarIndicator});

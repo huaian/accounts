@@ -1,0 +1,1 @@
+define("util/less/lib/less/tree/assignment",["dojo","dijit","dojox"],function(e,t,i){!function(e){e.Assignment=function(e,t){this.key=e,this.value=t},e.Assignment.prototype={toCSS:function(){return this.key+"="+(this.value.toCSS?this.value.toCSS():this.value)},eval:function(t){return this.value.eval?new e.Assignment(this.key,this.value.eval(t)):this}}}(require("../tree"))});

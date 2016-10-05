@@ -1,0 +1,28 @@
+@charset "utf-8";
+.rule-title .active-title{
+  background-position: rem-calc(0) rem-calc(-160px);
+  left: 44%;
+  width: rem-calc(200px);
+  height: rem-calc(75px);
+  margin-top: rem-calc(15px);
+}
+.rule-text{
+  color: #fff;
+  padding:0 rem-calc(40px);
+  @include box-sizing(border-box);
+  margin-top: rem-calc(60px);
+  font-size: rem-calc(26px);
+  line-height: rem-calc(50px);
+
+}
+.btn-return{
+  width:rem-calc(280px);
+  display: inline-block;
+  margin: rem-calc(84px) 0 rem-calc(80px) 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+
+

@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example59/protractor",["dojo","dijit","dojox"],function(e,t,o){it("should toggle open",function(){expect(element(by.id("details")).getAttribute("open")).toBeFalsy(),element(by.model("open")).click(),expect(element(by.id("details")).getAttribute("open")).toBeTruthy()})});

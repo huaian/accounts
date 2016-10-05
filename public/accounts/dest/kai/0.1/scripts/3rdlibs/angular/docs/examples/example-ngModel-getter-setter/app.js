@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-ngModel-getter-setter/app",["dojo","dijit","dojox"],function(e,n,t){!function(e){"use strict";e.module("getterSetterExample",[]).controller("ExampleController",["$scope",function(e){var n="Brian";e.user={name:function(e){return arguments.length?n=e:n}}}])}(window.angular)});

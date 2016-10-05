@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-heroComponentTree/index",["dojo","dijit","dojox"],function(e,o,n){!function(e){"use strict";e.module("heroApp",[])}(window.angular)});

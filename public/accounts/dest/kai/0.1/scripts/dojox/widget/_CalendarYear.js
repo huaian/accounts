@@ -1,0 +1,1 @@
+define("dojox/widget/_CalendarYear",["dojo/_base/declare","./_CalendarYearView"],function(e,a){return e("dojox.widget._CalendarYear",null,{parent:null,constructor:function(){this._addView(a)}})});

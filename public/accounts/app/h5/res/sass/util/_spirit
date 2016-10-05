@@ -1,0 +1,16 @@
+@mixin icon-sprit-cross($width,$height,$columns,$count){
+  $row : 1; 
+  $column : 1; 
+  
+  @for $i from 1 to $count {
+    #{percentage(($i - 1) / $count)} {
+        background-position: #{($column - 1) * $width}px #{($row - 1) * $height}px;
+    };
+    @if $column == $columns {
+      $column :1;
+      $row : $row + 1;
+    }else{
+      $column : $column + 1;
+    }
+  }
+}

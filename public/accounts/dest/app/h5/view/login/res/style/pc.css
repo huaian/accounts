@@ -1,0 +1,1048 @@
+@charset "UTF-8";
+/*project global css style*/
+/*必填项标注*/
+/* line 4, ../sass/_credit-pc.scss */
+.form-label-required, .claro .dijitToolbar .form-label-required {
+  background: url("../img/field-required.gif") right 1px no-repeat;
+  padding-right: 12px; }
+
+/*label最小宽度*/
+/* line 9, ../sass/_credit-pc.scss */
+.form-label-loan {
+  min-width: 70px;
+  display: inline-block;
+  box-sizing: border-box; }
+
+/*自定义fieldset*/
+/* line 15, ../sass/_credit-pc.scss */
+.fieldset-containter {
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 5px; }
+
+/* line 20, ../sass/_credit-pc.scss */
+.fieldset-legend {
+  background-color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  z-index: 1; }
+
+/*自定义fieldset 左右布局 用于关联使用 标题+radio */
+/* line 28, ../sass/_credit-pc.scss */
+.fieldset-related {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+
+/* line 32, ../sass/_credit-pc.scss */
+.fieldset-related legend {
+  float: left;
+  min-width: 70px; }
+
+/* line 36, ../sass/_credit-pc.scss */
+.fieldset-related .legend-inherit {
+  float: inherit;
+  width: 100%; }
+
+/* line 40, ../sass/_credit-pc.scss */
+.fieldset-related .fieldset-related-container {
+  float: left;
+  /*问题库 input */ }
+  /* line 43, ../sass/_credit-pc.scss */
+  .fieldset-related .fieldset-related-container .blank_input {
+    margin: 5px 0; }
+
+/* line 47, ../sass/_credit-pc.scss */
+.fieldset-related-line {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  float: left; }
+
+/* line 52, ../sass/_credit-pc.scss */
+.fieldset-related-line legend {
+  float: left;
+  min-width: 70px; }
+
+/* line 56, ../sass/_credit-pc.scss */
+.fieldset-related-line .fieldset-related-line-container {
+  float: left; }
+
+/* line 59, ../sass/_credit-pc.scss */
+.loan-img-thumbnail {
+  width: 150px;
+  height: 150px; }
+
+/* line 64, ../sass/_credit-pc.scss */
+.img-operation {
+  z-index: 8; }
+
+/* line 67, ../sass/_credit-pc.scss */
+.trial-note-reason {
+  position: absolute;
+  height: 150px;
+  background-color: #FFF;
+  z-index: 100;
+  overflow-y: scroll;
+  left: 0;
+  border: 1px solid #8babc7;
+  min-width: 160px; }
+
+/* line 78, ../sass/_credit-pc.scss */
+.adaptive-height {
+  height: 100%; }
+
+/* line 82, ../sass/_credit-pc.scss */
+.field-content {
+  white-space: pre-wrap; }
+
+/* 内部信息评估 排疑方法*/
+/* line 88, ../sass/_credit-pc.scss */
+.field-text {
+  position: relative;
+  overflow: inherit !important; }
+
+/* line 92, ../sass/_credit-pc.scss */
+.troubleshooting-container {
+  padding: 15px;
+  position: absolute;
+  top: 23px;
+  left: 3px;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 0px  #ccc; }
+
+/*电话核查*/
+/* line 104, ../sass/_credit-pc.scss */
+.phone_check_navMenu {
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  opacity: 0.7;
+  /*
+  color: #FFF;
+  */ }
+
+/* line 117, ../sass/_credit-pc.scss */
+.phone_check_navMenu a {
+  margin-right: 20px;
+  text-decoration: underline;
+  color: #FFF;
+  cursor: pointer; }
+
+/* line 118, ../sass/_credit-pc.scss */
+.phone_check_headInformation_mgt {
+  margin-top: 40px; }
+
+/* line 119, ../sass/_credit-pc.scss */
+.phone_check_headInformation {
+  padding: 0 10px; }
+
+/* line 120, ../sass/_credit-pc.scss */
+#phone_check_dialogCon {
+  display: none; }
+
+/* line 121, ../sass/_credit-pc.scss */
+.phone_check_operation_btns {
+  text-align: center; }
+
+/* line 122, ../sass/_credit-pc.scss */
+.form-label-phone, .form-label-title {
+  min-width: 60px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 10px; }
+
+/* line 130, ../sass/_credit-pc.scss */
+.register-apply-container {
+  border: 1px solid #666666;
+  padding: 10px; }
+
+/* line 135, ../sass/_credit-pc.scss */
+.dialog-checkbox-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+/* line 143, ../sass/_credit-pc.scss */
+.dialog-checkbox-list li {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  min-width: 150px;
+  white-space: nowrap; }
+
+/*自定义table仿dojo的dgrid*/
+/* line 150, ../sass/_credit-pc.scss */
+.form-table-list {
+  width: 100%;
+  border-collapse: collapse; }
+
+/* line 154, ../sass/_credit-pc.scss */
+.form-table-list thead tr td {
+  text-align: center;
+  padding: 5px 0; }
+
+/* line 158, ../sass/_credit-pc.scss */
+.form-table-list tbody tr td {
+  padding: 5px 0; }
+
+/* line 161, ../sass/_credit-pc.scss */
+.table-style-blue {
+  text-align: center;
+  border-color: #edc; }
+
+/* line 165, ../sass/_credit-pc.scss */
+.table-style-blue thead tr td {
+  border-color: #bbb;
+  background-color: #e2e9f1; }
+
+/* line 169, ../sass/_credit-pc.scss */
+.table-style-blue tbody tr td {
+  padding: 5px 5px; }
+
+/* line 172, ../sass/_credit-pc.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+/*影像区域 上一页 下一页*/
+/* line 182, ../sass/_credit-pc.scss */
+.img-callbacks {
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  top: 52%;
+  left: 0;
+  opacity: 0.7;
+  z-index: 3;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("../img/img-arrow.gif") no-repeat left top;
+  margin-top: -45px;
+  cursor: pointer; }
+
+/* line 198, ../sass/_credit-pc.scss */
+.img-next {
+  left: auto;
+  background-position: right top;
+  right: 0; }
+
+/*无边框的 fieldset*/
+/* line 204, ../sass/_credit-pc.scss */
+.fieldset-border-hidden {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important; }
+
+/* line 209, ../sass/_credit-pc.scss */
+.fieldset-border-hidden legend {
+  display: none; }
+
+/*表单table*/
+/* line 213, ../sass/_credit-pc.scss */
+.table-form-common {
+  width: 100%; }
+
+/* line 216, ../sass/_credit-pc.scss */
+.table-form-common td {
+  padding-bottom: 5px; }
+
+/* line 220, ../sass/_credit-pc.scss */
+.table-form-common .form-label-title, .form-label-phone {
+  margin-left: 0; }
+
+/*灰色 表单  注：未确认的更改*/
+/* line 225, ../sass/_credit-pc.scss */
+.form-disabled {
+  background-color: #efefef !important;
+  border-color: #d3d3d3 !important;
+  background-image: none; }
+
+
+/*多选下拉框 checkbox 隐藏 */
+/* line 239, ../sass/_credit-pc.scss */
+.checkboxHide {
+  display: none; }
+
+/*材料质检页*/
+/* line 243, ../sass/_credit-pc.scss */
+.material-explanation-container {
+  max-height: 200px;
+  overflow-y: scroll; }
+
+/* line 247, ../sass/_credit-pc.scss */
+.material-explanation {
+  width: 410px;
+  list-style: none; }
+
+/* line 251, ../sass/_credit-pc.scss */
+.material-explanation li {
+  float: left;
+  margin-bottom: 10px;
+  width: 200px; }
+
+/*借款需求 隐藏*/
+/* line 257, ../sass/_credit-pc.scss */
+.registerDetail_select_source_two_container {
+  display: none; }
+
+/* line 262, ../sass/_credit-pc.scss */
+.groups-header {
+  padding: 5px;
+  background-color: #f3f3f3;
+  font-weight: bold;
+  border-bottom: 1px solid #b8b8b8; }
+
+/* line 268, ../sass/_credit-pc.scss */
+.groups-list {
+  padding: 0;
+  margin: 0; }
+
+/* line 272, ../sass/_credit-pc.scss */
+.groups-list li {
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  list-style: none; }
+
+/* line 278, ../sass/_credit-pc.scss */
+.groups-list li:hover {
+  background-color: #e7e7e7;
+  color: #0081c2; }
+
+/* line 282, ../sass/_credit-pc.scss */
+.groups-list .choice, .groups-list .choice:hover {
+  background-color: #0081c2;
+  color: #fff; }
+
+/*设置地址详情box*/
+/* line 288, ../sass/_credit-pc.scss */
+.address-textBox {
+  width: 30% !important;
+  min-width: 250px !important; }
+
+/*设置日期控件最小宽度*/
+/* line 293, ../sass/_credit-pc.scss */
+.dateText-min {
+  width: 110px !important; }
+
+/*设置弹框最小宽度*/
+/* line 297, ../sass/_credit-pc.scss */
+.dialog-min-width {
+  min-width: 300px; }
+
+/*签约文件复核*/
+/* line 302, ../sass/_credit-pc.scss */
+.signed_file_review_container {
+  width: 290px;
+  border: none !important; }
+
+/* line 306, ../sass/_credit-pc.scss */
+.signed-file-review-dijit-tab .dijitTabController {
+  min-height: 600px; }
+
+/* line 309, ../sass/_credit-pc.scss */
+.signed-file-review-dijit-tab .dijitTabListWrapper {
+  width: 150px !important; }
+
+/* line 312, ../sass/_credit-pc.scss */
+.signed-file-review-dijit-tab .dijitTabPaneWrapper {
+  min-height: inherit !important; }
+
+/* line 315, ../sass/_credit-pc.scss */
+.signed-file-review-dijit-tab .dijitTabController {
+  width: 150px !important; }
+
+/*自定义强制dgrid换行*/
+/* line 322, ../sass/_credit-pc.scss */
+.custom-dgrid-wrap .dgrid-scroller {
+  overflow-x: inherit;
+  overflow-y: inherit !important; }
+
+/* line 326, ../sass/_credit-pc.scss */
+.custom-dgrid-wrap .dgrid-scroller .dgrid-content .dgrid-cell {
+  overflow: inherit;
+  word-break: break-all;
+  word-wrap: break-word;
+  position: relative;
+  white-space: inherit !important; }
+
+/* line 334, ../sass/_credit-pc.scss */
+.space-wrap {
+  white-space: pre-wrap !important; }
+
+/*列表中文字增加下划线显示点击效果*/
+/* line 337, ../sass/_credit-pc.scss */
+.anchor_simulate, #review_apply_grid .field-history[role='gridcell'], #review_grid .field-dealwith_task[role='gridcell'], #call_center_list_div .field-visitTime[role='gridcell'], #call_center_list_div .field-signedMaterial[role='gridcell'], .dgrid-cell.field-fallbackCode[role='gridcell'], .dgrid-cell.field-handle[role='gridcell'], #call_center_list .field-visitTime[role='gridcell'], #call_center_list .field-signedMaterial[role='gridcell'], #call_center_list .field-operateType[role='gridcell'] {
+  color: #337ab7;
+  text-decoration: underline;
+  cursor: pointer; }
+
+/*影像区域*/
+/* line 343, ../sass/_credit-pc.scss */
+.heading {
+  margin-top: 1em;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 5px; }
+
+/* line 350, ../sass/_credit-pc.scss */
+.footing {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #ededed;
+  overflow: hidden; }
+
+/* line 358, ../sass/_credit-pc.scss */
+.footing img {
+  border: none; }
+
+/* line 359, ../sass/_credit-pc.scss */
+.footing ul {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  list-style-type: none; }
+
+/* line 368, ../sass/_credit-pc.scss */
+.loan-img-container {
+  overflow: scroll;
+  width: 98%;
+  height: 88%; }
+
+/* line 373, ../sass/_credit-pc.scss */
+.loan_assessment_container {
+  height: 100% !important;
+  overflow: inherit !important; }
+
+/*影像区域图片列表*/
+/* line 378, ../sass/_credit-pc.scss */
+.picker li {
+  float: left;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px; }
+
+/*电话审核*/
+/* line 392, ../sass/_credit-pc.scss */
+.trial-note-dialog {
+  width: 900px; }
+
+/*页面tab默认最小高度*/
+/* line 396, ../sass/_credit-pc.scss */
+.direct-tab-containe {
+  min-height: 560px; }
+
+/*影像区域 大图*/
+/* line 400, ../sass/_credit-pc.scss */
+.preview_container {
+  padding-right: 5px;
+  display: inline-block; }
+
+/* line 402, ../sass/_credit-pc.scss */
+.sub-items-rule .treeSelectorWidget .dijitTextBox {
+  width: 130px; }
+/* line 405, ../sass/_credit-pc.scss */
+.sub-items-rule .select-width {
+  width: 110px !important; }
+
+/* line 411, ../sass/_credit-pc.scss */
+.treeSelectorWidget-maxWidth #tree_container_dijit__WidgetsInTemplateMixin_0 {
+  max-width: 200px; }
+
+/* line 415, ../sass/_credit-pc.scss */
+.image-review-list li {
+  width: 190px;
+  float: left;
+  list-style: none; }
+
+/* line 422, ../sass/_credit-pc.scss */
+.image-review-list li label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  top: 10px; }
+
+/* line 433, ../sass/_credit-pc.scss */
+.icon-switch {
+  height: 25px;
+  width: 55px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #CCCCCC;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-style: inherit;
+  line-height: 25px;
+  color: #7c7c7c;
+  text-align: left;
+  box-sizing: border-box; }
+
+/* line 451, ../sass/_credit-pc.scss */
+.icon-switch .ico-text {
+  z-index: 4;
+  left: 24px;
+  position: absolute; }
+
+/* line 456, ../sass/_credit-pc.scss */
+.icon-switch::before {
+  content: "";
+  height: 25px;
+  width: 55px;
+  position: absolute;
+  left: -55px;
+  background-color: #099FDE;
+  border-radius: 14px;
+  -webkit-transition: left 0.2s ease 0s;
+  transition: left 0.2s ease 0s;
+  z-index: 2; }
+
+/* line 468, ../sass/_credit-pc.scss */
+.icon-switch::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 14px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  -webkit-transition: left 0.2s ease 0s;
+  transition: left 0.2s ease 0s;
+  z-index: 3; }
+
+/* line 481, ../sass/_credit-pc.scss */
+.icon-switch.active::before {
+  left: 0; }
+
+/* line 484, ../sass/_credit-pc.scss */
+.icon-switch.active::after {
+  left: 33px; }
+
+/* line 487, ../sass/_credit-pc.scss */
+.icon-switch.active .ico-text {
+  left: 6px;
+  color: #fff; }
+
+/* line 492, ../sass/_credit-pc.scss */
+.icon-arrow {
+  display: inline-block;
+  width: 30px;
+  height: 100%;
+  position: relative;
+  cursor: pointer; }
+
+/*开启关闭图标*/
+/* line 501, ../sass/_credit-pc.scss */
+.left-container .dojoxExpandoWrapper .dojoxExpandoContent {
+  overflow: auto; }
+
+/*当屏幕过小时对input的长度进行更改，保证页面不错乱*/
+@media only screen and (min-width: 1px) and (max-width: 1300px) {
+  /* line 507, ../sass/_credit-pc.scss */
+  .dijitTextBox:not(.dijitTextArea) {
+    width: 150px; }
+
+  /* line 510, ../sass/_credit-pc.scss */
+  .dijitDateTextBox {
+    width: 110px !important; }
+
+  /* line 513, ../sass/_credit-pc.scss */
+  .dgrid-row-table .treeSelectorWidget .dijitTextBox {
+    width: 90px !important; }
+
+  /* line 516, ../sass/_credit-pc.scss */
+  .dgrid-row-table .treeSelectorWidget .dijitTextBox {
+    width: 90% !important; }
+
+  /* line 519, ../sass/_credit-pc.scss */
+  .treeSelectorWidget .dijitTextBox {
+    width: 130px; }
+
+  /* line 522, ../sass/_credit-pc.scss */
+  .treeSelectorWidget .dijitTree, .trial-note-reason .dijitTree {
+    width: 150px; }
+
+  /* line 525, ../sass/_credit-pc.scss */
+  .dijitTree {
+    overflow: initial !important; }
+
+  /* line 528, ../sass/_credit-pc.scss */
+  .select-width {
+    width: 130px; } }
+/*树多选样式*/
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+  /* line 535, ../sass/_credit-pc.scss */
+  .dijitSelect, .dgrid-row-table .treeSelectorWidget .dijitTextBox {
+    width: 100px !important; }
+
+  /* line 538, ../sass/_credit-pc.scss */
+  .dgrid-row-table .treeSelectorWidget .dijitTextBox {
+    width: 90% !important; }
+
+  /* line 541, ../sass/_credit-pc.scss */
+  .treeSelectorWidget .dijitTree, .trial-note-reason .dijitTree {
+    width: 150px; }
+
+  /* line 544, ../sass/_credit-pc.scss */
+  .dijitTree {
+    overflow: initial !important; } }
+/*打印界面*/
+/* line 550, ../sass/_credit-pc.scss */
+.print_contract {
+  padding: 20px; }
+
+/* line 553, ../sass/_credit-pc.scss */
+.print_contract p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 20px; }
+
+/* line 558, ../sass/_credit-pc.scss */
+.print_contract h3 {
+  font-weight: bold; }
+
+/*img container*/
+/* line 563, ../sass/_credit-pc.scss */
+#mainContainer {
+  position: relative; }
+
+/* style the image */
+/* line 568, ../sass/_credit-pc.scss */
+#me {
+  width: 400px;
+  height: 300px; }
+
+/* line 573, ../sass/_credit-pc.scss */
+.menu {
+  color: #766;
+  width: 600px;
+  margin: 100px auto 0 auto;
+  padding: 0;
+  font: 28px sans;
+  position: relative; }
+
+/* line 581, ../sass/_credit-pc.scss */
+.menu div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: white;
+  border: 4px solid #ccc;
+  line-height: 150px;
+  cursor: pointer; }
+
+/* part of the widget: drag handle styles.Hide it temporatiry */
+/* line 592, ../sass/_credit-pc.scss */
+.imageDragger {
+  /* required: */
+  position: absolute;
+  /* optional: */
+  cursor: move;
+  z-index: 6;
+  background: #fff;
+  display: none;
+  /*  border:1px solid #000; */ }
+
+/*问题库*/
+/* line 604, ../sass/_credit-pc.scss */
+.question-container {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #efefef; }
+
+/* line 608, ../sass/_credit-pc.scss */
+#question_answer_grid .dgrid-row-expanded {
+  background: #D6D9D8; }
+
+/* line 611, ../sass/_credit-pc.scss */
+.prompt-log {
+  position: absolute;
+  bottom: 0;
+  min-width: 30%;
+  left: 0;
+  font-size: 12px;
+  padding: 1px 10px;
+  background: #f2f2f2;
+  border-top: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  border-radius: 0 3px 0 0;
+  z-index: 1000; }
+
+/* line 622, ../sass/_credit-pc.scss */
+.btn-percentage-100, .btn-percentage-100 .dijitButtonNode, .btn-percentage-100 .dijitButtonContents {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 628, ../sass/_credit-pc.scss */
+.btn-blue .dijitButtonNode {
+  background-color: #5bc0de !important;
+  border-color: #46b8da !important; }
+
+/* line 632, ../sass/_credit-pc.scss */
+.btn-blue .dijitButtonNode:hover {
+  background-color: #4fb6d5 !important;
+  border-color: #39abcd !important; }
+
+/*pages style*/
+/* line 2, ../sass/pages/index.scss */
+.header-container {
+  height: 60px;
+  background-color: #0ca3d2;
+  background-image: -webkit-linear-gradient(top, #0ca3d2, #0891bc);
+  background-image: -moz-linear-gradient(top, #0ca3d2, #0891bc);
+  background-image: -o-linear-gradient(top, #0ca3d2, #0891bc);
+  background-image: linear-gradient(to bottom, #0ca3d2, #0891bc);
+  box-shadow: 0px 5px 10px #ccc;
+  position: relative;
+  margin: -5px 0px 0px -5px;
+  overflow: hidden; }
+  /* line 14, ../sass/pages/index.scss */
+  .header-container .header-logo {
+    width: 250px;
+    font-size: 26px;
+    color: #fff;
+    float: left;
+    animation: keyframes-logo 1s ease-in-out 1 forwards; }
+  /* line 21, ../sass/pages/index.scss */
+  .header-container .iconfont {
+    font-size: 28px; }
+  /* line 25, ../sass/pages/index.scss */
+  .header-container .header-menu {
+    top: 20px !important; }
+  /* line 29, ../sass/pages/index.scss */
+  .header-container .dijitToolbar {
+    right: 0;
+    left: inherit !important;
+    text-align: right;
+    background: none !important;
+    color: #fff;
+    border: none !important;
+    float: right; }
+    /* line 40, ../sass/pages/index.scss */
+    .header-container .dijitToolbar .dijitButtonContents {
+      color: #fff; }
+
+@keyframes keyframes-logo {
+  from {
+    -webkit-transform: skew(0deg);
+    margin-left: -250px; }
+  40% {
+    -webkit-transform: skew(70deg); }
+  70% {
+    -webkit-transform: skew(30deg);
+    margin-left: 30px; }
+  80% {
+    -webkit-transform: skew(20deg);
+    margin-left: 30px; }
+  to {
+    -webkit-transform: skew(0deg);
+    margin-left: 10px; } }
+/* line 67, ../sass/pages/index.scss */
+.right-container {
+  top: 60px !important; }
+
+/* line 70, ../sass/pages/index.scss */
+.left-container {
+  top: 60px !important;
+  left: 0 !important; }
+  /* line 73, ../sass/pages/index.scss */
+  .left-container .dojoxExpandoTitle {
+    background-color: #f2f2f5   !important;
+    border: 1px solid #f2f2f5   !important;
+    border-right: 1px solid #b9bcc8 !important;
+    border-bottom: 1px solid #b9bcc8 !important;
+    color: #666666 !important;
+    background-image: none !important; }
+  /* line 81, ../sass/pages/index.scss */
+  .left-container .dijitTree {
+    border-right: 1px solid #b9bcc8 !important; }
+  /* line 84, ../sass/pages/index.scss */
+  .left-container .dojoxExpandoContent {
+    background-color: #E0E0E3   !important; }
+    /* line 86, ../sass/pages/index.scss */
+    .left-container .dojoxExpandoContent .dijitTreeContent {
+      text-shadow: 0 1px 0 #fff; }
+  /* line 90, ../sass/pages/index.scss */
+  .left-container .dijitTreeContainer {
+    margin-bottom: 20px; }
+
+/* line 95, ../sass/pages/index.scss */
+.left-container .dojoxExpandoIcon {
+  background: url("../img/arrow-orange.png");
+  width: 20px;
+  height: 20px;
+  margin-top: -3px !important; }
+/* line 102, ../sass/pages/index.scss */
+.left-container .dojoxExpandoIconLeft {
+  background-position: 0 0;
+  margin-right: 1px; }
+
+/* line 108, ../sass/pages/index.scss */
+.dojoxExpandoClosed .dojoxExpandoIconLeft {
+  animation: keyframes-IconLeft 0.3s ease-in-out;
+  background-position: 0 -20px; }
+
+@keyframes keyframes-IconLeft {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes keyframes—bubble {
+  from {
+    -webkit-transform: scale(0.8); }
+  to {
+    -webkit-transform: scale(1); } }
+/* line 2, ../sass/pages/login.scss */
+#pc-login {
+  /*login 背景图*/ }
+  /* line 4, ../sass/pages/login.scss */
+  #pc-login .login-back {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: #0ca3d2;
+    background-color: rgba(12, 163, 210, 0.7); }
+
+/*login*/
+/* line 15, ../sass/pages/login.scss */
+.claro .login-dialog {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important; }
+  /* line 25, ../sass/pages/login.scss */
+  .claro .login-dialog .dijitDialogTitleBar {
+    display: none; }
+  /* line 28, ../sass/pages/login.scss */
+  .claro .login-dialog .dijitDialogPaneContent {
+    background: none !important;
+    border-top: none !important;
+    padding: inherit !important;
+    position: inherit !important;
+    left: inherit !important;
+    top: inherit !important;
+    position: inherit !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: inherit !important; }
+
+/* line 42, ../sass/pages/login.scss */
+.login-container {
+  width: 640px;
+  height: 250px;
+  margin-top: -125px;
+  margin-left: -320px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 5; }
+
+/* line 53, ../sass/pages/login.scss */
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  width: 310px;
+  background: white; }
+
+/* line 61, ../sass/pages/login.scss */
+.login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px; }
+
+/* line 73, ../sass/pages/login.scss */
+.login h1 {
+  position: absolute;
+  margin: -40px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf; }
+
+/* line 84, ../sass/pages/login.scss */
+.login .form-row {
+  margin: 20px 0 0; }
+
+/* line 87, ../sass/pages/login.scss */
+.login .form-row:first-child {
+  margin-top: 0; }
+
+/* line 91, ../sass/pages/login.scss */
+.login .form-row.remember_me {
+  float: left;
+  line-height: 31px; }
+
+/* line 95, ../sass/pages/login.scss */
+.login .form-row.remember_me label {
+  font-size: 12px;
+  color: #777;
+  cursor: pointer; }
+
+/* line 100, ../sass/pages/login.scss */
+.login .form-row.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle; }
+
+/* line 106, ../sass/pages/login.scss */
+.login .form-row.submit {
+  text-align: right; }
+
+/* line 110, ../sass/pages/login.scss */
+:-moz-placeholder {
+  color: #c9c9c9 !important; }
+
+/* line 114, ../sass/pages/login.scss */
+::-webkit-input-placeholder {
+  color: #ccc; }
+
+/* line 118, ../sass/pages/login.scss */
+.login .form-row .dijitTextBox {
+  border: none;
+  padding: 0 !important;
+  color: #404040; }
+  /* line 122, ../sass/pages/login.scss */
+  .login .form-row .dijitTextBox .dijitInputInner {
+    padding: 0 10px !important;
+    background: white;
+    width: 285px !important;
+    line-height: 34px;
+    margin: 5px;
+    height: 34px;
+    border: 1px solid !important;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4 !important;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12); }
+  /* line 137, ../sass/pages/login.scss */
+  .login .form-row .dijitTextBox .dijitInputContainer {
+    overflow: inherit; }
+  /* line 140, ../sass/pages/login.scss */
+  .login .form-row .dijitTextBox .dijitPlaceHolder {
+    margin-left: 10px;
+    line-height: 45px;
+    color: #404040; }
+
+/* line 148, ../sass/pages/login.scss */
+.login .form-row .dijitTextBoxFocused .dijitInputContainer, .login .form-row .dijitTextBoxHover {
+  background: none; }
+
+/* line 153, ../sass/pages/login.scss */
+.login .form-row .dijitInputInner:focus {
+  border-color: #7dc9e2 !important;
+  outline-color: #dceefc;
+  outline-offset: 0; }
+
+/* line 160, ../sass/pages/login.scss */
+.login .dijitButton {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15); }
+  /* line 180, ../sass/pages/login.scss */
+  .login .dijitButton .dijitButtonNode {
+    background-color: inherit !important;
+    border-color: inherit !important;
+    color: inherit !important;
+    padding: inherit !important;
+    box-shadow: none !important;
+    border: none !important; }
+  /* line 188, ../sass/pages/login.scss */
+  .login .dijitButton .dijitButtonContents {
+    line-height: 28px; }
+
+/*z-index style*/
+/*sass/pc/page/index.scss */
+/* line 3, ../sass/_z-index.scss */
+.header-container {
+  z-index: 999; }
+
+/*sass/pc/_credit-pc.scss*/
+/* line 6, ../sass/_z-index.scss */
+.fieldset-legend {
+  z-index: 1; }
+
+/* line 7, ../sass/_z-index.scss */
+.img-operation {
+  z-index: 8; }
+
+/* line 8, ../sass/_z-index.scss */
+.trial-note-reason {
+  z-index: 100; }
+
+/* line 9, ../sass/_z-index.scss */
+.troubleshooting-container {
+  z-index: 2; }
+
+/* line 10, ../sass/_z-index.scss */
+.phone_check_navMenu {
+  z-index: 100; }
+
+/* line 11, ../sass/_z-index.scss */
+.img-callbacks {
+  z-index: 3; }
+
+/* line 12, ../sass/_z-index.scss */
+.mask-layer {
+  z-index: 101; }

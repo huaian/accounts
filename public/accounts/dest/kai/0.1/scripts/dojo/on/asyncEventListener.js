@@ -1,0 +1,1 @@
+define("dojo/on/asyncEventListener",["../on","../_base/window","../dom-construct","../domReady!"],function(n,c,o){function t(n){var c,o={};for(c in n)o[c]=n[c];return o}var i,e,r=o.create("div",null,c.body());n.once(r,"click",function(n){i=n}),r.click();try{e=void 0===i.clientX}catch(d){e=!0}finally{o.destroy(r)}return function(n){return e?function(c){n.call(this,t(c))}:n}});

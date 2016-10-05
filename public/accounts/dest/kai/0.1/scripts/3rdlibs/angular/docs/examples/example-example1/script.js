@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example1/script",["dojo","dijit","dojox"],function(o,n,t){!function(o){"use strict";o.module("locationExample",[]).controller("LocationController",["$scope","$location",function(o,n){o.locationPath=function(o){return n.path(o)}}])}(window.angular)});

@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/components/marked-0.3.5/index",["dojo","dijit","dojox"],function(d,e,o){module.exports=require("./lib/marked")});

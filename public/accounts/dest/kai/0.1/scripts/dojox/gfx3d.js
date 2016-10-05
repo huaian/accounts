@@ -1,0 +1,1 @@
+define("dojox/gfx3d",["dojo/_base/kernel","dojox","./gfx3d/matrix","./gfx3d/_base","./gfx3d/object"],function(d,e){return d.getObject("gfx3d",!0,e),e.gfx3d});

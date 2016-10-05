@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*常见问题*/
+.questionTitle{ font-size:rem-calc(30px); color:$main-color; padding-bottom:rem-calc(20px);}
+.questionCon ul{ border:solid 1px #EEE; border-bottom:0;}
+.questionCon ul li{ bottom-bottom:solid 1px #FFF;}
+.questionCon ul li h2{ height:rem-calc(70px); line-height:rem-calc(70px)  ; font-size:rem-calc(30px); padding-left:25px; font-weight:400;color:#666;background-size:rem-calc(50px) rem-calc(560px); border-bottom:solid 1px #EEE;}
+.questionCon ul li h2.cur{color:#FFF;background:$main-color ; background-size:rem-calc(50px) rem-calc(560px);border-bottom:solid 1px $main-color; }
+.questionCon dl{padding:rem-calc(25px); color:#666;border-bottom:solid rem-calc(1px) #EEE; display:none;border-bottom:solid 1px #EEE;}
+.questionCon dl dt{font-size:rem-calc(28px); margin-bottom:rem-calc(10px);}
+.questionCon dl dd{font-size:rem-calc(28px); line-height:rem-calc(40px); padding-left:rem-calc(20px); background-size:rem-calc(8px) rem-calc(7px); margin-bottom:rem-calc(5px);}
+.questionCon dl.noDots dd{ background:none;}
+.question-icon-arrow{
+  font-size: rem-calc(40px);
+  @include  transition(all 300ms);
+  margin-right: rem-calc(20px);
+}
+.cur .question-icon-arrow{
+  transform:rotate(90deg);
+}

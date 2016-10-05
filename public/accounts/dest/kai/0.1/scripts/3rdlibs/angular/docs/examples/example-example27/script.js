@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example27/script",["dojo","dijit","dojox"],function(e,o,n){!function(e){"use strict";e.module("expressionExample",[]).controller("ExampleController",["$window","$scope",function(e,o){o.name="World",o.greet=function(){e.alert("Hello "+o.name)}}])}(window.angular)});

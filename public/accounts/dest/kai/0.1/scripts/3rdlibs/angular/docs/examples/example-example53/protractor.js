@@ -1,0 +1,1 @@
+define("3rdlibs/angular/docs/examples/example-example53/protractor",["dojo","dijit","dojox"],function(e,t,o){it("should auto compile",function(){var e=$("textarea"),t=$("div[compile]");expect(t.getText()).toBe("Hello Angular"),e.clear(),e.sendKeys("{{name}}!"),expect(t.getText()).toBe("Angular!")})});

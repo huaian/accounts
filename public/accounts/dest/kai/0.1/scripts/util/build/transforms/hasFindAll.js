@@ -1,0 +1,1 @@
+define("util/build/transforms/hasFindAll",["../buildControl"],function(r){return function(e){if(e.hasTest)return 0;for(var s,t=r.hasFeatures=r.hasFeatures||{},n=e.text,u=/[^\w\.]has\s*\(\s*["']([^"']+)["']\s*\)/g;null!=(s=u.exec(n));){var a=s[1],i=t[a]=t[a]||{};i[e.mid]=1}return 0}});

@@ -1,0 +1,1 @@
+define("dojo/dnd/Target",["../_base/declare","../dom-class","./Source"],function(o,e,d){return o("dojo.dnd.Target",d,{constructor:function(){this.isSource=!1,e.remove(this.node,"dojoDndSource")}})});

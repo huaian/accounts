@@ -1,0 +1,35 @@
+<div data-dojo-attach-point="containerNode">
+  <div style="position:absolute; top:0; left:0; width:200px; height:100px; z-index:99999; background-color:#FFF; display:none;" id="webRtcDiv"></div>
+  <div style="position:absolute;left:8px;top:8px;"><!--height:100%;-->
+    <table border="0" cellspacing="0" cellpadding="0" style="margin:0;">
+      <tr>
+        <td align="center"><span style="background:url('${baseUrl}pc/res/img/tiNet/tb1.png') no-repeat; width:24px; height:24px; display:block;" id="statusImg"></span><span id="cnoTime"></span></td>
+        <td align="center" id="status" width="40" style="text-align:left;padding-left:2px;">离线</td>
+        <td align="left" id="toolbarButton">
+          <input placeholder="暂停" type="button" id="pause" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_zm.png') no-repeat;display:none;" />
+          <input type="button" id="online" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_zx.png') no-repeat;display:none;" />
+          <!--                <input type="button" class="split"/>-->
+          <input type="button" id="answer" value="" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_link.png') no-repeat;display:none;" />
+          <input type="button" id="unLink" value="" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_gd.png') no-repeat;display:none;" />
+          <input type="button" id="refused" value="" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_jj.png') no-repeat;display:none;" />
+          <input type="button" id="hold" value="" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_bc.png') no-repeat;display:none;" />
+          <input type="button" id="unHold" value="" style="border:none;width:80px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_bcjh.png') no-repeat;display:none;" />
+          <input type="button" id="consult" value="" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_zixun.png') no-repeat;display:none;" />
+          <input type="button" id="consultBack" value="" style="border:none;width:80px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_zixunjh.png') no-repeat;display:none;" />
+          <input type="button" id="consultTransfer" value="" style="border:none;width:80px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_zixunzj.png') no-repeat;display:none;" />
+          <input type="button" id="consultThreeway" value="" style="border:none;width:80px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_zixunsf.png') no-repeat; display:none;" />
+          <input type="button" id="transfer" value="" style="border:none;width:57px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_zy.png') no-repeat;display:none;" />
+          <input type="button" id="investigation" value="" style="border:none;width:95px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_myddc.png') no-repeat;display:none;" />
+          <!--                <input type="button" class="split"/>-->
+          <input type="text" id="phoneCallText" value="" maxlength="60" style="display:inline-block;width:180px;height:28px;line-height:28px;font-family:verdana;border:solid 1px #ddd;vertical-align:top;margin-top:2px;display:none;" />
+          <input type="button" id="phoneCallout" value="" style="border:none;width:80px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_wh.png') no-repeat;display:none;" />
+          <input type="button" id="phoneCallCancel" value="" style="border:none;width:80px;height:33px;background:url('${baseUrl}pc/res/img/tiNet/toobarBtn_whqx.png') no-repeat;display:none;" />
+          <select id="consultInput" style="display:none;">
+            <option value="0">普通电话</option>
+            <option value="1">座席号</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+define("kaiView/pc/data/login",["dojo","dijit","dojox"],function(i,o,d){});

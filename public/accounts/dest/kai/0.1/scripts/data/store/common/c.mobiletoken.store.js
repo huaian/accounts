@@ -1,0 +1,1 @@
+define("data/store/common/c.mobiletoken.store",["common/c.class.inherit","data/store/c.local.store"],function(t,e){var o=new t.Class(e,{__propertys__:function(){this.key="PAUTH",this.lifeTime="30M"},set:function($super,t){_.isFunction($super)&&$super(t)}});return o});
