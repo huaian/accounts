@@ -89,7 +89,7 @@
 		baseUrl:(function(){
 			if(location.pathname.indexOf('app') >= 0){
 				//return '../../';//得到绝对路径，main.js根据该路径来定义
-				kaiPrefx = '../../../../';
+				kaiPrefx = '../../../../';//NOTE 设置kai的路径
 				return '../';//
 			}else{
 				appPrefx = './app/';
