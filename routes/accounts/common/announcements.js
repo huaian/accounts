@@ -16,7 +16,7 @@ Code = require('mongodb').Code,
 //BSON = require('mongodb').pure().BSON,
 assert = require('assert');
 var crypto = require('crypto');
-var mongoConnect = require('../mongoConnect');
+var mongoConnect = require('../../../utils/mongoConnect');
 //dict data
 //var db = new Db('accounts', new Server('localhost', 27017));
 var url = 'mongodb://localhost:27017/accounts';

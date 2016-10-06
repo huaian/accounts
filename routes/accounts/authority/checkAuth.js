@@ -16,7 +16,7 @@ Code = require('mongodb').Code,
 //BSON = require('mongodb').pure().BSON,
 assert = require('assert');
 var db = new Db('accounts', new Server('localhost', 27017));
-var mongoConnect = require('../mongoConnect');
+var mongoConnect = require('../../../utils/mongoConnect');
 //注册
 router.all('*',function(req, res, next){
   console.log(req.method);

@@ -6,6 +6,11 @@ define([
   "dojo/_base/lang",
   'cutil/c.util.common',
   'cutil/c.util.validate',
+  "dojox/charting/Chart",
+  "dojox/charting/plot2d/Pie",
+  "dojox/charting/action2d/Tooltip",
+  "dojox/charting/themes/Tom",
+  "dojox/charting/widget/Legend"
 ],
 function (
   restStores,
@@ -38,15 +43,38 @@ function (
           var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
           => 6
           */
-          self.viewData.sumExpenses = _.reduce(_.pluck(resp.body.expenses,'total'),function(memo,num){
+          self.viewData.statisticsData = resp.body;
+          self.viewData.sumExpenses = _.reduce(_.pluck(resp.body.expenses,'y'),function(memo,num){
             return memo + num;
           },0);
-          self.viewData.sumIncomes = _.reduce(_.pluck(resp.body.incomes,'total'),function(memo,num){
+          self.viewData.sumIncomes = _.reduce(_.pluck(resp.body.incomes,'y'),function(memo,num){
             return memo + num;
           },0);
           if(self.vm){
             self.vm.$set('sumExpenses',self.viewData.sumExpenses);
             self.vm.$set('sumIncomes',self.viewData.sumIncomes);
+          }
+          if(!self.expensePieChart){
+            //显示收入
+            self.model.trigger('renderChart',{
+              pieChartName:'incomePieChart',
+              legendId:'incomeLegend',
+              chartId:'incomePieChart',
+              chartData:self.viewData.statisticsData.incomes,
+              seriesName:'Series Income',
+              legendName:'incomeLegend '
+            });
+            //显示消费
+            self.model.trigger('renderChart',{
+              pieChartName:'expensePieChart',
+              legendId:'expenseLegend',
+              chartId:'expensePieChart',
+              chartData:self.viewData.statisticsData.expenses,
+              seriesName:'Series Expense',
+              legendName:'expenseLegend '
+            });
+          }else{
+            self.model.trigger('refreshChart');
           }
         }else{
           self.showResponseError(resp);
@@ -66,6 +94,44 @@ function (
           self.model.trigger('fetchData',postData);
         }
       }
+    },
+
+    /**
+    @description legendId chartId chartData seriesName legendName pieChartName
+    */
+    renderChart:function(opts){
+      var self = this;
+      var dc = dojox.charting;
+      //var pieChart = null;
+      //var legend = null;
+      self[opts.pieChartName] = new dc.Chart(opts.chartId);
+      self[opts.pieChartName].setTheme(dc.themes.Tom).addPlot("default", {
+        type: "Pie",
+        font: "normal normal 10pt Tahoma",
+        fontColor: "#ccc",
+        labelWiring: "#ccc",
+        radius: 65,
+        labelStyle: "columns",
+        htmlLabels: true,
+        startAngle: -10
+      }).addSeries(opts.seriesName, opts.chartData);
+      var anim_c = new dc.action2d.Tooltip(self[opts.pieChartName], "default");
+      self[opts.pieChartName].render();
+      self[opts.legendName] = new dojox.charting.widget.Legend({
+        chart: self[opts.pieChartName],
+        horizontal:false
+      }, opts.legendId + self.viewContextPostfix);
+    },
+
+    //更新数据显示
+    refreshChart:function(){
+      var self = this;
+      self.expensePieChart.updateSeries("Series Expense", self.viewData.statisticsData.expenses);
+      self.incomePieChart.updateSeries("Series Income", self.viewData.statisticsData.incomes);
+      self.expensePieChart.render();
+      self.incomePieChart.render();
+      self['incomeLegend' + self.viewContextPostfix].refresh();
+      self['expenseLegend' + self.viewContextPostfix].refresh();
     }
   };
   return viewUtils;

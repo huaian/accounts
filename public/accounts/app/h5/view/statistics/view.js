@@ -7,6 +7,11 @@ define([
   './events/events',
   //'dataHelper/login',//TBD
   'cutil/c.util.validate',
+  "dojox/charting/Chart",
+  "dojox/charting/plot2d/Pie",
+  "dojox/charting/action2d/Tooltip",
+  "dojox/charting/themes/Tom",
+  "dojox/charting/widget/Legend"
 ],
 function (
   restStores,
@@ -41,69 +46,68 @@ function (
 
     onShow: function () {//在再显示时候调用 在 create之后调用
       var self = this;
-    },
+  },
 
-    onHide: function () {//view is hidden
-      var self = this;
-    },
+  onHide: function () {//view is hidden
+    var self = this;
+  },
 
-    init: function () {
-      var self = this;
-    },
+  init: function () {
+    var self = this;
+  },
 
-    prepareViewData: function () {
-      var self = this;
-      if(self.viewName.indexOf('statistics_search') >= 0){
+  prepareViewData: function () {
+    var self = this;
+    if(self.viewName.indexOf('statistics_search') >= 0){
+    }else{
+      self.model.trigger('fetchData');
+    }
+    self.turnOn();
+  },
 
-      }else{
-        self.model.trigger('fetchData');
-      }
-      self.turnOn();
-    },
+  /*prepare events*/
+  prepareEvents: function () {
+    var self = this;
+    self.event = Events;
+  },
 
-    /*prepare events*/
-    prepareEvents: function () {
-      var self = this;
-      self.event = Events;
-    },
+  prepareViewUtils:function(){
+    var self = this;
+    self.viewUtils = _.extend(viewUtils,indexViewUtils);
+  },
 
-    prepareViewUtils:function(){
-      var self = this;
-      self.viewUtils = _.extend(viewUtils,indexViewUtils);
-    },
+  prepareDataHelper:function(){
+    var self = this;
+    //self.dataHelper = dataHelper;//TBD
+  },
 
-    prepareDataHelper:function(){
-      var self = this;
-      //self.dataHelper = dataHelper;//TBD
-    },
+  afterShow:function(){
+    var self = this;
+    self.hideLoading();
+  },
 
-    afterShow:function(){
-      var self = this;
-      self.hideLoading();
-    },
-
-    getVueInitParams:function(){
-      var self = this;
-      return {
-        data: {
-          formData: self.memoryStore.getAttr('memory.formData') || {},//表单数据
-          sumIncomes:self.viewData.sumIncomes || '',
-          sumExpenses:self.viewData.sumExpenses || '',
-          //_viewName:self.viewName
+  getVueInitParams:function(){
+    var self = this;
+    return {
+      data: {
+        formData: self.memoryStore.getAttr('memory.formData') || {},//表单数据
+        sumIncomes:self.viewData.sumIncomes || '',
+        sumExpenses:self.viewData.sumExpenses || '',
+        //_viewName:self.viewName
+      },
+      methods: {
+        search:function(){
+          self.model.trigger('search');//前往客户详情页面
         },
-        methods: {
-          search:function(){
-            self.model.trigger('search');//前往客户详情页面
-          },
-          goBack:function(accountId,event){
-            self.model.trigger('goBack',accountId);//前往客户详情页面
-          },
-          goCustomerDetail:function(taskItem,event){
-            self.model.trigger('goCustomerDetail',taskItem,event);
-          }
+        goBack:function(accountId,event){
+          self.model.trigger('goBack',accountId);//前往客户详情页面
+        },
+        goCustomerDetail:function(taskItem,event){
+          self.model.trigger('goCustomerDetail',taskItem,event);
         }
-      };
-    },
-  });
-  return View;
+      }
+    };
+  },
+});
+return View;
 });

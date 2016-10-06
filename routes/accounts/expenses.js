@@ -23,7 +23,7 @@ var ObjectID = require('mongodb').ObjectID;
 //dict data
 //var db = new Db('accounts', new Server('localhost', 27017));
 var url = 'mongodb://localhost:27017/accounts';
-var mongoConnect = require('./mongoConnect');
+var mongoConnect = require('../../utils/mongoConnect');
 //ADD
 router.post('/',function(req, res, next){
   if (!req.user || !req.user.userName) {

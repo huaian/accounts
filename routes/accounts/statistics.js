@@ -23,7 +23,8 @@ assert = require('assert');
 var crypto = require('crypto');
 var ObjectID = require('mongodb').ObjectID;
 //dict data
-var mongoConnect = require('./mongoConnect');
+var mongoConnect = require('../../utils/mongoConnect');
+var dictUtil = require('../../utils/dict');//
 var http = require('http');
 var URL = require('url');
 /*
@@ -59,7 +60,16 @@ router.get('/',function(req, res, next){
     console.log('collection');
     var incomesCursor = collection.aggregate(
       [
-        {$match:{
+        {
+          $project:{
+            date:1,
+            amount:1,
+            userName:1,
+            type:1
+          }
+        },
+        {
+          $match:{
           userName:req.user.userName,
           date:{
             '$gt':_.isString(startDate)?new Date(startDate):currentMonth,
@@ -67,46 +77,97 @@ router.get('/',function(req, res, next){
           }
         }
       },
-      {$group:{
-        _id:"$type",
-        total:{$sum:"$amount"}
+      {
+        $group:{
+          _id:"$type",
+          y:{$sum:"$amount"},
+        }
+      },
+      {
+        $project:{
+          type:"$_id",
+          y: "$y",
+          text: "$_id",
+          tooltip: "$y"
+        }
       }
-    }
-  ]
-);
+    ]
+  );
 incomesCursor.toArray().then(function(items){
     console.log(items);
     statistics.incomes = items;
     console.log(statistics.incomes);
     var collection = db.collection('expenses');//expenses
+    /**
+    {
+      y: 1.48,
+      text: "Russian",
+      tooltip: "148 million"
+    }
+    */
     var expensesCursor = collection.aggregate(
       [
-        {$match:{
-          userName:req.user.userName,
-          date:{
-            '$gt':_.isString(startDate)?new Date(startDate):currentMonth,
-            '$lt':_.isString(endDate)?new Date(endDate):nextMonth
+        {
+          $project:{
+            date:1,
+            amount:1,
+            userName:1,
+            type:1
           }
-        }
-      },
-      {$group:{
-        _id:"$type",total:{$sum:"$amount"}}
-      }
+        },
+        {
+          $match:{
+            userName:req.user.userName,
+            date:{
+              '$gt':_.isString(startDate)?new Date(startDate):currentMonth,
+              '$lt':_.isString(endDate)?new Date(endDate):nextMonth
+            }
+          }
+        },
+        {
+          $group:
+          {
+            _id:"$type",
+            y:{
+              $sum:"$amount"
+            }
+          }
+        },
+        {
+          $project:{
+            type:"$_id",
+            y: "$y",
+            text: "$_id",
+            tooltip: "$y"
+          }
+        },
     ]
   );
   return expensesCursor.toArray();
 }).then(
   function(items) {
     statistics.expenses = items;
-    res.json(
-      {
-        "responseStatus":{
-          "code":"000000",//状态码，"000000"成功,其他为失败 4000004
-          "msg":"查询成功！",//描述
-        },
-        body:statistics
-      }
-    );
+    ///*
+    dictUtil.getDictData('income_types').then(function(dictItems){
+      _.each(statistics.incomes,function(item){
+        item.text = (_.findWhere(dictItems,{id:item.type}) || {}).name;//set desc attribute
+      });
+      dictUtil.getDictData('expense_types').then(function(dictItems){
+        _.each(statistics.expenses,function(item){
+          item.text = (_.findWhere(dictItems,{id:item.type}) || {}).name;//set desc attribute
+        });
+        res.json(
+          {
+            "responseStatus":{
+              "code":"000000",//状态码，"000000"成功,其他为失败 4000004
+              "msg":"查询成功！",//描述
+            },
+            body:statistics
+          }
+        );
+      });
+    });
+    //*/
   });
 });
 });

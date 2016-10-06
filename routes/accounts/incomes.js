@@ -23,7 +23,7 @@ var ObjectID = require('mongodb').ObjectID;
 //dict data
 //var db = new Db('accounts', new Server('localhost', 27017));
 var url = 'mongodb://localhost:27017/accounts';
-var mongoConnect = require('./mongoConnect');
+var mongoConnect = require('../../utils/mongoConnect');
 //ADD
 router.post('/',function(req, res, next){
   if (!req.user || !req.user.userName) {
@@ -94,14 +94,14 @@ router.get('/',function(req, res, next){
   console.log(req.body);
   console.log(req.user.userName);
   //db.open(function(err, db) {
-    MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, function(err, db) {
     var collection = db.collection('incomes');//incomes
     collection.find({userName:req.user.userName}).sort({'date':-1}).toArray(function(err,items){
       console.log(items);
       var collection = db.collection("dict_" + 'income_types');//查询收入字典表
       collection.find().toArray(function(err,dictItems){
         console.log(dictItems);
-        var collection = db.collection("dict_" + 'income_types');//查询收入字典表
+        //var collection = db.collection("dict_" + 'income_types');//查询收入字典表
         _.each(items,function(item){
           item.typeDesc = (_.findWhere(dictItems,{id:item.type}) || {}).name;//set desc attribute
         });
