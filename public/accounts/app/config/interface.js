@@ -27,6 +27,20 @@ define([
       trackerPostUrl:{
       }
     },
+    //product enviornment
+    {
+      host:'121.42.51.73:3000',
+      protocol:'http',
+      //domain:(function(){return location.host})(),
+      //domain: '10.2.130.145:3000',
+      domain: '121.42.51.73:3000',
+      path:'accounts',
+      preventAlert:true,
+      isDefault:true,
+      envCode:'PRODUCT',
+      trackerPostUrl:{
+      }
+    },
   ];
   return interfaceConfig;
 });
