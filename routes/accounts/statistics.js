@@ -72,8 +72,8 @@ router.get('/',function(req, res, next){
           $match:{
           userName:req.user.userName,
           date:{
-            '$gt':_.isString(startDate)?new Date(startDate):currentMonth,
-            '$lt':_.isString(endDate)?new Date(endDate):nextMonth
+            '$gte':_.isString(startDate)?new Date(startDate):currentMonth,
+            '$lte':_.isString(endDate)?new Date(endDate):nextMonth
           }
         }
       },
@@ -119,8 +119,8 @@ incomesCursor.toArray().then(function(items){
           $match:{
             userName:req.user.userName,
             date:{
-              '$gt':_.isString(startDate)?new Date(startDate):currentMonth,
-              '$lt':_.isString(endDate)?new Date(endDate):nextMonth
+              '$gte':_.isString(startDate)?new Date(startDate):currentMonth,
+              '$lte':_.isString(endDate)?new Date(endDate):nextMonth
             }
           }
         },
