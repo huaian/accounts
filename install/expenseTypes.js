@@ -17,5 +17,14 @@ Code = require('mongodb').Code,
 assert = require('assert');
 var crypto = require('crypto');
 var db = new Db('accounts', new Server('localhost', 27017));
-var expenseTypes = [{name:'饮食',id:'foods'},{name:'日用',id:'daily'},{name:'交际',id:'social'},{name:'交通',id:'traffic'},{name:'赡养',id:'alimony'},{name:'医疗',id:'medical'}];
+var expenseTypes = [
+  {name:'服装',id:'clothes'},
+  {name:'饮食',id:'foods'},
+  {name:'护肤化妆品',id:'skinCare'},
+  {name:'日用',id:'daily'},
+  {name:'交际',id:'social'},
+  {name:'交通',id:'traffic'},
+  {name:'赡养',id:'alimony'},
+  {name:'医疗',id:'medical'}
+];
 module.exports.expenseTypes = expenseTypes;
