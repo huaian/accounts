@@ -36,7 +36,7 @@ define([
       domain: '121.42.51.73:3000',
       path:'accounts',
       preventAlert:true,
-      isDefault:true,
+      isDefault:false,
       envCode:'PRODUCT',
       trackerPostUrl:{
       }

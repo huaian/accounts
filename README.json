@@ -37,3 +37,7 @@ or
 
 实用mongodb命令：
   db.users.find()
+
+
+//
+forever start ./bin/www 
