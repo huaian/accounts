@@ -21,20 +21,35 @@
 <section  v-if="viewName.indexOf('statistics_search') >= 0">
   <div class="weui-cells__title"></div>
   <div class="weui-cells weui-cells_form">
-    <div class="weui-cell">
-      <div class="weui-cell__hd"><label for="" class="weui-label">开始日期</label></div>
-      <div class="weui-cell__bd">
-        <input class="weui-input" type="date" value="" v-model="formData.startDate" >
+
+    <div class="weui-cell weui_cells_access">
+      <div class="weui-cell_hd"><label for="" class="weui-label">开始日期</label></div>
+      <div class="weui-cell_bd weui_cell_primary">
+        <div class="weui_cell weui_cells_access">
+          <input class="weui-input" type="date" value="" v-model="formData.startDate" >
+          <div class="weui_cell_ft">
+            <i class="weui_icon_warn weui_icon_warn_custom rigth-0 display-none"></i>
+            <i class="weui_icon_success_no_circle weui_icon_success_no_circle_custom display-none rigth-0"></i>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="weui-cell">
-      <div class="weui-cell__hd"><label for="" class="weui-label">结束日期</label></div>
-      <div class="weui-cell__bd">
-        <input class="weui-input" type="date" value="" placeholder="" v-model="formData.endDate" >
+
+    <div class="weui-cell weui_cells_access">
+      <div class="weui-cell_hd"><label for="" class="weui-label">结束日期</label></div>
+      <div class="weui-cell_bd weui_cell_primary">
+        <div class="weui_cell weui_cells_access">
+          <input class="weui-input" type="date" value="" placeholder="" v-model="formData.endDate" >
+          <div class="weui_cell_ft">
+            <i class="weui_icon_warn weui_icon_warn_custom rigth-0 display-none"></i>
+            <i class="weui_icon_success_no_circle weui_icon_success_no_circle_custom display-none rigth-0"></i>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="weui_btn_area">
-      <a class="weui_btn weui_btn_primary" href="javascript:" id="subscribe_borrow" v-on:click="search($event)">查询</a><!--将事件作为参数传递-->
+      <a class="weui_btn weui_btn_primary" href="javascript:" v-on:click="search($event)">查询</a><!--将事件作为参数传递-->
     </div>
   </div>
   <div class="weui_cells" style="margin-top:0px;">
