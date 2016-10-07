@@ -17,5 +17,10 @@ Code = require('mongodb').Code,
 assert = require('assert');
 var crypto = require('crypto');
 var db = new Db('accounts', new Server('localhost', 27017));
-var incomeTypes = [{name:'工资',id:'salary'},{name:'补贴',id:'allowance'},{name:'奖金',id:'reward'},{name:'理财',id:'financing'}];
+var incomeTypes = [
+  {name:'工资',id:'salary'},
+  {name:'补贴',id:'allowance'},
+  {name:'奖金',id:'reward'},
+  {name:'理财',id:'financing'}
+];
 module.exports.incomeTypes = incomeTypes;

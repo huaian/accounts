@@ -5,7 +5,7 @@
     </div>
     <div class="weui_cell_bd weui_cell_primary">
       <select class="weui_select {{formData.type?'':'kui_placeholder_sim font-small'}}" v-model="formData.type"  v-on:click="setCareerTypeSelectClicked">
-        <option :selected="!formData.source"  value=''>请选择来源</option>
+        <option :selected="!formData.type"  value=''>请选择来源</option>
         <option v-for="expenseTypeItem in dictData['dict_expense_types']" value="{{expenseTypeItem.id}}">{{expenseTypeItem.name}}</option>
       </select>
     </div>
