@@ -1,6 +1,6 @@
 /*
  页面名称：重审申请
- 作者：chenxiangyun01@chinatopcredit.com
+ 作者：chenxiangyun01@company.com
  */
  define([
    "dojo/on",
