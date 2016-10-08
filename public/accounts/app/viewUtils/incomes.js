@@ -53,8 +53,8 @@ function (
             id:self.getQueryObj().incomeid//更新操作
           }),{
             forcePost:false
-          }).then(function(res){//返回数据
-            if(self.isSucceedResponse(res) && lang.exists('body.content'),res){
+          }).then(function(resp){//返回数据
+            if(self.isSucceedResponse(resp) && lang.exists('body.content'),resp){
               self.showToast({
                 text:'保存成功',
                 callback:function(){
@@ -62,7 +62,7 @@ function (
                 }
               });
             }else{
-              self.showResponseError(res);
+              self.showResponseError(resp);
             }
           },function(){
             self.showResponseError(resp);
