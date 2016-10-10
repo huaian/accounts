@@ -23,12 +23,16 @@ var db = new Db('accounts', new Server('localhost', 27017));
 db.open(function(err, db) {
   // Fetch a collection to insert document into
   var collection = db.collection("dict_" + 'expense_types');//查询消费字典表
-  collection.remove();//清空之前的列表
-  collection.insertMany(expenseTypesDictData.expenseTypes,{w:1}).then(function(){//promise interface
-    var collection = db.collection("dict_" + 'income_types');//查询收入字典表
-    collection.remove();//清空之前的列表
-    collection.insertMany(incomeTypesDictData.incomeTypes,{w:1});
-  }).then(function(){
-    db.close();//关闭数据库链接
-  });
+  collection.remove().then(function(){
+    collection.insertMany(expenseTypesDictData.expenseTypes,{w:1}).then(function(){//promise interface
+      var collection = db.collection("dict_" + 'income_types');//查询收入字典表
+      collection.remove().then(function(){
+        console.log(incomeTypesDictData.incomeTypes);
+        collection.insertMany(incomeTypesDictData.incomeTypes,{w:1});
+      }).then(function(){
+        db.close();//关闭数据库链接
+      });//清空之前的列表
+    }).then(function(){
+    });
+  });//清空之前的列表
 });
