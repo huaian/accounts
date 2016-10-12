@@ -17,12 +17,3 @@ Code = require('mongodb').Code,
 assert = require('assert');
 var db = new Db('accounts', new Server('localhost', 27017));
 var crypto = require('crypto');
-function md5 (text) {
-  return crypto.createHash('md5').update(text).digest('hex');
-};
-//MD5加密
-var hashPassword = function(password){
-  return md5(password);
-};
-//注册
-module.exports.hashPassword = hashPassword;

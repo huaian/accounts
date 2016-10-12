@@ -16,6 +16,9 @@ Code = require('mongodb').Code,
 //BSON = require('mongodb').pure().BSON,
 assert = require('assert');
 var db = new Db('accounts', new Server('localhost', 27017));
+/**
+@description 存放session表
+*/
 var generateSsoToken = function(){
   var $timestamp = Date.now();
   var $randomStr = crypto.randomBytes(16).toString('hex');
