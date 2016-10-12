@@ -29,6 +29,6 @@ app.js define routes
 测试启动是否正常:
 5. ./mongo
 6. use credit_loan
-7. db.users.save({name:'002233',password:123456})
+7. db.users.save({name:'121212',password:123456})
 8. 27017
 9. db.users.find()
