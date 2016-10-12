@@ -22,13 +22,13 @@ app.js define routes
 1. cd bin
 2. mkdir -p data/db
 3. mkdir log/
-4. touch credit_loan
+4. touch dbName
 
 启动mongodb:
-4. ./mongod --dbpath=../data/db/ --logpath ../log/credit_loan --fork
+4. ./mongod --dbpath=../data/db/ --logpath ../log/dbName --fork
 测试启动是否正常:
 5. ./mongo
-6. use credit_loan
+6. use dbName
 7. db.users.save({name:'121212',password:123456})
 8. 27017
 9. db.users.find()
