@@ -14,7 +14,7 @@ BASEDIR=$(cd $(dirname $0) && pwd)
 
 echo "$BASEDIR";
 
-# Source directory for unbuilt code. in kai and appPorject level.小贷是多了一层
+# Source directory for unbuilt code. in kai and appPorject level.小呆是多了一层
 SRCDIR="$BASEDIR/../"
 
 echo "$SRCDIR";

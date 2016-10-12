@@ -9,8 +9,8 @@
 *
 * Look to `util/build/buildControlDefault.js` for more information on available options and their default values.
 */
-var kaiPrefx = '/var/lib/jenkins/jobs/kai-cuishou-sit/workspace/';//小贷的目录多了一级
-//var kaiPrefx = '../kai/';//小贷的目录多了一级
+var kaiPrefx = '/var/lib/jenkins/jobs/kai-cuishou-sit/workspace/';//小呆的目录多了一级
+//var kaiPrefx = '../kai/';//小呆的目录多了一级
 var profile = {
 	//releaseDir: "./app",    //相对于basePath路径，现在basePath已经定位到js文件夹下
 	//releaseName: "lib",    //在releaseDir文件加下，此处是app文件夹下创建个lib文件夹
