@@ -36,8 +36,6 @@ function (
     urlPrefix = urlobj.protocol + '://' + urlobj.domain + '/' +  urlobj.path;
   }
   _stores._name = 'pc/store/restStores';
-  //   SIT：http://10.3.1.201/collection-web/collection/record
-  //http://10.1.5.15:8090/pages/viewpage.action?pageId=1974944
   _stores.expenses = new CRest({
     target: urlPrefix + '/expenses/',
     authRequired:true
