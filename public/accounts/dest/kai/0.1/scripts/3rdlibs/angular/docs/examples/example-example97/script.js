@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example97/script",["dojo","dijit","dojox"],function(e,o,t){!function(e){"use strict";e.module("documentExample",[]).controller("ExampleController",["$scope","$document",function(o,t){o.title=t[0].title,o.windowTitle=e.element(window.document)[0].title}])}(window.angular)});

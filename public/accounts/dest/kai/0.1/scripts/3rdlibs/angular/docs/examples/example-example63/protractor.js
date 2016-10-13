@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example63/protractor",["dojo","dijit","dojox"],function(e,t,n){it("should check ng-bind-html",function(){expect(element(by.binding("myHTML")).getText()).toBe("I am an HTMLstring with links! and other stuff")})});

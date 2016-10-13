@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example13/script",["dojo","dijit","dojox"],function(e,t,o){!function(e){"use strict";e.module("docsTemplateUrlDirective",[]).controller("Controller",["$scope",function(e){e.customer={name:"Naomi",address:"1600 Amphitheatre"}}]).directive("myCustomer",function(){return{templateUrl:"my-customer.html"}})}(window.angular)});

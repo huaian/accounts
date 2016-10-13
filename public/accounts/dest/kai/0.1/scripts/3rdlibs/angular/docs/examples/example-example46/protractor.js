@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example46/protractor",["dojo","dijit","dojox"],function(e,t,l){it("should test service",function(){expect(element(by.id("simple")).element(by.model("message")).getAttribute("value")).toEqual("test")})});

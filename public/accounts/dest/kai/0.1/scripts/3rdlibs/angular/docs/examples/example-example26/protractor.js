@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example26/protractor",["dojo","dijit","dojox"],function(e,t,s){it("should allow user expression testing",function(){element(by.css(".expressions button")).click();var e=element(by.css(".expressions ul")).all(by.repeater("expr in exprs"));expect(e.count()).toBe(1),expect(e.get(0).getText()).toEqual("[ X ] 3*10|currency => $30.00")})});

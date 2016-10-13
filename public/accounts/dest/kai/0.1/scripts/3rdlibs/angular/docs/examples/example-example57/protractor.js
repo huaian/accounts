@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example57/protractor",["dojo","dijit","dojox"],function(e,t,o){it("should toggle readonly attr",function(){expect(element(by.css('[type="text"]')).getAttribute("readonly")).toBeFalsy(),element(by.model("checked")).click(),expect(element(by.css('[type="text"]')).getAttribute("readonly")).toBeTruthy()})});

@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example35/script",["dojo","dijit","dojox"],function(e,o,t){!function(e){"use strict";e.module("formExample",[]).controller("ExampleController",["$scope",function(o){o.master={},o.update=function(t){o.master=e.copy(t)},o.reset=function(t){t&&(t.$setPristine(),t.$setUntouched()),o.user=e.copy(o.master)},o.reset()}])}(window.angular)});

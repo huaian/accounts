@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example44/script",["dojo","dijit","dojox"],function(o,e,n){!function(o){"use strict";o.module("scopeExample",[]).controller("GreetController",["$scope","$rootScope",function(o,e){o.name="World",e.department="Angular"}]).controller("ListController",["$scope",function(o){o.names=["Igor","Misko","Vojta"]}])}(window.angular)});

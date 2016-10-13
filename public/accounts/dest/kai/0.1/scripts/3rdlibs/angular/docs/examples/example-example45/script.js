@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example45/script",["dojo","dijit","dojox"],function(n,o,e){!function(n){"use strict";n.module("eventExample",[]).controller("EventController",["$scope",function(n){n.count=0,n.$on("MyEvent",function(){n.count++})}])}(window.angular)});

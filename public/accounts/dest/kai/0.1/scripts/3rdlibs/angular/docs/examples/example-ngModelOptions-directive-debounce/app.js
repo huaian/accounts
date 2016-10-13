@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-ngModelOptions-directive-debounce/app",["dojo","dijit","dojox"],function(o,e,n){!function(o){"use strict";o.module("optionsExample",[]).controller("ExampleController",["$scope",function(o){o.user={name:"Igor"}}])}(window.angular)});

@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example20/script",["dojo","dijit","dojox"],function(e,o,i){!function(e){"use strict";e.module("docsTransclusionDirective",[]).controller("Controller",["$scope",function(e){e.name="Tobias"}]).directive("myDialog",function(){return{restrict:"E",transclude:!0,scope:{},templateUrl:"my-dialog.html"}})}(window.angular)});

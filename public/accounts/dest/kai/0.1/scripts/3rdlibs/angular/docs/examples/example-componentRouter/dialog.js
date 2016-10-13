@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-componentRouter/dialog",["dojo","dijit","dojox"],function(i,o,n){!function(i){"use strict";function o(i){this.confirm=function(o){return i.when(window.confirm(o||"Is it OK?"))}}i.module("dialog",[]).service("dialogService",o)}(window.angular)});

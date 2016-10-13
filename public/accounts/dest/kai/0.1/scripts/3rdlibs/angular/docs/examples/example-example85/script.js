@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example85/script",["dojo","dijit","dojox"],function(e,t,l){!function(e){"use strict";e.module("includeExample",["ngAnimate"]).controller("ExampleController",["$scope",function(e){e.templates=[{name:"template1.html",url:"template1.html"},{name:"template2.html",url:"template2.html"}],e.template=e.templates[0]}])}(window.angular)});

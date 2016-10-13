@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-ngList-directive/app",["dojo","dijit","dojox"],function(e,o,n){!function(e){"use strict";e.module("listExample",[]).controller("ExampleController",["$scope",function(e){e.names=["morpheus","neo","trinity"]}])}(window.angular)});

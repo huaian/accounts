@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-static-select/app",["dojo","dijit","dojox"],function(e,n,o){!function(e){"use strict";e.module("staticSelect",[]).controller("ExampleController",["$scope",function(e){e.data={singleSelect:null,multipleSelect:[],option1:"option-1"},e.forceUnknownOption=function(){e.data.singleSelect="nonsense"}}])}(window.angular)});

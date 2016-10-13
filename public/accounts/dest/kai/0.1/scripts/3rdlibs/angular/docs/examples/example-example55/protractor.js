@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example55/protractor",["dojo","dijit","dojox"],function(e,t,o){it("should toggle button",function(){expect(element(by.css("button")).getAttribute("disabled")).toBeFalsy(),element(by.model("checked")).click(),expect(element(by.css("button")).getAttribute("disabled")).toBeTruthy()})});

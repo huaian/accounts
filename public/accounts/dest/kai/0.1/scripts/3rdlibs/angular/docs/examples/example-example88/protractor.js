@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example88/protractor",["dojo","dijit","dojox"],function(e,t,n){it("should check ng-non-bindable",function(){expect(element(by.binding("1 + 2")).getText()).toContain("3"),expect(element.all(by.css("div")).last().getText()).toMatch(/1 \+ 2/)})});

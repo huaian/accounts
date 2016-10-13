@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example26/script",["dojo","dijit","dojox"],function(e,o,n){!function(e){"use strict";e.module("expressionExample",[]).controller("ExampleController",["$scope",function(e){var o=e.exprs=[];e.expr="3*10|currency",e.addExp=function(e){o.push(e)},e.removeExp=function(e){o.splice(e,1)}}])}(window.angular)});

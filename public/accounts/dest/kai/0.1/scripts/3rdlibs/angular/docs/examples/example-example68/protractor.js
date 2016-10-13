@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example68/protractor",["dojo","dijit","dojox"],function(e,t,l){it("should remove the template directive and css class",function(){expect($("#template1").getAttribute("ng-cloak")).toBeNull(),expect($("#template2").getAttribute("ng-cloak")).toBeNull()})});

@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-heroComponentSimple/heroDetail",["dojo","dijit","dojox"],function(e,o,n){!function(e){"use strict";function o(){}e.module("heroApp").component("heroDetail",{templateUrl:"heroDetail.html",controller:o,bindings:{hero:"="}})}(window.angular)});

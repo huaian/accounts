@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-custom-interpolation-markup/protractor",["dojo","dijit","dojox"],function(o,i,t){it("should interpolate binding with custom symbols",function(){expect(element(by.binding("demo.label")).getText()).toBe("This binding is brought you by // interpolation symbols.")})});

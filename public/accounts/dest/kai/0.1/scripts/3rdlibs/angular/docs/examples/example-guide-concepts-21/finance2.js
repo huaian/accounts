@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-guide-concepts-21/finance2",["dojo","dijit","dojox"],function(n,e,r){!function(n){"use strict";n.module("finance2",[]).factory("currencyConverter",function(){var n=["USD","EUR","CNY"],e={USD:1,EUR:.74,CNY:6.09},r=function(n,r,c){return n*e[c]/e[r]};return{currencies:n,convert:r}})}(window.angular)});

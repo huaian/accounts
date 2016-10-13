@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-ngMessages-directive/script",["dojo","dijit","dojox"],function(e,s,i){!function(e){"use strict";e.module("ngMessagesExample",["ngMessages"])}(window.angular)});

@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example.csp/script",["dojo","dijit","dojox"],function(dojo,dijit,dojox){!function(angular){"use strict";angular.module("cspExample",[]).controller("MainController",function(){this.counter=0,this.inc=function(){this.counter++},this.evil=function(){try{eval("1+2")}catch(e){this.evilError=e.message}}})}(window.angular)});

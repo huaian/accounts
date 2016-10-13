@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example49/script",["dojo","dijit","dojox"],function(o,n,e){!function(o){"use strict";function n(o){o.name="World"}o.module("ngAppStrictDemo",[]).controller("BadController",function(o){o.a=1,o.b=2}).controller("GoodController1",["$scope",function(o){o.a=1,o.b=2}]).controller("GoodController2",n),n.$inject=["$scope"]}(window.angular)});

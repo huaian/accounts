@@ -15,6 +15,12 @@
 			    <div class="form-row"><i class="iconfont">&#xf00c9;</i>
 					<input  data-dojo-type="dijit/form/TextBox" type="password" name="<%=((typeof passwordNameAttribute !== 'undefined') &&  _.isString(passwordNameAttribute))?passwordNameAttribute:'password'%>" placeholder="请输入密码">
 				</div>
+				<%if(typeof isVerificationCode != 'undefined' && isVerificationCode){%>
+					<div class="form-row verificationCode-con"><i class="iconfont">&#xf00c9;</i>
+						<input  data-dojo-type="dijit/form/TextBox" type="text" name="captcha" placeholder="请输入验证码">
+						<button class="fl-right" data-dojo-type='dijit/form/Button' data-dojo-attach-point="verificationCodeSButton" >获取验证码</button>
+					</div>
+				<%}%>
 				<!--<div class="form-row remember_me">
 					<label>
 						<input type="checkbox" name="remember_me" id="remember_me">

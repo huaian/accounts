@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example112/protractor",["dojo","dijit","dojox"],function(e,o,t){it("should display the greeting in the input box",function(){element(by.model("greeting")).sendKeys("Hello, E2E Tests")})});

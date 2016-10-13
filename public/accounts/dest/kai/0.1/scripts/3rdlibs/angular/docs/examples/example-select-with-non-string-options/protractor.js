@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-select-with-non-string-options/protractor",["dojo","dijit","dojox"],function(e,o,t){it("should initialize to model",function(){element(by.css("select"));expect(element(by.model("model.id")).$("option:checked").getText()).toEqual("Two")})});

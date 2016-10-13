@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example63/script",["dojo","dijit","dojox"],function(e,n,o){!function(e){"use strict";e.module("bindHtmlExample",["ngSanitize"]).controller("ExampleController",["$scope",function(e){e.myHTML='I am an <code>HTML</code>string with <a href="#">links!</a> and other <em>stuff</em>'}])}(window.angular)});

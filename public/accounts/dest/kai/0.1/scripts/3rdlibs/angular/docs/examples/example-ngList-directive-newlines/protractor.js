@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-ngList-directive-newlines/protractor",["dojo","dijit","dojox"],function(e,n,t){it("should split the text by newlines",function(){var e=element(by.model("list")),n=element(by.binding("list | json"));e.sendKeys("abc\ndef\nghi"),expect(n.getText()).toContain('[\n  "abc",\n  "def",\n  "ghi"\n]')})});

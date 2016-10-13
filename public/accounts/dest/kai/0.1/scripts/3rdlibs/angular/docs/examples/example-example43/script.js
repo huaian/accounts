@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example43/script",["dojo","dijit","dojox"],function(e,o,l){!function(e){"use strict";e.module("scopeExample",[]).controller("MyController",["$scope",function(e){e.username="World",e.sayHello=function(){e.greeting="Hello "+e.username+"!"}}])}(window.angular)});

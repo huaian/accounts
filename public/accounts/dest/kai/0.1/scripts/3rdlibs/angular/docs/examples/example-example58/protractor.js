@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example58/protractor",["dojo","dijit","dojox"],function(e,t,l){it("should select Greetings!",function(){expect(element(by.id("greet")).getAttribute("selected")).toBeFalsy(),element(by.model("selected")).click(),expect(element(by.id("greet")).getAttribute("selected")).toBeTruthy()})});

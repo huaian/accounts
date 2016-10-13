@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-example50/script",["dojo","dijit","dojox"],function(o,l,n){!function(o){"use strict";o.module("anchorScrollExample",[]).controller("ScrollController",["$scope","$location","$anchorScroll",function(o,l,n){o.gotoBottom=function(){l.hash("bottom"),n()}}])}(window.angular)});

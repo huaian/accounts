@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-ngMinlengthDirective/protractor",["dojo","dijit","dojox"],function(e,t,n){var i=element(by.binding("model")),o=element(by.id("input"));it("should validate the input with the default minlength",function(){o.sendKeys("ab"),expect(i.getText()).not.toContain("ab"),o.sendKeys("abc"),expect(i.getText()).toContain("abc")})});

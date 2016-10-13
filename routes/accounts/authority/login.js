@@ -71,7 +71,7 @@ router.post('/',function(req, res, next){
           {
             "responseStatus":{
               "code":"000004",//状态码，"000000"成功,其他为失败 4000004
-              "msg":"登录失败,请重试",//描述
+              "msg":"用户名或密码错误",//描述
             },
             body: {
             }

@@ -1,1 +1,0 @@
-define("3rdlibs/angular/docs/examples/example-$filter/script",["dojo","dijit","dojox"],function(e,i,l){!function(e){"use strict";e.module("filterExample",[]).controller("MainCtrl",function(e,i){e.originalText="hello",e.filteredText=i("uppercase")(e.originalText)})}(window.angular)});
