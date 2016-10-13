@@ -2,10 +2,13 @@
 @description 记录 详情
 */
 define([
+  // Require the theme of our choosing
+  "dojox/charting/themes/Claro",
   "appRestStore/statistics",
   "dojo/_base/lang",
   'cutil/c.util.common',
   'cutil/c.util.validate',
+  // Require the basic 2d chart resource
   "dojox/charting/Chart",
   "dojox/charting/plot2d/Pie",
   "dojox/charting/action2d/Tooltip",
@@ -13,6 +16,7 @@ define([
   "dojox/charting/widget/Legend"
 ],
 function (
+  claroTheme,
   restStores,
   lang,
   utilCommon,
@@ -105,7 +109,8 @@ function (
       //var pieChart = null;
       //var legend = null;
       self[opts.pieChartName] = new dc.Chart(opts.chartId);
-      self[opts.pieChartName].setTheme(dc.themes.Tom).addPlot("default", {
+      //self[opts.pieChartName].setTheme(dc.themes.Tom).addPlot("default", {
+      self[opts.pieChartName].setTheme(claroTheme).addPlot("default", {
         type: "Pie",
         font: "normal normal 10pt Tahoma",
         fontColor: "#ccc",
