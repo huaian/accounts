@@ -18,6 +18,7 @@ assert = require('assert');
 var crypto = require('crypto');
 var db = new Db('accounts', new Server('localhost', 27017));
 var expenseTypes = [
+  {name:'水电煤',id:'utilities'},
   {name:'服装',id:'clothes'},
   {name:'饮食',id:'foods'},
   {name:'护肤化妆品',id:'skinCare'},
