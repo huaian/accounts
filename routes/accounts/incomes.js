@@ -37,7 +37,8 @@ router.post('/',function(req, res, next){
       var collection = db.collection('incomes');//incomes
       var incomeItem = _.pick(req.body,'amount','date','remark','type');
       incomeItem.date = new Date(incomeItem.date);
-      incomeItem.amount = parseInt(incomeItem.amount,10);
+      //incomeItem.amount = parseInt(incomeItem.amount,10);
+      incomeItem.amount = parseFloat(incomeItem.amount,10).toFixed(2);
       collection.insertOne(_.extend({userName:req.user.userName},incomeItem),function(err, items) {
         db.close();
         res.json(
