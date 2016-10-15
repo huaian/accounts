@@ -1,5 +1,5 @@
-/*@description 单页应用的入口文件，设置项目配置信息
-*
+/**
+@description 单页应用的入口文件，设置项目配置信息
 */
 define([
 ],function(

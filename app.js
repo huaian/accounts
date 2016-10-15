@@ -39,7 +39,7 @@ var statistics = require('./routes/accounts/statistics');
 var announcements = require('./routes/accounts/common/announcements');
 app.use('/accounts/authority/login',login);//
 app.use('/accounts/authority/register',register);//
-app.use('/accounts',checkAuth);
+app.use('/accounts',checkAuth);//use to check auth for all api request.connect middle ware
 app.use('/accounts/dict/code/',dictData);
 app.use('/accounts/incomes',incomes);
 app.use('/accounts/expenses',expenses);
