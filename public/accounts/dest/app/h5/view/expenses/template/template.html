@@ -35,7 +35,7 @@
     </div>
     <div class="weui_cell_bd weui_cell_primary">
       <!--hideErrorTip-->
-      <input class="weui_input" type="tel" pattern="" placeholder="请输入金额" v-model="formData.amount" v-on:click="setNameInputClicked">
+      <input class="weui_input" type="number" pattern="" placeholder="请输入金额" v-model="formData.amount" v-on:click="setNameInputClicked">
     </div>
     <div class="weui_cell_ft">
       <i class="weui_icon_warn" v-show='!isValidChineseName(formData.name)'></i>
