@@ -1,11 +1,11 @@
 <div class="weui_panel weui_cells weui_cells_form" id="subscribe_borrow_con">
   <div class="weui_cell weui_cell_select weui_select_after {{(!formData.collectionWay && careerTypeSelectClicked )?'weui_cell_warn':''}}">
     <div class="weui_cell_hd">
-      <label for="" class="weui_label">来源:</label>
+      <label for="" class="weui_label">消费类型:</label>
     </div>
     <div class="weui_cell_bd weui_cell_primary">
       <select class="weui_select {{formData.type?'':'kui_placeholder_sim font-small'}}" v-model="formData.type"  v-on:click="setCareerTypeSelectClicked">
-        <option :selected="!formData.type"  value=''>请选择来源</option>
+        <option :selected="!formData.type"  value=''>请选择消费类型</option>
         <option v-for="expenseTypeItem in dictData['dict_expense_types']" value="{{expenseTypeItem.id}}">{{expenseTypeItem.name}}</option>
       </select>
     </div>
