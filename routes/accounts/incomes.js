@@ -38,7 +38,7 @@ router.post('/',function(req, res, next){
       var incomeItem = _.pick(req.body,'amount','date','remark','type');
       incomeItem.date = new Date(incomeItem.date);
       //incomeItem.amount = parseInt(incomeItem.amount,10);
-      incomeItem.amount = parseFloat(incomeItem.amount,10).toFixed(2);
+      incomeItem.amount = +parseFloat(incomeItem.amount,10).toFixed(2);
       collection.insertOne(_.extend({userName:req.user.userName},incomeItem),function(err, items) {
         db.close();
         res.json(
@@ -160,7 +160,7 @@ router.put('/:incomeId', function(req, res, next) {
       var incomeItem = _.pick(req.body,'amount','date','remark','type');
       incomeItem.date = new Date(incomeItem.date);
       //incomeItem.amount = parseInt(incomeItem.amount,10);
-      incomeItem.amount = parseFloat(incomeItem.amount,10).toFixed(2);
+      incomeItem.amount = +parseFloat(incomeItem.amount,10).toFixed(2);
       collection.findOneAndUpdate({userName:req.user.userName,_id:new ObjectID(incomeId)},{$set: incomeItem}).then(function(item){
         console.log(item);
         res.json(

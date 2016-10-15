@@ -26,7 +26,6 @@ function (
 
     /*可以冒泡的事件可以绑定在这里 delegate*/
     events: {
-      //'click .js_collection_item': _.debounce(viewUtils.goCollectionDetail,250,true,function(){}),
       'click .mobile_back': _.debounce(viewUtils.goBack,250,true,function(){})//返回上一级
     },
 
@@ -131,19 +130,6 @@ function (
           goBack:function(accountId,event){
             self.model.trigger('goBack',accountId);//前往客户详情页面
           },
-          goCollectionDetail:function(collectionRecord){
-            self.parentModel.set('h5/view/collection_detail',_.extend(collectionRecord,{
-              _readonly:true,//流程监控只能查看
-            }));
-            Kai.forwardWithQueryParams('h5/view/collection_detail',{
-              modelObj:{
-                readonly:true,//流程监控只能查看
-              },
-              queryObj:{
-                collectionRecordId:collectionRecord.id
-              }
-          });//跳转详情
-          }
         }
       };
     },
