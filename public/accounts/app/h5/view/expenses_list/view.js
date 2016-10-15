@@ -119,7 +119,23 @@ function (
         },
         methods: {
           delete:function(ExpenseId){
-            self.model.trigger('deleteExpense',ExpenseId);//删除
+            Kai.showConfirm({
+              datamodel:{
+                title: '',
+                content: '<div class="font-small align-left">确认删除该记录吗？</div>',
+                btns: [//添加buttons
+                  { name: '确认删除', className: 'cui-btns-ok' },
+                  { name: '取消', className: 'cui-btns-cancel' }
+                ],
+              },
+              okAction:function(){
+                this.hide();
+                self.model.trigger('deleteExpense',ExpenseId);//删除
+              },
+              cancelAction:function(){
+                this.hide();
+              }
+            });
           },
           edit:function(ExpenseId,event){
             self.forward('h5/view/expenses?' + $.param({ExpenseId:ExpenseId}));
