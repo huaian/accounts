@@ -159,7 +159,8 @@ router.put('/:incomeId', function(req, res, next) {
       var collection = db.collection('incomes');//incomes
       var incomeItem = _.pick(req.body,'amount','date','remark','type');
       incomeItem.date = new Date(incomeItem.date);
-      incomeItem.amount = parseInt(incomeItem.amount,10);
+      //incomeItem.amount = parseInt(incomeItem.amount,10);
+      incomeItem.amount = parseFloat(incomeItem.amount,10).toFixed(2);
       collection.findOneAndUpdate({userName:req.user.userName,_id:new ObjectID(incomeId)},{$set: incomeItem}).then(function(item){
         console.log(item);
         res.json(
