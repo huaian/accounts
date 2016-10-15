@@ -88,13 +88,14 @@ echo -n " Done"
 # Copy & minify index.html to dist
 echo -n " Copy & minify index.html to dist..."
 cat "$APPDIR/index.html" | \
-perl -pe 's/\/\/.*$//gm;       # Strip JS comments' |
+#perl -pe 's/\/\/.*$//gm;       # Strip JS comments' |
 perl -MTime::HiRes -MPOSIX -pe 'qw(time);qw(strftime);my $t = time;my $date = strftime "%Y%m%d%H%M%S", localtime $t;s/_v=/_v=$date/gm;       # Strip JS comments' |
 perl -pe 's/\n/ /g;            # Replace newlines with whitespace' |
 perl -pe 's/<\!--.*?-->//g;    # Strip HTML comments' |
 perl -pe 's/isDebug: *true,//; # Remove isDebug' |
-perl -pe 's/cacheBust: *false,//; # Remove cacheBust false' |
-perl -pe 's/\s+/ /g;           # Collapse whitespace' > "$DISTDIR/index.html"
+#perl -pe 's/cacheBust: *false,//; # Remove cacheBust false' |
+#perl -pe 's/\s+/ /g;           # Collapse whitespace' > "$DISTDIR/index.html"
+perl -pe 's/cacheBust: *false,//; # Remove cacheBust false'> "$DISTDIR/index.html"
 echo -n "Done"
 
 #copy index.html
