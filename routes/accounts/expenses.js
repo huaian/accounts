@@ -101,7 +101,7 @@ router.get('/',function(req, res, next){
       var collection = db.collection("dict_" + 'expense_types');//查询收入字典表
       collection.find().toArray(function(err,dictItems){
         console.log(dictItems);
-        var collection = db.collection("dict_" + 'expense_types');//查询收入字典表
+        //var collection = db.collection("dict_" + 'expense_types');//查询收入字典表
         _.each(items,function(item){
           item.typeDesc = (_.findWhere(dictItems,{id:item.type}) || {}).name;//set desc attribute
         });
