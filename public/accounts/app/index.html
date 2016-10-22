@@ -89,7 +89,7 @@
 		baseUrl:(function(){
 			if(location.pathname.indexOf('app') >= 0){
 				//return '../../';//得到绝对路径，main.js根据该路径来定义
-				kaiPrefx = '../../../../';//NOTE 设置kai的路径
+				kaiPrefx = '../../../../';//@NOTE 设置kai的路径
 				return '../';//
 			}else{
 				appPrefx = './app/';
@@ -157,8 +157,6 @@
 <!--AMD loader-->
 <!--script src="./kai/0.1/scripts/3rdlibs/require-2.1.22.js" defer async="true"></script-->
 <!--script src="./0.1/scripts/dojo/dojo.js" defer async="true"></script-->
-<script src="//pic.mdlc.com/js/tnsdk.min.js"></script>
-<script src="//pic.mdlc.com/js/tracker.min.js?app=appname" id="G_TRACKING"></script>
 <script>
 	//alert('template html loaded');
 </script>

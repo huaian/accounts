@@ -1,0 +1,41 @@
+<div>
+  <div class="hd" style="text-align:center;">
+    <img src="{{baseUrl}}h5/res/img/cuishou_mobile/logo.png" width="40%" title="" alt="">
+    <h2 class="align-center">欢迎使用移动</h2><!-- align-cente-->
+  </div>
+  <div class="weui_cells weui_cells weui_cells_form ">
+    <div class="weui_cell js_cellphone_container">
+      <div class="weui_cell_hd"><label class="weui_label">账号:</label></div>
+      <div class="weui_cell_bd weui_cell_primary">
+        <input class="weui_input js_input_username" type="" pattern="" maxlength="11" placeholder="请输入用户名" v-model="formData.loginId" v-on:click="setUsernameInputClicked">
+      </div>
+      <div class="weui_cell_ft">
+          <i class="weui_icon_warn"></i>
+        <i class="weui_icon_success_no_circle" v-show='isValidUserName(formData.loginId)'></i>
+      </div>
+    </div>
+    <div class="weui_cell js_cellphone_container">
+      <div class="weui_cell_hd"><label class="weui_label">密码:</label></div>
+      <div class="weui_cell_bd weui_cell_primary">
+        <input class="weui_input js_input_password" type="password" pattern="" maxlength="" placeholder="请输入密码" v-model="formData.password" v-on:click="setPasswordInputClicked">
+      </div>
+      <div class="weui_cell_ft">
+          <i class="weui_icon_warn"></i>
+        <i class="weui_icon_success_no_circle" v-show='isValidPassword(formData.password)'></i>
+      </div>
+    </div>
+    <div class="weui_cell js_cellphone_container">
+      <div class="weui_cell_hd"><label class="weui_label">确认密码:</label></div>
+      <div class="weui_cell_bd weui_cell_primary">
+        <input class="weui_input js_input_password" type="password" pattern="" maxlength="" placeholder="请确认密码" v-model="formData.rePassword" v-on:click="setPasswordInputClicked">
+      </div>
+      <div class="weui_cell_ft">
+          <i class="weui_icon_warn"></i>
+        <i class="weui_icon_success_no_circle" v-show='isValidPassword(formData.password)'></i>
+      </div>
+    </div>
+  </div>
+  <div class="weui_btn_area" style="margin-top:2em;">
+    <a class="weui_btn weui_btn_primary js_button_login" href="javascript:">注册</a>
+  </div>
+</div>

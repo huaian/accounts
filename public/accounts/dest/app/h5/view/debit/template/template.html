@@ -1,0 +1,62 @@
+<div class="weui_panel weui_cells weui_cells_form" id="subscribe_borrow_con">
+  <div class="weui_cell weui_cell_select weui_select_after {{(!formData.collectionWay && careerTypeSelectClicked )?'weui_cell_warn':''}}">
+    <div class="weui_cell_hd">
+      <label for="" class="weui_label">消费类型:</label>
+    </div>
+    <div class="weui_cell_bd weui_cell_primary">
+      <select class="weui_select {{formData.type?'':'kui_placeholder_sim font-small'}}" v-model="formData.type"  v-on:click="setCareerTypeSelectClicked">
+        <option :selected="!formData.type"  value=''>请选择消费类型</option>
+        <option v-for="expenseTypeItem in dictData['dict_expense_types']" value="{{expenseTypeItem.id}}">{{expenseTypeItem.name}}</option>
+      </select>
+    </div>
+    <div class="weui_cell_ft">
+      <i class="weui_icon_warn"></i>
+      <i class="weui_icon_success_no_circle" v-show='formData.collectionWay'></i>
+    </div>
+  </div>
+
+  <div class="weui_cell weui_cells_access ">
+    <div class="weui_cell_hd"><label class="weui_label">日期:</label></div>
+    <div class="weui_cell_bd weui_cell_primary">
+      <div class="weui_cell weui_cells_access js_validity_period_end_container">
+        <input class="weui_input js_input_repayDate" type={{'date'}} placeholder="有效期结束时间:2020-08-03" v-model="formData.date"/>
+        <div class="weui_cell_ft">
+          <i class="weui_icon_warn weui_icon_warn_custom rigth-0"></i>
+          <i class="weui_icon_success_no_circle weui_icon_success_no_circle_custom display-none rigth-0"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="weui_cell js_name_container"><!-- weui_cell_warn-->
+    <div class="weui_cell_hd">
+      <label class="weui_label">金额:</label>
+    </div>
+    <div class="weui_cell_bd weui_cell_primary">
+      <!--hideErrorTip-->
+      <input class="weui_input" type="number" pattern="" placeholder="请输入金额" v-model="formData.amount" v-on:click="setNameInputClicked">
+    </div>
+    <div class="weui_cell_ft">
+      <i class="weui_icon_warn" v-show='!isValidChineseName(formData.name)'></i>
+      <!--- v-show='isValidChineseName(formData.name)'-->
+      <i class="weui_icon_success_no_circle" v-show='isValidChineseName(formData.name)'></i>
+    </div>
+  </div>
+
+  <div class="weui_cell">
+    <div class="weui_cell_hd"><label class="weui_label">备注:</label></div>
+    <div class="weui_cell_bd weui_cell_primary">
+      <textarea class="weui_textarea" placeholder="请输入备注" rows="4" v-model="formData.remark" ></textarea>
+      <div class="weui_textarea_counter" style='display:none'><span>0</span>/200</div>
+    </div>
+    <div class="weui_cell_ft">
+      <i class="weui_icon_warn" v-show='!isValidOtherReason(formData.loanInfo.loanPurposeDesc)'></i>
+      <i class="weui_icon_success_no_circle" v-show='isValidOtherReason(formData.loanInfo.loanPurposeDesc)'></i><!---严格校验成功的显示-->
+    </div>
+  </div>
+</div>
+
+<div class="weui_btn_area">
+  <a class="weui_btn weui_btn_primary" href="javascript:" id="subscribe_borrow" v-on:click="save($event)">保存</a><!--将事件作为参数传递-->
+</div>
