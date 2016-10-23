@@ -13,7 +13,8 @@ define([
   "dojox/charting/plot2d/Pie",
   "dojox/charting/action2d/Tooltip",
   "dojox/charting/themes/Tom",
-  "dojox/charting/widget/Legend"
+  "dojox/charting/widget/Legend",
+  'css!res/style/main_pc',/*css for kernel pc*/
 ],
 function (
   claroTheme,
@@ -121,7 +122,7 @@ function (
         startAngle: -10
       }).addSeries(opts.seriesName, opts.chartData);
       var anim_c = new dc.action2d.Tooltip(self[opts.pieChartName], "default");
-      self[opts.pieChartName].render();
+      self[opts.pieChartName].render();//Also note that the Tooltip plugin must be assigned to the chart before the render method is called on the chart.
       self[opts.legendName] = new dojox.charting.widget.Legend({
         chart: self[opts.pieChartName],
         horizontal:false
