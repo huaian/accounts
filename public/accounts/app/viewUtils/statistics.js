@@ -125,7 +125,7 @@ function (
       self[opts.pieChartName].render();//Also note that the Tooltip plugin must be assigned to the chart before the render method is called on the chart.
       self[opts.legendName] = new dojox.charting.widget.Legend({
         chart: self[opts.pieChartName],
-        horizontal:true
+        horizontal:false
       }, opts.legendId + self.viewContextPostfix);//创建legend
     },
 
