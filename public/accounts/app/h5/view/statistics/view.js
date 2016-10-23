@@ -93,7 +93,6 @@ function (
         formData: self.memoryStore.getAttr('memory.formData') || {},//表单数据
         sumIncomes:self.viewData.sumIncomes || '',
         sumExpenses:self.viewData.sumExpenses || '',
-        //_viewName:self.viewName
       },
       methods: {
         search:function(){

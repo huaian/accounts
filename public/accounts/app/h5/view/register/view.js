@@ -9,7 +9,6 @@ function (
   restStores,
   baseView
 ) {
-
   "use strict";
   var View = baseView.extend({
     _registerComm:restStores.register
