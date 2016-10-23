@@ -11,9 +11,9 @@
       <div class="cui-flx1">本月结余</div>
     </div>
     <div class='cui-box align-center weui_cell' v-on:click="goCustomerDetail(taskItem,$event)">
-      <div class="cui-flx1 smaller_font">{{sumIncomes}}</div>
-      <div class="cui-flx1 smaller_font"> {{sumExpenses}}</div>
-      <div class="cui-flx1 smaller_font">{{sumIncomes - sumExpenses}}</div>
+      <div class="cui-flx1 smaller_font">{{sumIncomes?sumIncomes.toFixed(2):sumIncomes}}</div>
+      <div class="cui-flx1 smaller_font"> {{sumExpenses?sumExpenses.toFixed(2):sumExpenses}}</div>
+      <div class="cui-flx1 smaller_font">{{(sumIncomes - sumExpenses)?(sumIncomes - sumExpenses).toFixed(2):''}}</div>
     </div>
   </div>
 </section>

@@ -150,10 +150,12 @@ incomesCursor.toArray().then(function(items){
     ///*
     dictUtil.getDictData('income_types').then(function(dictItems){
       _.each(statistics.incomes,function(item){
+        item.tooltip = item.tooltip.toFixed(2);
         item.text = (_.findWhere(dictItems,{id:item.type}) || {}).name;//set desc attribute
       });
       dictUtil.getDictData('expense_types').then(function(dictItems){
         _.each(statistics.expenses,function(item){
+          item.tooltip = item.tooltip.toFixed(2);
           item.text = (_.findWhere(dictItems,{id:item.type}) || {}).name;//set desc attribute
         });
         res.json(
