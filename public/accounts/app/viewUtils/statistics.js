@@ -125,8 +125,8 @@ function (
       self[opts.pieChartName].render();//Also note that the Tooltip plugin must be assigned to the chart before the render method is called on the chart.
       self[opts.legendName] = new dojox.charting.widget.Legend({
         chart: self[opts.pieChartName],
-        horizontal:false
-      }, opts.legendId + self.viewContextPostfix);
+        horizontal:true
+      }, opts.legendId + self.viewContextPostfix);//创建legend
     },
 
     //更新数据显示
@@ -136,8 +136,8 @@ function (
       self.incomePieChart.updateSeries("Series Income", self.viewData.statisticsData.incomes);
       self.expensePieChart.render();
       self.incomePieChart.render();
-      self['incomeLegend' + self.viewContextPostfix].refresh();
-      self['expenseLegend' + self.viewContextPostfix].refresh();
+      self['incomeLegend'] && self['incomeLegend'].refresh();
+      self['expenseLegend'] && self['expenseLegend'].refresh();
     }
   };
   return viewUtils;
