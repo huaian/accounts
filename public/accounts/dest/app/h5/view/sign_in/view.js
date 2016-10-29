@@ -1,0 +1,1 @@
+define(["common/c.geo","appRestStore/account","kaiView/h5/view/sign_in/view"],function(e,i,t){"use strict";var n=t.extend({_registerComm:i.register});return n});

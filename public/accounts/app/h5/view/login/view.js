@@ -94,7 +94,12 @@ function (
     },
 
     getVueMethods:function(){
+      var self = this;
       return {
+        goRegister:function(){
+          //self.model.trigger('goRegister');
+          self.goRegister();
+        },
         setCellphoneNumberInputClicked:function(){
           this.cellphoneNumberInputClicked = true;
         },

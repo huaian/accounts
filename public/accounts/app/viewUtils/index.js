@@ -12,6 +12,11 @@ function (
       var self = this;
       self.back();//返回上一级页面
     },
+    //注册
+    goRegister:function(){
+      var self = this;
+      self.forward('h5/view/register');
+    },
 
     /**
     @description 拨打电话
