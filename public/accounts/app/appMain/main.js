@@ -4,7 +4,8 @@
 define([
 ],function(
 ) {
-	var projectName = '';//使用相对路径寻找资源,目前使用相对路径，不需要配置
+	//var projectName = '';//使用相对路径寻找资源,目前使用相对路径，不需要配置
+	var projectName = srcParentDirectory;//使用相对路径寻找资源,目前使用相对路径，不需要配置
 	/**
 	@description 定义Kai路径和应用层包路径
 	*/

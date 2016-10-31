@@ -24,7 +24,8 @@ app.js define routes
 3. mkdir log/
 4. touch dbName
 
-启动mongodb:
+
+启动mongodb(本地):
 4. ./mongod --dbpath=../data/db/ --logpath ../log/dbName --fork
 测试启动是否正常:
 5. ./mongo

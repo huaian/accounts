@@ -144,7 +144,8 @@ function (
             self.forward('h5/view/expenses');
           },
           goBack:function(accountId,event){
-            self.model.trigger('goBack',accountId);//前往客户详情页面
+            //self.model.trigger('goBack',accountId);//前往客户详情页面
+            self.goBack();
           },
         }
       };
