@@ -1,1 +1,0 @@
-define("util/buildscripts/jslib/checkBuildSize",["dojo","dijit","dojox"],function(i,l,e){load("jslib/logger.js"),load("jslib/fileUtil.js"),load("jslib/buildUtil.js");var s=buildUtil.makeDojoJs(buildUtil.loadDependencyList(buildUtil.evalProfile("profiles/base.profile.js")),"0.0.0"),o=buildUtil.optimizeJs(null,s[0].contents,null,"shrinksafe");print(o.length)});

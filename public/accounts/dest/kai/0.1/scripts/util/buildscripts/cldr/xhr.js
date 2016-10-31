@@ -1,1 +1,0 @@
-define("util/buildscripts/cldr/xhr",[],function(){return{get:function(r){try{r.load(readFile(r.url,"utf-8"))}catch(t){r.error()}}}});

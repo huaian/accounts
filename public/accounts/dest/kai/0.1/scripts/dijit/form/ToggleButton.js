@@ -1,1 +1,0 @@
-define("dijit/form/ToggleButton",["dojo/_base/declare","dojo/_base/kernel","./Button","./_ToggleButtonMixin"],function(e,t,o,d){return e("dijit.form.ToggleButton",[o,d],{baseClass:"dijitToggleButton",setChecked:function(e){t.deprecated("setChecked("+e+") is deprecated. Use set('checked',"+e+") instead.","","2.0"),this.set("checked",e)}})});

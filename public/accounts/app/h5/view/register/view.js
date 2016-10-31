@@ -11,7 +11,9 @@ function (
 ) {
   "use strict";
   var View = baseView.extend({
-    _registerComm:restStores.register
+    _registerComm:restStores.register,
+    //是否显示title
+    showHeader:true,
   });
   return View;
 });

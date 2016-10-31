@@ -1,1 +1,0 @@
-define("kaiView/h5/topic/topics",["common/c.class.inherit","topic/c.topic"],function(t,i){"use strict";var c={};return c.test=new t.Class(i,{__propertys__:function(){this.topicName=""}}),c});

@@ -1,1 +1,0 @@
-define(["common/c.class.inherit","./c.abstract.store","../storage/c.session.storage"],function(n,s,t){var e=new n.Class(s,{__propertys__:function(){this.sProxy=t.getInstance()},initialize:function($super,n){$super(n)}});return e});

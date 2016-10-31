@@ -1,1 +1,0 @@
-define("kaiView/h5/view/system_notification/events/events",["dojo/on","cutil/c.util.validate"],function(i,n){"use strict";var e={subscribeTopics:function(){},bindEvents:function(){var i=this;i.bind({})}};return{eventBinder:e}});

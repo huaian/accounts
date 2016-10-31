@@ -1,1 +1,0 @@
-define("dijit/_base/manager",["dojo/_base/array","dojo/_base/config","dojo/_base/lang","../registry","../main"],function(i,e,n,a,o){var d={};return i.forEach(["byId","getUniqueId","findWidgets","_destroyAll","byNode","getEnclosingWidget"],function(i){d[i]=a[i]}),n.mixin(d,{defaultDuration:e.defaultDuration||200}),n.mixin(o,d),o});

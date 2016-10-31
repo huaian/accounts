@@ -1,1 +1,0 @@
-define("util/less/lib/less/tree/unicode-descriptor",["dojo","dijit","dojox"],function(e,i,t){!function(e){e.UnicodeDescriptor=function(e){this.value=e},e.UnicodeDescriptor.prototype={toCSS:function(e){return this.value},eval:function(){return this}}}(require("../tree"))});

@@ -1,1 +1,0 @@
-define("dojox/form/RangeSlider",["dojo/_base/kernel","./_RangeSliderMixin","./HorizontalRangeSlider","./VerticalRangeSlider"],function(e,r){return e.deprecated("Call require() for HorizontalRangeSlider / VerticalRangeSlider, explicitly rather than 'dojox.form.RangeSlider' itself","","2.0"),r});

@@ -1,1 +1,0 @@
-define("dojox/widget/Calendar3Pane",["dojo/_base/declare","./_CalendarBase","./_CalendarDay","./_CalendarMonth","./_CalendarYear"],function(a,e,d,n,r){return a("dojox.widget.Calendar3Pane",[e,d,n,r],{})});

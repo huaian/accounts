@@ -1,1 +1,0 @@
-define("util/docscripts/tests/declare_returns",["dojo","dojo/declare"],function(e){return e.declare("foo.Bar",null,{})});

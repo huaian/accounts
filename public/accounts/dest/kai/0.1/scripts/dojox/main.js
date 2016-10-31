@@ -1,1 +1,0 @@
-define("dojox/main",["dojo/_base/kernel"],function(o){return o.dojox});

@@ -1,1 +1,0 @@
-define("dijit/_base/window",["dojo/window","../main"],function(n,i){i.getDocumentWindow=function(i){return n.get(i)}});

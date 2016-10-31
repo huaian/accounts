@@ -1,1 +1,0 @@
-define("dojo/request",["./request/default!"],function(e){return e});

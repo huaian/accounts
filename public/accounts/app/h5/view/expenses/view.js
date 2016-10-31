@@ -25,6 +25,8 @@ function (
   "use strict";
   var baseview = CommonPageFactory.create('appBaseView');
   var View = baseview.extend({
+    //是否显示title
+    showHeader:true,
 
     /*可以冒泡的事件可以绑定在这里 delegate*/
     events: {

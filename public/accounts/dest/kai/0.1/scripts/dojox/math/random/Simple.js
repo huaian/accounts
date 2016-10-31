@@ -1,1 +1,0 @@
-define("dojox/math/random/Simple",["dojo"],function(o){return o.declare("dojox.math.random.Simple",null,{destroy:function(){},nextBytes:function(o){for(var n=0,t=o.length;t>n;++n)o[n]=Math.floor(256*Math.random())}})});

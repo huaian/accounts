@@ -1,1 +1,0 @@
-define("xstyle/has-class",["dojo/has"],function(a){var n={};return function(){for(var e,t=arguments,s=0;s<t.length;s++){var e=t[s];if(!n[e]){n[e]=!0;var o=e.match(/^(no-)?(.+?)((-[\d\.]+)(-[\d\.]+)?)?$/),r=a(o[2]),c=-o[4];(c>0?r>=c&&(-o[5]||c)>=r:!!r)==!o[1]&&(document.documentElement.className+=" has-"+e)}}}});

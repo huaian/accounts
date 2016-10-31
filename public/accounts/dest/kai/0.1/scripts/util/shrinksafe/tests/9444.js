@@ -1,1 +1,0 @@
-define("util/shrinksafe/tests/9444",["dojo","dijit","dojox"],function(i,n,o){!function(){for(var i=function(){},n=0;10>n;n++)n%2===0&&i()}()});

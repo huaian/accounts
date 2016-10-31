@@ -1,1 +1,0 @@
-define("dojox/app/module/env",["dojo/_base/declare"],function(e){return e(null,{mode:"",init:function(){}})});

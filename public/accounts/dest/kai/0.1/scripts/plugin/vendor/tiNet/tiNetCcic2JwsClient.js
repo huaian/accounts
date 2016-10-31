@@ -1,1 +1,0 @@
-define("plugin/vendor/tiNet/tiNetCcic2JwsClient",["require"],function(e){});

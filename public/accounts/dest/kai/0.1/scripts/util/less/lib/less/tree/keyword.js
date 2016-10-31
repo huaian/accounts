@@ -1,1 +1,0 @@
-define("util/less/lib/less/tree/keyword",["dojo","dijit","dojox"],function(e,t,o){!function(e){e.Keyword=function(e){this.value=e},e.Keyword.prototype={eval:function(){return this},toCSS:function(){return this.value},compare:function(t){return t instanceof e.Keyword?t.value===this.value?0:1:-1}},e.True=new e.Keyword("true"),e.False=new e.Keyword("false")}(require("../tree"))});

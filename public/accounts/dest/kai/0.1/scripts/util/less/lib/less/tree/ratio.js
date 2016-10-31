@@ -1,1 +1,0 @@
-define("util/less/lib/less/tree/ratio",["dojo","dijit","dojox"],function(t,i,e){!function(t){t.Ratio=function(t){this.value=t},t.Ratio.prototype={toCSS:function(t){return this.value},eval:function(){return this}}}(require("../tree"))});
