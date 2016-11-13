@@ -26,19 +26,6 @@ define([
       trackerPostUrl:{
       }
     },
-    {
-      host:'',
-      protocol:'http',
-      //domain:(function(){return location.host})(),
-      domain: '10.2.130.145:3000',
-      //domain: '192.168.1.7:3000',
-      path:'accounts',
-      preventAlert:false,
-      isDefault:false,
-      envCode:'LOCAL',
-      trackerPostUrl:{
-      }
-    },
     //product enviornment
     {
       host:'121.42.51.73:3000',
