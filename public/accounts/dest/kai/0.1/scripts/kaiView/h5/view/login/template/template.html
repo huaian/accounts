@@ -1,16 +1,17 @@
+<!--登录-->
 <div>
   <div class="hd" style="text-align:center;">
-    <img v-bind:src="baseUrl + 'h5/res/img/cuishou_mobile/logo.png'" width="40%" title="中腾信金融" alt="中腾信金融">
-    <h2 class="align-center">欢迎使用移动催收</h2><!-- align-cente-->
+    <img class='logoImg' v-bind:src="logoImgUrl" title="中腾信金融" alt="中腾信金融">
+    <h2 class="align-center">{{title}}</h2><!-- align-cente-->
   </div>
   <div class="weui_cells weui_cells weui_cells_form ">
     <div class="weui_cell js_cellphone_container">
-      <div class="weui_cell_hd"><label class="weui_label">账号:</label></div>
+      <div class="weui_cell_hd"><label class="weui_label">驻点商超:</label></div>
       <div class="weui_cell_bd weui_cell_primary">
         <input class="weui_input js_input_username" type="" pattern="" maxlength="11" placeholder="请输入用户名" v-model="formData.loginId" v-on:click="setUsernameInputClicked">
       </div>
       <div class="weui_cell_ft">
-          <i class="weui_icon_warn" v-show='!isValidUserName(formData.loginId)'></i>
+        <i class="weui_icon_warn" v-show='!isValidUserName(formData.loginId)'></i>
         <i class="weui_icon_success_no_circle" v-show='isValidUserName(formData.loginId)'></i>
       </div>
     </div>
@@ -20,7 +21,7 @@
         <input class="weui_input js_input_password" type="password" pattern="" maxlength="" placeholder="请输入密码" v-model="formData.password" v-on:click="setPasswordInputClicked">
       </div>
       <div class="weui_cell_ft">
-          <i class="weui_icon_warn" v-show='!isValidPassword(formData.password)'></i>
+        <i class="weui_icon_warn" v-show='!isValidPassword(formData.password)'></i>
         <i class="weui_icon_success_no_circle" v-show='isValidPassword(formData.password)'></i>
       </div>
     </div>
