@@ -1,0 +1,1 @@
+define("dijit/ConfirmTooltipDialog",["dojo/_base/declare","./TooltipDialog","./_ConfirmDialogMixin"],function(i,o,l){return i("dijit/ConfirmTooltipDialog",[o,l],{})});

@@ -1,0 +1,1 @@
+define("util/build/version",[],function(){var r="$Rev: 37e1249 $".match(/[0-9a-f]{7,}/),i={major:1,minor:10,patch:4,flag:"",revision:r?r[0]:NaN,toString:function(){var r=i;return r.major+"."+r.minor+"."+r.patch+r.flag+" ("+r.revision+")"}};return i});

@@ -1,0 +1,1 @@
+define("dijit/main",["dojo/_base/kernel"],function(i){return i.dijit});

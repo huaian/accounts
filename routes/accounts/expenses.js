@@ -111,7 +111,10 @@ router.get('/',function(req, res, next){
               "code":"000000",//状态码，"000000"成功,其他为失败 4000004
               "msg":"查询成功！",//描述
             },
-            body: items
+            body: {
+              content:items,
+              totalElements:items.length
+            }
           }
         );
         db.close();

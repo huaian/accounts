@@ -1,5 +1,5 @@
 /**
-@description 历史列表
+@description 收入历史列表
 */
 define([
   "dojo/date/locale",
@@ -82,7 +82,7 @@ function (
     };
     restStores['incomes'].get('').then(function(resp){
       if(self.isSucceedResponse(resp)){
-        setViewData(resp.body);
+        setViewData(resp.body.content);
       }else{
         self.showResponseError(resp);
       }

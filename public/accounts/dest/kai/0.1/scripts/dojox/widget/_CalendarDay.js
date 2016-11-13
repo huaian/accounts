@@ -1,0 +1,1 @@
+define("dojox/widget/_CalendarDay",["dojo/_base/declare","./_CalendarDayView"],function(e,a){return e("dojox.widget._CalendarDay",null,{parent:null,constructor:function(){this._addView(a)}})});

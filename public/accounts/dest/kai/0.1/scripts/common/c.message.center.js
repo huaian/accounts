@@ -1,0 +1,1 @@
+define("common/c.message.center",[],function(){var e={},n={publish:function(n,c){e[n]&&_.each(e[n],function(e){e.handler.apply(e.scope?e.scope:window,c)})},subscribe:function(n,c,u){e[n]||(e[n]=[]),e[n].push({scope:u,handler:c})},unsubscribe:function(n,c){e[n]&&(c?e[n]=_.reject(e[n],function(e){return e.handler==c}):delete e[n])}};return n});

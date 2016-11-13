@@ -1,0 +1,1 @@
+define("dojox/mobile/app/TextBox",["dojo","dijit","dojox","dojo/require!dojox/mobile/TextBox"],function(o,e,x){o.provide("dojox.mobile.app.TextBox"),o.deprecated("dojox.mobile.app.TextBox is deprecated","dojox.mobile.app.TextBox moved to dojox.mobile.TextBox",1.8),o.require("dojox.mobile.TextBox"),x.mobile.app.TextBox=x.mobile.TextBox});

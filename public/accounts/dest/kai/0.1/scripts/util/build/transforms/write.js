@@ -1,0 +1,1 @@
+define("util/build/transforms/write",["../buildControl","../fileUtils","../fs","../replace"],function(e,t,i,n){return function(n,r){return n.tag.noWrite?0:(t.ensureDirectoryByFilename(n.dest),i.writeFile(n.dest,e.newlineFilter(n.getText(),n,"write"),n.encoding,function(e){r(n,e)}),r)}});

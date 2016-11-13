@@ -1,0 +1,1 @@
+define("util/build/transforms/optimizer/shrinksafe",["../../buildControl","require","../../fs","dojo/has"],function(n,o,r,e){throw new Error("Unknown host environment: only nodejs and rhino are supported by shrinksafe optimizer.")});

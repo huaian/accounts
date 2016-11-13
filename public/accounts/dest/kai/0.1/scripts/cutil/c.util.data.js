@@ -1,0 +1,1 @@
+define("cutil/c.util.data",["common/c.class.inherit"],function(n){var e=new n.Class({initialize:function(){}});return n.extend(e,{mapToItems:function(n){for(var e=[],i=_.keys(n),t=_.values(n),a=i.length-1;a>=0;a--)e.push({id:i[a],name:t[a]});return e}}),e});

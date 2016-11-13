@@ -1,0 +1,1 @@
+define("dojox/charting/plot2d/StackedLines",["dojo/_base/declare","./Stacked"],function(t,o){return t("dojox.charting.plot2d.StackedLines",o,{constructor:function(){this.opt.lines=!0}})});

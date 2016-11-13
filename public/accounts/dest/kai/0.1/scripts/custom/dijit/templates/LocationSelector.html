@@ -1,0 +1,22 @@
+<div style='display:inline' data-dojo-attach-point="containerNode">
+    <select required=${required} id="province-${id}" data-dojo-type="dijit/form/Select"
+            data-dojo-props="class:'select-width'" name="${provinceDomName}">
+        <option></option>
+    </select>
+    <select required=${required} id="city-${id}" data-dojo-type="dijit/form/Select"
+            data-dojo-props="class:'select-width'" name="${cityDomName}">
+        <option></option>
+    </select>
+    <%if((typeof(hasCounty) !== 'undefined') && (hasCounty === false)){%>
+      <%}else{%>
+        <select required=${required}  id="county-${id}" data-dojo-type="dijit/form/Select"
+        data-dojo-props="class:'select-width'" name="${countyDomName}">
+        <option></option>
+      </select>
+        <%}%>
+    <%if((typeof(hasDetail) !== 'undefined') && (hasDetail === false)){%>
+
+    <%}else{%>
+      <input required=${required} id="address-${id}" data-dojo-type="dijit/form/ValidationTextBox" name="${addressDomName}" class="address-textBox" trim="true"/>
+    <%}%>
+</div>

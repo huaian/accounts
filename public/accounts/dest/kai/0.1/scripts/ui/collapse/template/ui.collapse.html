@@ -1,0 +1,19 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<%for(var i = 0; i < model.data.items.length;i++){var item = model.data.items[i];%>
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingOne">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse<%=i%>" aria-expanded="true" aria-controls="collapseOne">
+					<%=item.title%>
+				</a>
+			</h4>
+		</div>
+
+		<div id="collapse<%=i%>" class="panel-collapse collapse <%=item.active?'in':''%>" role="tabpanel" aria-labelledby="headingOne">
+			<div class="panel-body">
+				<%=item.content%>
+			</div>
+		</div>
+	</div>
+	<%}%>
+</div>

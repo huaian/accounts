@@ -1,0 +1,1 @@
+define("dojox/lang/aspect/counter",["dojo","dijit","dojox"],function(n,t,o){n.provide("dojox.lang.aspect.counter"),function(){var t=o.lang.aspect,e=function(){this.reset()};n.extend(e,{before:function(){++this.calls},afterThrowing:function(){++this.errors},reset:function(){this.calls=this.errors=0}}),t.counter=function(){return new e}}()});

@@ -1,0 +1,1 @@
+define("dojox/mobile/bidi/Icon",["dojo/_base/declare","dojo/dom-style","../_css3"],function(o,d,t){return o(null,{_setCustomTransform:function(){"rtl"==(this.dir||d.get(this.domNode,"direction"))&&(d.set(this.domNode.firstChild,t.add({direction:"ltr"},{})),d.set(this.domNode,t.add({},{transform:"scaleX(-1)"})))}})});

@@ -1,0 +1,197 @@
+<style type="text/css" class="js_ui_calendar_v1">
+.cm-day-list:before, .cm-calendar .cm-calendar-hd:before, .cm-calendar .cm-calendar-ft .cm-calendar-quick-nav:before, .cm-keyboard-list:before, .clearfix:after, .cm-slide .cm-slide-list:after, .cm-day-list:after, .cm-calendar .cm-calendar-hd:after, .cm-calendar .cm-calendar-ft .cm-calendar-quick-nav:after, .cm-keyboard-list:after {
+  content: "";
+  display: table; }
+.cm-day-list:after, .cm-calendar .cm-calendar-hd:after, .cm-calendar .cm-calendar-ft .cm-calendar-quick-nav:after, .cm-keyboard-list:after {
+  clear: both; }
+.cm-day-list li, .cm-calendar .cm-calendar-hd li {
+  float: left;
+  width: 14.2%;
+  text-align: center;
+  box-sizing: border-box; }
+  .cm-day-list li:nth-of-type(7n), .cm-calendar .cm-calendar-hd li:nth-of-type(7n), .cm-day-list li:nth-of-type(7n+1), .cm-calendar .cm-calendar-hd li:nth-of-type(7n+1) {
+    width: 14.5%;
+    color: #666; }
+
+.cm-day-list {
+  border-bottom: 1px solid #dbdbdb; }
+  .cm-day-list:last-of-type {
+    border-bottom: none; }
+  .cm-day-list li {
+    position: relative;
+    height: 54px; }
+    .cm-day-list li.active {
+      background-color: #099fde; }
+      .cm-day-list li.active .cm-field-title, .cm-day-list li.active .cm-field-price, .cm-day-list li.active .cm-field-label {
+        color: #fff; }
+    .cm-day-list li.cm-item--disabled .cm-field-title, .cm-day-list li.cm-item--disabled .cm-field-price, .cm-day-list li.cm-item--disabled .cm-field-label {
+      color: #ccc; }
+  .cm-day-list .cm-field-title {
+    line-height: 20px;
+    font-size: 16px;
+    padding-top: 8px; }
+  .cm-day-list .cm-field-title--festival {
+    font-size: 14px; }
+  .cm-day-list .cm-field-price {
+    font-size: 12px;
+    color: #999; }
+  .cm-day-list .cm-field-price--sale {
+    color: #ff9a14; }
+  .cm-day-list .cm-field-label {
+    font-size: 12px; }
+  .cm-day-list .cm-item--multi {
+    background-color: rgba(9, 159, 222, 0.1); }
+  .cm-day-list .icon-calendar-holiday, .cm-day-list .icon-calendar-work {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid #333;
+    line-height: 14px;
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    text-align: center;
+    font-size: 12px;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-transform-origin: right top;
+        -ms-transform-origin: right top;
+            transform-origin: right top;
+    box-sizing: border-box; }
+  .cm-day-list .icon-calendar-holiday {
+    color: #52bce8;
+    border-color: #52bce8; }
+
+.cm-day-list--special li {
+  height: 74px; }
+
+.cm-calendar {
+  /*padding-top: 30px;*/
+}
+  .cm-calendar .cm-calendar-hd {
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #f5f5f5;
+    position: fixed;
+    left: 0;
+    right: 0;
+    /*top: 44px;*/
+    height: 30px;
+    z-index: 960; }
+    .cm-calendar .cm-calendar-hd li {
+      color: #666;
+      line-height: 30px; }
+  .cm-calendar .cm-calendar-bd {
+    background-color: #fff;
+    padding-bottom: 44px;
+    padding-top: 30px;
+  }
+  .cm-calendar .cm-month {
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px; }
+  .cm-calendar .cm-calendar-ft {
+    border-top: 1px solid #dbdbdb;
+    background-color: #efefef;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px 0; }
+    .cm-calendar .cm-calendar-ft .cm-calendar-quick-nav {
+      width: 200%; }
+    .cm-calendar .cm-calendar-ft li {
+      float: left;
+      line-height: 30px;
+      width: 60px;
+      border-radius: 4px;
+      text-align: center;
+      background-color: #ccc;
+      margin: 0 5px 0 10px; }
+      .cm-calendar .cm-calendar-ft li.active {
+        background-color: #099fde;
+        color: #fff; }
+
+.cm-calendar .cm-calendar-hd li:nth-of-type(7n), .cm-calendar .cm-calendar-hd li:nth-of-type(7n+1) {
+  color: #52bce8; }
+
+.cm-calendar-tips {
+  width: 14.2%;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #099fde;
+  position: absolute; }
+  .cm-calendar-tips::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: -6px;
+    border-top: 6px solid #099fde;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent; }
+  .cm-calendar-tips .cm-tips-day {
+    padding-bottom: 5px; }
+    .cm-calendar-tips .cm-tips-day .cm-tips-day-title {
+      line-height: 28px;
+      font-size: 16px; }
+    .cm-calendar-tips .cm-tips-day .cm-tips-day-label, .cm-calendar-tips .cm-tips-day .cm-tips-day-price {
+      font-size: 12px; }
+</style>
+<div class="cm-calendar">
+
+  <ul class="cm-calendar-hd js_weekend">
+    <% var i = 0, day1 = 0;  %>
+    <%for(day1 = 0; day1 < 7; day1++) { %>
+    <li><%=weekDayArr[day1] %></li>
+    <%} %>
+  </ul>
+
+  <div class="cm-calendar-bd ">
+  <%for(var j = 0; j < displayMonthNum; j++) { %>
+<%
+  var changedMonth = month + j;
+  var yyy =  parseInt(( month + j ) / 12);
+  if(changedMonth > 11) {
+    changedMonth = changedMonth - 12 * yyy;
+  }
+  changedYear = year + yyy;
+  var d = new Date(changedYear, changedMonth);
+  var days = _.dateUtil.getDaysOfMonth(d);
+  var beginWeek = _.dateUtil.getBeginDayOfMouth(d);
+  var endDateTime = endDate.getTime();
+
+  var str_month = MonthClapFn(changedYear, changedMonth);
+%>
+    <%if(str_month.length > 0 ) { %>
+      <h3 class="cm-month js_month"><%=str_month %></h3>
+    <% } %>
+    <ul class="cm-day-list">
+      <% for(i = 0; i < beginWeek; i++) { %>
+        <li class="js_empty_day"></li>
+      <% } %>
+      <% for(i = 0; i < days; i++) { %>
+        <% var day = i + 1; %>
+        <% var dateObj = new Date(changedYear, changedMonth, day ); %>
+        <% var calendar_time = dateObj.getTime(); %>
+        <% var difftime = calendar_time -curTime; %>
+        <% var _difftime =  -1 * difftime; %>
+        <% var diffHour =  parseInt(_difftime / 3600000 * 100) / 100; %>
+        <% var _diffHour =  parseInt((startTime.getTime() - calendar_time) / 36000) / 100; %>
+
+
+        <%if(typeof dayWrapperItemFn != 'undefined' && _.isFunction(dayWrapperItemFn)){ %>
+          <%=dayWrapperItemFn(scope, changedYear, changedMonth, day, dateObj, difftime) %>
+        <%} else { %>
+        <li  data-curTime="<%=diffHour %>" class="js_calendar_item <%if(_diffHour >= 24 || (endTime && calendar_time > endTime.getTime() )) { %> js_overdue_day cm-item--disabled <%} %> " data-cndate="<%=changedYear%>-<%=changedMonth + 1%>-<%=day%>" data-date="<%=changedYear%>-<%=changedMonth%>-<%=day%>">
+          <%=dayItemFn.call(scope, changedYear, changedMonth, day, dateObj, difftime)%>
+        </li>
+        <%} %>
+
+      <% } %>
+    </ul>
+  <%} %>
+
+  </div>
+</div>

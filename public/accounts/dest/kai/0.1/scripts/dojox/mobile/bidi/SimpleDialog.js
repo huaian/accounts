@@ -1,0 +1,1 @@
+define("dojox/mobile/bidi/SimpleDialog",["dojo/_base/declare"],function(e){return e(null,{refresh:function(){if(this.inherited(arguments),!this.isLeftToRight()&&this.closeButton){var e=Math.round(this.closeButtonNode.offsetHeight/2);this.closeButtonNode.style.left=-e+"px"}}})});

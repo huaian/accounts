@@ -1,0 +1,101 @@
+<!-- basic preloader: -->
+<div class='viewContainer'>
+    <!--border container start-->
+     <div data-viewname='pc/view/index' id="pc/view/index"  data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="liveSplitters:true, design:'headline'" style='position:absolute;height:100%;width:100%'>
+
+        <!--lef panel 左侧菜单栏目-->
+        <div id="navigation" class="left-container" data-dojo-type="dojox.layout.ExpandoPane" data-dojo-props="title:'{{headerTitle}}',selected:true, maxWidth:200, splitter:true, region:'leading', duration:0" style="width: 180px;">
+
+        </div>
+        <!-- end AccordionContainer 左侧菜单栏目 -->
+
+        <!--top panel-->
+         <header class="header-container" data-dojo-type="dijit/layout/ContentPane"  data-dojo-props='region: "top",doLayout:false,style:"height:44px;overflow: hidden"' >
+             <div class="header-logo"><i class="iconfont" style="font-size: 35px;">&#xf0035;</i>{{headerTitle}}</div>
+
+             <div data-dojo-type="dijit/Toolbar" class="header-menu">
+            <!--登陆名：超级管理员-->
+            <label class="form-label-loan" id="username_login">{{name}}</label>
+            &nbsp;&nbsp;
+            <!--职位：终审-->
+            <label class="form-label-loan position_login" id="position_login"></label>
+
+            <!--
+            刷新当前选择的widget
+            <button data-dojo-type="dijit/form/Button" id='pc/index_reload'
+                    data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconRedo',dir:'ltl'">
+                重载
+            </button>
+
+            重新启动系统
+            <button data-dojo-type="dijit/form/Button" id='pc/index_restart'
+                    data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconFullScreen',dir:'ltl'">
+                重启
+            </button>
+            查看当前所有view的状态
+            -->
+
+
+            <!--刷新当前选择的widget-->
+            <button data-dojo-type="dijit/form/Button" id='pc/index_refresh'
+                    data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconViewSource',dir:'ltl'">
+                刷新
+            </button>
+
+            <!--修改密码弹窗-->
+            <button class="change_password" data-dojo-type="dijit/form/Button" id='pc/change_password'
+                    data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconWikiword',dir:'ltl'">
+                修改密码
+            </button>
+
+            <button data-dojo-type="dijit/form/Button" id='pc/index_logout'
+            data-dojo-props="iconClass:'dijitIconTask',dir:'ltl'">
+            注销
+            </button>
+
+            <span>版本:{{version}}</span>
+
+            <span id='userInfo' style='display:none'>工号:{{user.username}}</span>
+
+            <button data-dojo-type="dijit/form/Button" id='pc/index_button_view-states'
+            data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconWikiword',dir:'ltl'" style='display:none'>
+            任务管理
+            </button>
+
+            <button data-dojo-type="dijit/form/Button" id='pc/index_button_interfaces-states'
+            data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconWikiword',dir:'ltl'" style='display:none'>
+            接口状态
+          </button>
+
+            <button data-dojo-type="dijit/form/Button" id='pc/index_close-all-tabs'
+            data-dojo-props="iconClass:'dijitIconTask',dir:'ltl'" style='display:none'>
+            关闭所有标签
+            </button>
+
+            <button data-dojo-type="dijit/form/Button" id='openAllTabsButton'
+            data-dojo-props="iconClass:'dijitIconTask',dir:'ltl'" style='display:none'>
+            打开所有标签
+            </button>
+
+            <!-- 查看当前view的源代码 -->
+            <button data-dojo-type="dijit/form/Button" id='pc/show_code' style='display:none'
+                    data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconViewSource',dir:'ltl'">
+                查看代码
+            </button>
+          </div>
+         </header>
+        <!-- end of region="top"-->
+
+        <!--right panel.Add new tab into tabContainer if nav tree is clicked-->
+        <div class="centerPanel right-container"  data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region: "center",doLayout:false' style="overflow: scroll;" data-dojo-avoidreparse='true' data-avoidreparse='true'>
+            <!-- top tabs (marked as "center" to take up the main part of the BorderContainer) -->
+            <!--start of Tab container-->
+            <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region:'center',doLayout:false,style:'display:none'" id='pc_index_main_tab_container' style="width: 1200px;" >
+            </div>
+            <!-- end of region="center" TabContainer -->
+        </div>
+    </div>
+    <!-- end of BorderContainer 布局用的最外部控件-->
+<!--操作提示-->
+<div class="cui_log prompt-log"></div>
+</div>

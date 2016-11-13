@@ -1,0 +1,1 @@
+define("dijit/_base/scroll",["dojo/window","../main"],function(o,i){i.scrollIntoView=function(i,n){o.scrollIntoView(i,n)}});

@@ -1,0 +1,1 @@
+define("dojox/charting/plot2d/Lines",["dojo/_base/declare","./Default"],function(o,n){return o("dojox.charting.plot2d.Lines",n,{constructor:function(){this.opt.lines=!0}})});

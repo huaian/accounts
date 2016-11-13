@@ -82,7 +82,7 @@ function (
     };
     restStores['expenses'].get('').then(function(resp){
       if(self.isSucceedResponse(resp)){
-        setViewData(resp.body);
+        setViewData(resp.body.content);
       }else{
         self.showResponseError(resp);
       }

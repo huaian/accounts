@@ -1,0 +1,1 @@
+define("dijit/_BidiSupport",["dojo/has","./_WidgetBase","./_BidiMixin"],function(i,d,e){return d.extend(e),i.add("dojo-bidi",!0),d});

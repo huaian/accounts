@@ -1,0 +1,1 @@
+define("kaiView/pc/topic/topics",["common/c.class.inherit","topic/c.topic"],function(e,i){"use strict";var c={};return c.indexLevelTabChangeRequire=new e.Class(i,{__propertys__:function(){this.topicName="/pc/view/index/require_tab_change"}}),c.indexLevelTabCloseRequire=new e.Class(i,{__propertys__:function(){this.topicName="/pc/view/index/require_tab_close"}}),c});

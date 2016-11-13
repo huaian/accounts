@@ -1,0 +1,1 @@
+define("dojox/mobile/RoundRectStoreList",["dojo/_base/declare","./RoundRectList","./_StoreListMixin"],function(o,e,t){return o("dojox.mobile.RoundRectStoreList",[e,t],{})});

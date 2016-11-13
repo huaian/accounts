@@ -1,0 +1,1 @@
+define(["common/c.class.inherit","data/store/c.abstract.store","data/storage/c.local.storage","data/storage/c.memory.storage","cutil/c.util.common"],function(t,e,s,a,o){var n=new t.Class(e,{__propertys__:function(){},initialize:function($super,t){_.isFunction($super)&&$super(t),this.sProxy=this.useSessionStorage||o.isPrivateModel?a.getInstance():s.getInstance()}});return n});

@@ -15,13 +15,13 @@ define([
   var interfaceConfig = [
     //node env local used
     {
-      host:'192.168.1.7:8000',
+      host:'192.168.1.6:8000',
       protocol:'http',
       //domain:(function(){return location.host})(),
-      domain: '192.168.1.7:3000',
+      domain: '192.168.1.6:3000',
       path:'accounts',
       preventAlert:false,
-      isDefault:false,
+      isDefault:true,
       envCode:'LOCAL',
       trackerPostUrl:{
       }

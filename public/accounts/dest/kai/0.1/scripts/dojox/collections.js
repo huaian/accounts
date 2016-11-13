@@ -1,0 +1,1 @@
+define("dojox/collections",["./collections/_base"],function(o){return o});

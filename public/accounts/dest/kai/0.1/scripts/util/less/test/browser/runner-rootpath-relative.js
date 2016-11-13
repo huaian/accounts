@@ -1,0 +1,1 @@
+define("util/less/test/browser/runner-rootpath-relative",["dojo","dijit","dojox"],function(e,s,t){less.rootpath="https://www.github.com/cloudhead/less.js/",less.relativeUrls=!0,describe("less.js browser test - rootpath and relative url's",function(){testLessEqualsInDocument()})});

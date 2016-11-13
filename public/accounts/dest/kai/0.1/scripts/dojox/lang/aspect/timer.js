@@ -1,0 +1,1 @@
+define("dojox/lang/aspect/timer",["dojo","dijit","dojox"],function(n,i,t){n.provide("dojox.lang.aspect.timer"),function(){var i=t.lang.aspect,o=0,e=function(n){this.name=n||"DojoAopTimer #"+ ++o,this.inCall=0};n.extend(e,{before:function(){!this.inCall++},after:function(){!--this.inCall}}),i.timer=function(n){return new e(n)}}()});

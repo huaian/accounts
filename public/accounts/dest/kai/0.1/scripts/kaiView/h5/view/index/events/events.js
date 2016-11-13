@@ -1,0 +1,1 @@
+define("kaiView/h5/view/index/events/events",["dojo/on","cutil/c.util.validate"],function(i,e){"use strict";var n={subscribeTopics:function(){},bindEvents:function(){var i=this;i.bind({})}};return{eventBinder:n}});

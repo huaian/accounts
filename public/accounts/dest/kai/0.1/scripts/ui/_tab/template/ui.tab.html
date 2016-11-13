@@ -1,0 +1,22 @@
+<!--<div role="tabpanel"> -->
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+	  <%for(var i=0;i<model.data.tabs.length;i++){var item = model.data.tabs[i];%>
+	  <li role="presentation" class="<%=item.active?'active':''%>">
+	  <a href="<%=item.href%>" data-target='<%=item.target%>' aria-controls="<%=item.target%>" role="tab" data-toggle="tab"><%=item.label%></a>
+	  </li>
+    <%}%>
+  </ul>
+
+  <!-- Tab panes -->
+  <!--
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active" id="home">...</div>
+    <div role="tabpanel" class="tab-pane fade" id="profile">...</div>
+    <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
+  </div>
+	-->
+<!--
+</div>-->

@@ -1,0 +1,1 @@
+define("util/build/fileHandleThrottle",[],function(){var e=0,n=10,t=[];return{release:function(){t.length?t.shift()():e--},enqueue:function(u){n>e?(e++,u()):t.push(u)}}});

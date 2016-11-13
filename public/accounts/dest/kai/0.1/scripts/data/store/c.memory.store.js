@@ -1,0 +1,1 @@
+define("data/store/c.memory.store",["common/c.class.inherit","data/store/c.abstract.store","data/storage/c.memory.storage"],function(t,e,s){"use strict";var r=new t.Class(e,{__propertys__:function(){this.data=null,this.key="memory_store",this.sProxy=s.getInstance()},initialize:function($super,t){$super(t)}});return r});

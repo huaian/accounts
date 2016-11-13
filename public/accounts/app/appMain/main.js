@@ -5,7 +5,7 @@ define([
 ],function(
 ) {
 	//var projectName = '';//使用相对路径寻找资源,目前使用相对路径，不需要配置
-	var projectName = srcParentDirectory;//使用相对路径寻找资源,目前使用相对路径，不需要配置
+	//var projectName = srcParentDirectory;//使用相对路径寻找资源,目前使用相对路径，不需要配置
 	/**
 	@description 定义Kai路径和应用层包路径
 	*/
@@ -32,38 +32,38 @@ define([
 
 			{
 				name: 'appConfig',
-				location: projectName + './app/config',
+				location: appPrefix + './app/config',
 				main:'main'
 			},
 
 			{
 				name: 'appRestStore',
-				location: projectName + './app/appRestStore',
+				location: appPrefix + './app/appRestStore',
 			},
 
 			{
 				name: 'dataHelper',
-				location: projectName + './app/dataHelper',
+				location: appPrefix + './app/dataHelper',
 			},
 
 			{
 				name: 'viewUtils',
-				location:projectName + './app/viewUtils',
+				location:appPrefix + './app/viewUtils',
 			},
 
 			{
 				name: 'pc',
-				location: projectName + './app/pc',
+				location: appPrefix + './app/pc',
 			},
 
 			{
 				name: 'h5',
-				location: projectName + './app/h5',
+				location: appPrefix + './app/h5',
 			},
 
 			{
 				name: 'appMain',
-				location: './',
+				location: appPrefix + './app/appMain',
 			}
 		]
 	});

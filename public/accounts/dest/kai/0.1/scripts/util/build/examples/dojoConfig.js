@@ -1,0 +1,1 @@
+define("util/build/examples/dojoConfig",["dojo","dijit","dojox"],function(o,i,d){});
