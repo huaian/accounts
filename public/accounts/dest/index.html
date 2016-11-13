@@ -79,7 +79,7 @@
     }
     if(s.cache === false){//需要显式设置不允许缓存
       //url = url+( /\?/.test( url ) ? "&" : "?" )+ "_=" +(new Date()).getTime();
-      url = url+( /\?/.test( url ) ? "&" : "?" )+ '_v=20161113212357'+ version;
+      url = url+( /\?/.test( url ) ? "&" : "?" )+ '_v=20161113215420'+ version;
     }
     script.src = url;
     head.insertBefore(script, head.firstChild);
@@ -117,17 +117,14 @@
       }else{//打包后的环境
         //appPrefix = './app/';
         //appParentDirectory = 'http://192.168.1.6:3000/';
-        //srcParentDirectory = 'http://10.2.130.145:3000/';
         //srcParentDirectory = './';
-        //srcParentDirectory = 'http://10.2.130.145:3000/';
-        //appPrefix = 'http://192.168.1.6:3000/app/';
-        //srcParentDirectory = 'http://10.2.4.43:81/hlui/';
-        //appPrefix = srcParentDirectory;
+        srcParentDirectory = 'http://121.42.51.73:3000/';
+        /*
         kaiPrefx = './';//需要以/结尾
         appPrefix = './';//需要以/结尾
-        //kaiPrefx = 'http://192.168.1.6:3000/';//需要以/结尾
-        //kaiPrefx = srcParentDirectory;
-        //return location.pathname.replace(/\/[^/]*$/, '/');
+        */
+        kaiPrefx = srcParentDirectory;//需要以/结尾
+        appPrefix = srcParentDirectory;//需要以/结尾
         return '';
       }
     })(),
@@ -158,7 +155,7 @@
     locale: "zh",
     extraLocale: [],
     //cacheBust: true,
-    cacheBust: '_v=20161113212357'+ '_k=' + version,
+    cacheBust: '_v=20161113215420'+ '_k=' + version,
     fontSizeWatch:true,
     preloadImages:true,
     callback:function(){
