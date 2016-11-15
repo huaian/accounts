@@ -1,1 +1,0 @@
-define("xstyle/util/getComputedStyle",[],function(){return document.defaultView.getComputedStyle?function(e){return e.ownerDocument.defaultView.getComputedStyle(e,null)}:function(e){return e.currentStyle||{}}});

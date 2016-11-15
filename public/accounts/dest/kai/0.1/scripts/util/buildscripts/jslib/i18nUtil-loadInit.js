@@ -1,1 +1,0 @@
-define("util/buildscripts/jslib/i18nUtil-loadInit",[],{names:["dojo","dijit","dojox"],def:function(i,e,o){i.require("dojo.i18n"),i.requireLocalization(moduleName,bundleName,localeName)}});

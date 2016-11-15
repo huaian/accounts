@@ -1,1 +1,0 @@
-define("custom/dstore/CacheableRestStore",["dojo/_base/declare","./Rest","dstore/Cache","./Trackable"],function(e,t,a,o){return e([t,a,o],{})});

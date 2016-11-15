@@ -1,1 +1,0 @@
-define("dijit/_OnDijitClickMixin",["dojo/on","dojo/_base/array","dojo/keys","dojo/_base/declare","dojo/has","./a11yclick"],function(i,n,o,c,e,t){var d=c("dijit._OnDijitClickMixin",null,{connect:function(i,n,o){return this.inherited(arguments,[i,"ondijitclick"==n?t:n,o])}});return d.a11yclick=t,d});

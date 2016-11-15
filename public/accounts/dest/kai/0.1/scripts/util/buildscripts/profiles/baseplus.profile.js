@@ -1,1 +1,0 @@
-dependencies={layers:[{name:"dojo.js",dependencies:["dijit._Widget","dijit._Templated","dojo.fx","dojo.NodeList-fx"]}],prefixes:[["dijit","../dijit"],["dojox","../dojox"]]};

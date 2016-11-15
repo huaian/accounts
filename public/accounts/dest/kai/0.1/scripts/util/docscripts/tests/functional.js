@@ -1,1 +1,0 @@
-define("util/docscripts/tests/functional",["dojo","dojox/lang/functional","dijit"],function(t,n,i){return t.declare("util.docscripts.tests.FunctionalThinger",null,{constructor:function(n){t._mixin(this,n)}})});

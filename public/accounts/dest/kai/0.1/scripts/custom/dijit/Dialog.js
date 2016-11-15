@@ -1,1 +1,0 @@
-define("custom/dijit/Dialog",["dojo/_base/lang","dojo/_base/declare","dijit/Dialog","dojo/Deferred","dojo/_base/fx","dojo/_base/lang"],function(o,e,i,a,n,o){return e("custom.dijit.Dialog",i,{baseClass:"dijitDialog",focus:function(){return!1},_onKey:function(){return!1}})});

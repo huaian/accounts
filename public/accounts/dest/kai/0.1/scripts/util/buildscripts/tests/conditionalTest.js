@@ -1,1 +1,0 @@
-define("util/buildscripts/tests/conditionalTest",["dojo","dijit","dojox"],function(i,l,t){load("../jslib/fileUtil.js"),load("../jslib/logger.js"),load("../jslib/buildUtil.js");var o=buildUtil.processConditionals("conditionalTest.txt",fileUtil.readFile("conditionalTest.txt"),{loader:"xdomain",shouldInclude:!0,nesting:1});print(o)});

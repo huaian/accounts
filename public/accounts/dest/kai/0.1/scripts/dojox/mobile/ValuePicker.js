@@ -1,1 +1,0 @@
-define("dojox/mobile/ValuePicker",["dojo/_base/declare","./_PickerBase","./ValuePickerSlot"],function(e,o){return e("dojox.mobile.ValuePicker",o,{baseClass:"mblValuePicker",onValueChanged:function(e){}})});

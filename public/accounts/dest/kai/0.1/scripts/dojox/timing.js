@@ -1,1 +1,0 @@
-define("dojox/timing",["./timing/_base"],function(i){return i});

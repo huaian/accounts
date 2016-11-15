@@ -1,1 +1,0 @@
-define("util/shrinksafe/tests/3241",["dojo","dijit","dojox"],function(t,n,o){result="",function(){function t(){this.foo=function(t,o){var i=n;return i},this.bar=function(){}}var n="data";result=(new t).foo()}()});

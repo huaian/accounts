@@ -1,1 +1,0 @@
-dependencies={dojoxStorageBuildOption:"offline",layers:[{name:"../dojox/sql.js",layerDependencies:[],dependencies:["dojox.sql"]}],prefixes:[["dijit","../dijit"],["dojox","../dojox"]]};

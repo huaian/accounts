@@ -1,1 +1,0 @@
-var dependencies={layers:[{name:"dojo.js",customBase:!0,dependencies:[]}]};

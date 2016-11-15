@@ -1,1 +1,0 @@
-require(["build/buildControlDefault"],function(a){a.defaultConfig.async="legacyAsync",a.defaultConfig.hasCache["dojo-cdn"]=1});var profile={};

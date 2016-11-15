@@ -1,1 +1,0 @@
-define("dijit/form/RadioButton",["dojo/_base/declare","./CheckBox","./_RadioButtonMixin"],function(i,o,t){return i("dijit.form.RadioButton",[o,t],{baseClass:"dijitRadio"})});

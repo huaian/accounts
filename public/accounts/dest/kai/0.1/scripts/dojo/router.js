@@ -1,1 +1,0 @@
-define("dojo/router",["./router/RouterBase"],function(e){return new e({})});

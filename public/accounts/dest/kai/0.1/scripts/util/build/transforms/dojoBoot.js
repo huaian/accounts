@@ -1,1 +1,0 @@
-!function(){var o=this.require;o({cache:{}}),!o.async&&o(["dojo"]),o.boot&&o.apply(null,o.boot)}();
