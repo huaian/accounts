@@ -1,0 +1,1 @@
+define("dojox/mobile/app",["./app/_base"],function(e){return e});

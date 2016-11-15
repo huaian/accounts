@@ -1,0 +1,1 @@
+define("util/less/lib/less/tree/paren",["dojo","dijit","dojox"],function(e,n,t){!function(e){e.Paren=function(e){this.value=e},e.Paren.prototype={toCSS:function(e){return"("+this.value.toCSS(e)+")"},eval:function(n){return new e.Paren(this.value.eval(n))}}}(require("../tree"))});

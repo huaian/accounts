@@ -1,0 +1,1 @@
+define("dojox/charting/bidi/axis2d/Default",["dojo/_base/declare","dojo/dom-style"],function(t,i){return t(null,{labelTooltip:function(t,e,n,r,o,a){var d="rtl"==i.get(e.node,"direction"),l="rtl"==e.getTextDir(n);l&&!d&&(n="<span dir='rtl'>"+n+"</span>"),!l&&d&&(n="<span dir='ltr'>"+n+"</span>"),this.inherited(arguments)},_isRtl:function(){return this.chart.isRightToLeft()}})});

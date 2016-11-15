@@ -1,0 +1,1 @@
+define("dojox/charting/bidi/action2d/ZoomAndPan",["dojo/_base/declare"],function(t){return t(null,{_getDelta:function(t){var n=this.inherited(arguments);return n*(this.chart.isRightToLeft()?-1:1)}})});

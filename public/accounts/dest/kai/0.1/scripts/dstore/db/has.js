@@ -1,0 +1,1 @@
+define("dstore/db/has",["dojo/has","dojo/sniff"],function(d){return d.add("indexeddb",!!(window.indexedDB||window.webkitIndexedDB||window.mozIndexedDB)),d.add("sql",!!window.openDatabase),d});

@@ -1,0 +1,1 @@
+define("dojox/mobile/bidi/Accordion",["dojo/_base/declare","./common","dojo/dom-class"],function(e,i,o){return e(null,{_setupChild:function(e){this.textDir&&(e.label=i.enforceTextDirWithUcc(e.label,this.textDir)),this.inherited(arguments)},_setIconDir:function(e){o.add(e,"mblAccordionIconParentRtl")}})});

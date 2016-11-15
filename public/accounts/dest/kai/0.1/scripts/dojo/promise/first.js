@@ -1,0 +1,1 @@
+define("dojo/promise/first",["../_base/array","../Deferred","../when"],function(e,r,n){"use strict";var t=e.forEach;return function(e){var o;if(e instanceof Array)o=e;else if(e&&"object"==typeof e){o=[];for(var f in e)Object.hasOwnProperty.call(e,f)&&o.push(e[f])}if(!o||!o.length)return(new r).resolve();var i=new r;return t(o,function(e){n(e,i.resolve,i.reject)}),i.promise}});

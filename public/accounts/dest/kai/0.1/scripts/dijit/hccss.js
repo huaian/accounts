@@ -1,0 +1,1 @@
+define("dijit/hccss",["dojo/dom-class","dojo/hccss","dojo/domReady","dojo/_base/window"],function(o,d,i,c){return i(function(){d("highcontrast")&&o.add(c.body(),"dijit_a11y")}),d});

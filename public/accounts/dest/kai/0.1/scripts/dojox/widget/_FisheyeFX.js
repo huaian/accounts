@@ -1,0 +1,1 @@
+define("dojox/widget/_FisheyeFX",["dojo/_base/declare","dojo/query","./FisheyeLite"],function(e,o,i){return e("dojox.widget._FisheyeFX",null,{addFx:function(e,n){o(e,n).forEach(function(e){new i({properties:{fontSize:1.1}},e)})}})});

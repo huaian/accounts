@@ -1,0 +1,1 @@
+define("dojox/mobile/RoundRect",["dojo/_base/declare","dojo/dom-class","./Container"],function(o,d,e){return o("dojox.mobile.RoundRect",e,{shadow:!1,baseClass:"mblRoundRect",buildRendering:function(){this.inherited(arguments),this.shadow&&d.add(this.domNode,"mblShadow")}})});

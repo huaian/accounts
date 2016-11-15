@@ -1,0 +1,1 @@
+define("util/doh/plugins/alwaysAudio",["dojo","doh/runner"],function(d,n){d.ready(function(){var n=d.byId("audio");n&&(n.checked=!0)})});

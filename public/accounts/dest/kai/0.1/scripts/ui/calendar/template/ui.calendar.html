@@ -1,0 +1,54 @@
+<ul class="cui_cldweek" style=" position: static; ">
+<% var i = 0, day1 = 0;  %>
+<%for(day1 = 0; day1 < 7; day1++) { %>
+<li><%=weekDayArr[day1] %></li>
+<%} %>
+</ul>
+
+<section class="cui_cldunit">
+<%
+var changedYear;
+var endDateTime = endDate.getTime();
+ %>
+<%for(var j = 0; j < displayMonthNum; j++) { %>
+<%
+  var changedMonth = month + j;
+  var yyy =  parseInt(( month + j ) / 12);
+  if(changedMonth > 11) { 
+    changedMonth = changedMonth - 12 * yyy;
+  }
+  changedYear = year + yyy;
+  var d = new Date(changedYear, changedMonth);
+  var days = _.dateUtil.getDaysOfMonth(d);
+  var beginWeek = _.dateUtil.getBeginDayOfMouth(d);
+
+  var str_month = MonthClapFn(changedYear, changedMonth);
+%>
+  <%if(str_month.length > 0 ) { %>
+  <h1 class="cui_cldmonth">
+    <%=str_month %>
+  </h1>
+    <% } %>
+  <ul class="cui_cld_daybox">
+     <% for(i = 0; i < beginWeek; i++) { %>
+        <li class="cui_invalid"></li>
+      <% } %>
+      <% for(i = 0; i < days; i++) { %>
+        <% var day = i + 1; %>
+        <% var dateObj = new Date(changedYear, changedMonth, day); %>
+        <% var calendar_time = dateObj.getTime(); %>
+        <% var difftime = calendar_time -curTime; %>
+        <% var _difftime =  -1 * difftime; %>
+        <% var diffHour =  parseInt(_difftime / 3600000 * 100) / 100; %>
+        <% var _diffHour =  parseInt((startTime.getTime() - calendar_time) / 36000) / 100; %>
+
+        <%if(typeof dayWrapperItemFn != 'undefined' && _.isFunction(dayWrapperItemFn)){ %>
+          <%=dayWrapperItemFn(scope, changedYear, changedMonth, day, dateObj, difftime) %>
+        <%} else { %>
+        <li data-curTime="<%=diffHour %>" class="cui_calendar_item cui_cld_day_havetxt <%if(_diffHour >= 24 || (endTime && calendar_time > endTime.getTime() )) { %> cui_cld_daypass <%} %>" data-cndate="<%=changedYear%>-<%=changedMonth + 1%>-<%=day%>" data-date="<%=changedYear%>-<%=changedMonth%>-<%=day%>"><%=dayItemFn.call(scope, changedYear, changedMonth, day, dateObj, difftime)%> </li>
+        <%} %>
+
+      <% } %>
+  </ul>
+<%} %>
+</section>

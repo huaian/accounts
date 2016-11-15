@@ -1,0 +1,1 @@
+define("util/build/examples/require",["dojo","dijit","dojox"],function(i,o,e){require({packages:[{name:"dojo",location:"../../../dojo"},{name:"dijit",location:"../../../dijit"}]})});

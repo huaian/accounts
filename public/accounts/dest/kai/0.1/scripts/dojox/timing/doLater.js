@@ -1,0 +1,1 @@
+define("dojox/timing/doLater",["./_base"],function(e){return dojo.experimental("dojox.timing.doLater"),e.doLater=function(o,t,r){if(o)return!1;var a=e.doLater.caller,n=e.doLater.caller.arguments;return r=r||100,t=t||dojo.global,setTimeout(function(){a.apply(t,n)},r),!0},e.doLater});

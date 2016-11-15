@@ -1,0 +1,1 @@
+define("util/less/test/browser/runner-rootpath",["dojo","dijit","dojox"],function(t,s,o){less.rootpath="https://www.github.com/",describe("less.js browser test - rootpath url's",function(){testLessEqualsInDocument()})});

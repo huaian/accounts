@@ -1,0 +1,1 @@
+define("util/less/lib/less/tree/alpha",["dojo","dijit","dojox"],function(t,e,i){!function(t){t.Alpha=function(t){this.value=t},t.Alpha.prototype={toCSS:function(){return"alpha(opacity="+(this.value.toCSS?this.value.toCSS():this.value)+")"},eval:function(t){return this.value.eval&&(this.value=this.value.eval(t)),this}}}(require("../tree"))});

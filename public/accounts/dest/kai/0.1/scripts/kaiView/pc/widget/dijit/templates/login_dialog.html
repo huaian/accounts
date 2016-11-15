@@ -1,0 +1,41 @@
+<div  data-dojo-attach-point="containerNode">
+	<div data-dojo-type="dijit/Dialog" data-dojo-props='
+			title:"请输入用户名密码"' data-dojo-attach-point='dialog' class="login-dialog">
+		<section class="login-container animation-bounce">
+			<form data-dojo-type="dijit/form/Form" data-dojo-props='doLayout:false' data-dojo-attach-point='form'>
+				<div class="login boxShadow-white-200 borderRadius-3">
+					<h1 class="boxShadow-white-1 borderRadius-3 background-linear-gradient-whiteffd">
+				<i class="iconfont" >&#xf0159;</i>
+				<%=title%></h1>
+				<div class="form-row">
+					<i class="iconfont">&#xf012d;</i>
+					<input  trim="true" data-dojo-type="dijit/form/TextBox" type="text" name="<%=((typeof idNameAttribute !== 'undefined') && _.isString(idNameAttribute))?idNameAttribute:'username'%>" placeholder="请输入用户名">
+				</div>
+
+			    <div class="form-row"><i class="iconfont">&#xf00c9;</i>
+					<input  data-dojo-type="dijit/form/TextBox" type="password" name="<%=((typeof passwordNameAttribute !== 'undefined') &&  _.isString(passwordNameAttribute))?passwordNameAttribute:'password'%>" placeholder="请输入密码">
+				</div>
+				<%if(typeof isVerificationCode != 'undefined' && isVerificationCode){%>
+					<div class="form-row verificationCode-con"><i class="iconfont">&#xf00c9;</i>
+						<input  data-dojo-type="dijit/form/TextBox" type="text" name="captcha" placeholder="请输入验证码">
+						<button class="fl-right" data-dojo-type='dijit/form/Button' data-dojo-attach-point="verificationCodeSButton" >获取验证码</button>
+					</div>
+				<%}%>
+				<!--<div class="form-row remember_me">
+					<label>
+						<input type="checkbox" name="remember_me" id="remember_me">
+						记住我？
+					</label>
+				</div>-->
+				<div class='form-row submit' data-dojo-attach-point="actionBarNode">
+					<button class="auto_loginButton" data-dojo-type='dijit/form/Button' data-dojo-attach-point="okButton">确认</button>
+		</div>
+	</div>
+
+</form>
+</section>
+		<div id='pc-login'>
+			<div class="login-back"> </div>
+		</div>
+</div>
+</div>

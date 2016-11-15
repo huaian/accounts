@@ -1,0 +1,58 @@
+<!--<div class="hd hd_title">
+  <h1 class="page_title">赏金猎人</h1>
+  <a class="mobile_back">返回</a>
+</div>-->
+  <!--头部logo开始-->
+<div class="hd" style="text-align:center;">
+    <img src="{{baseUrl}}h5/res/img/cuishou_mobile/logo.png" width="40%" title="中腾信金融" alt="中腾信金融">
+  </div>
+  <!--头部logo结束-->
+
+  <!--中间豆腐块开始-->
+<div class="weui_cells mobile_index">
+  <section class='weui_panel'>
+    <div class='cui-box weui_cell'>
+      <div class="cui-flx4" v-on:click="gotoPhoneCollection(accountId,$event)">
+        <a href="javascript:;" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>电催作业</p>
+        </a>
+      </div>
+      <div class="cui-flx1">
+      </div>
+      <div class="cui-flx4" v-on:click="gotoCustomerSearch(accountId,$event)">
+        <a href="javascript:;" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>客户查询</p>
+        </a>
+      </div>
+    </div>
+    <div class='cui-box weui_cell'>
+      <div class="cui-flx4" v-on:click="gotoCollectionPerformance(accountId,$event)">
+        <a href="javascript:;" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>催收业绩</p>
+        </a>
+      </div>
+      <div class="cui-flx1">
+      </div>
+      <div class="cui-flx4">
+        <a href="javascript:;" v-on:click="gotoOutboundCollection(accountId,$event)" class="weui_btn weui_btn_plain_primary button_red">
+          <i class="icon iconfont"></i>
+          <p>外访催收</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+<!--中间豆腐块结束-->
+
+<!--底部提示开始-->
+<div class="missView " v-on:click="gotoSystemNotification($event)">
+  <span class="missTips announce" v-show='hasUnread'>
+    <span style="font-size:.7em">新的未读消息</span>
+    <i class="icon iconfont" style="font-size:1.2em"></i>
+  </span>
+  <img src="{{baseUrl}}h5/res/img/cuishou_mobile/announce.jpg" width="100%" title="系统通知" alt="系统通知">
+</div>
+<!--底部提示结束-->

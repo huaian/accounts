@@ -1,0 +1,1 @@
+define("dojox/gfx",["dojo/_base/lang","./gfx/_base","./gfx/renderer!"],function(e,n,o){return n.switchTo(o),n});

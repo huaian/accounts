@@ -1,0 +1,1 @@
+define("dojox/layout/BorderContainer",["dojo","dijit","dojox"],function(o,d,e){o.provide("dojox.layout.BorderContainer")});

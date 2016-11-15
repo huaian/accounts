@@ -1,0 +1,1 @@
+define("util/less/lib/less/tree/anonymous",["dojo","dijit","dojox"],function(t,n,o){!function(t){t.Anonymous=function(t){this.value=t.value||t},t.Anonymous.prototype={toCSS:function(){return this.value},eval:function(){return this},compare:function(t){if(!t.toCSS)return-1;var n=this.toCSS(),o=t.toCSS();return n===o?0:o>n?-1:1}}}(require("../tree"))});

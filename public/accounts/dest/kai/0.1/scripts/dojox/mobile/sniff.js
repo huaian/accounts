@@ -1,0 +1,1 @@
+define("dojox/mobile/sniff",["dojo/_base/kernel","dojo/sniff"],function(o,e){return o.deprecated("dojox/mobile/sniff","Use dojo/sniff instead","2.0"),e.add("iphone",e("ios")),e});

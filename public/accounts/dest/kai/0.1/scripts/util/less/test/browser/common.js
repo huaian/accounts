@@ -1,0 +1,1 @@
+define("util/less/test/browser/common",["dojo","dijit","dojox"],function(e,n,o){!function(){function e(){setTimeout(function(){n.execute()},3e3)}var n=jasmine.getEnv();n.updateInterval=1e3;var o=new jasmine.HtmlReporter;n.addReporter(o),n.specFilter=function(e){return o.specFilter(e)};var t=window.onload;window.onload=function(){t&&t(),e()}}()});

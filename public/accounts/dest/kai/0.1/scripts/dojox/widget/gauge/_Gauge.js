@@ -1,0 +1,1 @@
+define("dojox/widget/gauge/_Gauge",["dojo","dijit","dojox","dojo/require!dojox/gauges/_Gauge"],function(g,e,a){g.provide("dojox.widget.gauge._Gauge"),g.require("dojox.gauges._Gauge"),a.widget.gauge._Gauge=a.gauges._Gauge,a.widget.gauge.Range=a.gauges.Range,a.widget.gauge._indicator=a.gauges._indicator});

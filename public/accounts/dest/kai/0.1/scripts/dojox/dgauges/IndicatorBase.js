@@ -1,0 +1,1 @@
+define("dojox/dgauges/IndicatorBase",["dojo/_base/declare","dojox/widget/_Invalidating"],function(d,e){return d("dojox.dgauges.IndicatorBase",e,{value:null})});

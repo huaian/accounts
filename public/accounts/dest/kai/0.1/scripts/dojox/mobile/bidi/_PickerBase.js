@@ -1,0 +1,1 @@
+define("dojox/mobile/bidi/_PickerBase",["dojo/_base/declare","dojo/dom-construct"],function(e,i){return e(null,{buildRendering:function(){if(this.inherited(arguments),!this.isLeftToRight())for(var e=this.domNode.children.length;e>0;e--)i.place(this.domNode.children[0],this.domNode.children[e-1],"after")}})});

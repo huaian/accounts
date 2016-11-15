@@ -1,0 +1,1 @@
+define("util/build/plugins/domReady",[],function(){return{start:function(d,e,n){return n.amdResources[n.getSrcModuleInfo("dojo/domReady",e).mid]}}});

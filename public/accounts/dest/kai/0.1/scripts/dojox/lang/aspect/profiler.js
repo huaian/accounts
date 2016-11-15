@@ -1,0 +1,1 @@
+define("dojox/lang/aspect/profiler",["dojo","dijit","dojox"],function(n,i,o){n.provide("dojox.lang.aspect.profiler"),function(){var i=o.lang.aspect,t=function(n){this.args=n?[n]:[],this.inCall=0};n.extend(t,{before:function(){!this.inCall++},after:function(){!--this.inCall}}),i.profiler=function(n){return new t(n)}}()});

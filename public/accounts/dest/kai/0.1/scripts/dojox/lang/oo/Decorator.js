@@ -1,0 +1,1 @@
+define("dojox/lang/oo/Decorator",["dojo","dijit","dojox"],function(o,n,t){o.provide("dojox.lang.oo.Decorator"),function(){var o=t.lang.oo,n=o.Decorator=function(o,n){this.value=o,this.decorator="object"==typeof n?function(){return n.exec.apply(n,arguments)}:n};o.makeDecorator=function(o){return function(t){return new n(t,o)}}}()});

@@ -1,0 +1,1 @@
+define("dojox/charting/plot2d/MarkersOnly",["dojo/_base/declare","./Default"],function(o,t){return o("dojox.charting.plot2d.MarkersOnly",t,{constructor:function(){this.opt.lines=!1,this.opt.markers=!0}})});

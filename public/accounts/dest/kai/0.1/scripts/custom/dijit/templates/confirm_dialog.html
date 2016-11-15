@@ -1,0 +1,11 @@
+<div data-dojo-attach-point="containerNode">
+    <div data-dojo-attach-point='dialog'  data-dojo-type="dijit/Dialog" class="dialog-min-width" title="<%=(typeof title !== 'undefined')?title:''%>">
+        <form data-dojo-type="dijit/form/Form">
+            <p class="align-center" id="msgContainer"><%=msg%></p>
+            <p class="align-center">
+                <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="yes_button">是</button>
+                <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="no_button">否</button>
+            </p>
+        </form>
+    </div>
+</div>
