@@ -34,9 +34,29 @@ router.delete('/:caseId',function(req, res, next){
 */
 router.post('/',function(req, res, next){
   var userName = req.body.loginId;
+  //console.log(req.body.photo);
   db.open(function(err, db) {
     // Fetch a collection to insert document into
     var collection = db.collection("users");//查询用户表
+    /*
+    collection.insertOne(
+      {
+        userName : userName,
+        password : req.body.photo
+      },function(){
+        res.json(
+          {
+            "responseStatus":{
+              "code":"000000",//状态码，"000000"成功,其他为失败 4000004
+              "msg":"注册成功！",//描述
+            },
+            body: {
+            }
+          }
+        );
+      }
+    );//更新用户表
+    */
     collection.findOne({"userName":userName}, function(err, item) {
       console.log(item);//
       if(_.isObject(item) && (item.password == passwordCrypo.hashPassword(req.body.password))){//
