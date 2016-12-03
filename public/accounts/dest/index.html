@@ -79,7 +79,7 @@
     }
     if(s.cache === false){//需要显式设置不允许缓存
       //url = url+( /\?/.test( url ) ? "&" : "?" )+ "_=" +(new Date()).getTime();
-      url = url+( /\?/.test( url ) ? "&" : "?" )+ '_v=20161113224744'+ version;
+      url = url+( /\?/.test( url ) ? "&" : "?" )+ '_v=20161203173819'+ version;
     }
     script.src = url;
     head.insertBefore(script, head.firstChild);
@@ -155,7 +155,7 @@
     locale: "zh",
     extraLocale: [],
     //cacheBust: true,
-    cacheBust: '_v=20161113224744'+ '_k=' + version,
+    cacheBust: '_v=20161203173819'+ '_k=' + version,
     fontSizeWatch:true,
     preloadImages:true,
     callback:function(){

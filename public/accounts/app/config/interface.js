@@ -21,7 +21,7 @@ define([
       domain: '10.2.130.145:3000',
       path:'accounts',
       preventAlert:false,
-      isDefault:true,
+      isDefault:false,
       envCode:'LOCAL',
       trackerPostUrl:{
       }
@@ -31,10 +31,11 @@ define([
       host:'192.168.1.6:8000',
       protocol:'http',
       //domain:(function(){return location.host})(),
-      domain: '192.168.1.6:3000',
+      //domain: '192.168.1.6:3000',
+      domain: '192.168.1.7:3000',
       path:'accounts',
       preventAlert:false,
-      isDefault:false,
+      isDefault:true,
       envCode:'LOCAL',
       trackerPostUrl:{
       }

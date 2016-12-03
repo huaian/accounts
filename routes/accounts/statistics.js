@@ -34,9 +34,6 @@ var arg = url.parse(req.url, true).query;  //方法二arg => { aa: '001', bb: '0
 console.log(arg.aa);//返回001
 console.log(arg.bb);//返回002
 */
-var current = new Date();
-var currentMonth = new Date(current.getFullYear(), current.getMonth());//当前月开始时间
-var nextMonth = new Date(current.getFullYear(), current.getMonth() + 1);//下个月的时间开始
 //ADD
 router.get('/', function (req, res, next) {
   //check auth
@@ -55,6 +52,18 @@ router.get('/', function (req, res, next) {
   var endDate = arg.endDate;
   console.log(startDate, endDate, arg);
   var statistics = {};
+  var current;
+  //var nextMonth;
+  //var currentMonth;
+  if(!(startDate && _.isString(startDate)) || !(endDate && _.isString(endDate))){
+    current = new Date();//当前日期
+    if(!(startDate && _.isString(startDate))){
+      startDate = new Date(current.getFullYear(), current.getMonth());//当前月开始时间
+    }
+    if( !(endDate && _.isString(endDate))){
+      endDate = new Date(current.getFullYear(), current.getMonth() + 1);//下个月的时间开始
+    }
+  }
   mongoConnect.then(function (db) {//request
     var collection = db.collection('incomes');//incomes
     console.log('collection');
@@ -72,8 +81,10 @@ router.get('/', function (req, res, next) {
           $match: {
             userName: req.user.userName,
             date: {
-              '$gte': _.isString(startDate) ? new Date(startDate) : currentMonth,
-              '$lte': _.isString(endDate) ? new Date(endDate) : nextMonth
+              //'$gte': (startDate && _.isString(startDate)) ? new Date(startDate) : currentMonth,//start time
+              //'$lte': (endDate && _.isString(endDate)) ? new Date(endDate) : nextMonth//时间截止
+              '$gte': new Date(startDate),//start time
+              '$lte':new Date(endDate)//时间截止
             }
           }
         },
@@ -93,10 +104,10 @@ router.get('/', function (req, res, next) {
         }
       ]
     );
-    incomesCursor.toArray().then(function (items) {
+    incomesCursor.toArray().then(function (items) {//incomes
       console.log(items);
       statistics.incomes = items;
-      console.log(statistics.incomes);
+      console.log('incomes:',statistics.incomes);
       var collection = db.collection('expenses');//expenses
       /**
       {
@@ -119,8 +130,12 @@ router.get('/', function (req, res, next) {
             $match: {
               userName: req.user.userName,
               date: {
+                /*
                 '$gte': _.isString(startDate) ? new Date(startDate) : currentMonth,//from date
-                '$lte': _.isString(endDate) ? new Date(endDate) : nextMonth//end date
+                '$lte': _.isString(endDate) ? new Date(endDate) : nextMonth,//end date
+                */
+                '$gte': new Date(startDate),//start time
+                '$lte': new Date(endDate)//时间截止
               }
             }
           },
@@ -145,8 +160,9 @@ router.get('/', function (req, res, next) {
       );
       return expensesCursor.toArray();//get the 
     }).then(
-      function (items) {
+      function (items) {//expenses
         statistics.expenses = items;
+        console.log('expeneses:',statistics.expenses);
         ///*
         dictUtil.getDictData('income_types').then(function (dictItems) {//get income dict data list
           _.each(statistics.incomes, function (item) {
