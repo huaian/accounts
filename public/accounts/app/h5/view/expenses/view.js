@@ -83,7 +83,7 @@ function (
       });
       if(_.isString(expenseId)){
         expensesRestStores.expenses.get(expenseId).then(function(resp){
-          self.viewData.formData = resp.body.content;
+          self.viewData.formData = resp.body;//获取数据
           self.viewData.formData.date = locale.format(new Date(self.viewData.formData.date), {
             datePattern: "yyyy-MM-dd",
             selector: 'date'
