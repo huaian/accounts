@@ -13,7 +13,7 @@ define([
   /*
   h5 start
   */
-  {id:'h5/view/login',parent:'h5/view/index',viewName:'login',useModule:true,viewTitle:'账号绑定',isDefault:true,indexLevel:true},
+  {id:'h5/view/login',parent:'h5/view/index',viewName:'login',useModule:true,viewTitle:'登录',isDefault:true,indexLevel:true},
   {id:'h5/view/register',parent:'h5/view/index',viewName:'register',useModule:true,viewTitle:'注册',isDefault:true,indexLevel:true,templatePath:'kaiView/h5/view/register/template/template'},
   {id:'h5/view/incomes',parent:'h5/view/index',viewName:'incomes',useModule:true,viewTitle:'收入',isDefault:true,indexLevel:true},
   {id:'h5/view/incomes_list',parent:'h5/view/index',viewName:'incomes_list',useModule:true,viewTitle:'收入列表',isDefault:true,indexLevel:true},

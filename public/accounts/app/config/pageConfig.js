@@ -23,7 +23,7 @@ define([],function() {
     /*配置页面名称*/
     var pageNameConfig = {
         //h5
-        'h5/view/login':'账号绑定',
+        'h5/view/login':'登录',
         'h5/view/task_list':'任务列表',
         'h5/view/task_detail':'客户详细信息',
         //
