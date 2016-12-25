@@ -31,7 +31,10 @@
       <div class="main-frame">
         <div class="hd hd_title" id='headerview' style='display:none'>
           <h1 class="page_title"></h1>
-          <a class="mobile_back">返回</a>
+          <a class="mobile_back"></a>
+          <span class="fr cm-header-icon cm-header-logout">
+            注销
+          </span>
         </div>
         <div class="main-viewport mt-70">
           <div style='display:none'>
@@ -79,7 +82,7 @@
     }
     if(s.cache === false){//需要显式设置不允许缓存
       //url = url+( /\?/.test( url ) ? "&" : "?" )+ "_=" +(new Date()).getTime();
-      url = url+( /\?/.test( url ) ? "&" : "?" )+ '_v=20161203173819'+ version;
+      url = url+( /\?/.test( url ) ? "&" : "?" )+ '_v=20161225170306'+ version;
     }
     script.src = url;
     head.insertBefore(script, head.firstChild);
@@ -117,8 +120,8 @@
       }else{//打包后的环境
         //appPrefix = './app/';
         //appParentDirectory = 'http://192.168.1.6:3000/';
-        //srcParentDirectory = './';
-        srcParentDirectory = 'http://121.42.51.73:3000/';
+        srcParentDirectory = './';
+        //srcParentDirectory = 'http://121.42.51.73:3000/';
         /*
         kaiPrefx = './';//需要以/结尾
         appPrefix = './';//需要以/结尾
@@ -128,7 +131,7 @@
         return '';
       }
     })(),
-    
+
     packages: [
       // Using a string as a package is shorthand for `{ name: 'app', location: 'app' }`
     ],
@@ -155,7 +158,7 @@
     locale: "zh",
     extraLocale: [],
     //cacheBust: true,
-    cacheBust: '_v=20161203173819'+ '_k=' + version,
+    cacheBust: '_v=20161225170306'+ '_k=' + version,
     fontSizeWatch:true,
     preloadImages:true,
     callback:function(){

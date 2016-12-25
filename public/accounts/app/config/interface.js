@@ -35,7 +35,7 @@ define([
       domain: '192.168.1.7:3000',
       path:'accounts',
       preventAlert:false,
-      isDefault:true,
+      isDefault:false,
       envCode:'LOCAL',
       trackerPostUrl:{
       }

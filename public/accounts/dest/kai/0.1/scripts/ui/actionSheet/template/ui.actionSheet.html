@@ -6,8 +6,10 @@
         <div class="weui-actionsheet__cell" data-id='<%=actionItem.id%>'><%=actionItem.name%></div>
       <%});%>
     </div>
+    <%if(isCancel){%>
     <div class="weui-actionsheet__action">
       <div class="weui-actionsheet__cell kui-actionSheet-cancel">取消</div>
     </div>
+    <%}%>
   </div>
 </div>
