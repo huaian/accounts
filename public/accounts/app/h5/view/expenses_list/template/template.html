@@ -9,7 +9,12 @@
 "contactRemark" : "1313"
 }
 --->
-<a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary" v-on:click="gotoExpenses(accountId,$event)">新增</a>
+<div class="page__hd">
+  <h1 class="page__title"></h1>
+  <p class="page__desc">
+    <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary" v-on:click="gotoExpenses(accountId,$event)">新增</a>
+  </p>
+</div>
 <div class="page__bd">
         <section  v-for="expenseItem in expenseList">
         <div class="weui-form-preview">
