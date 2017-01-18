@@ -1,1 +1,0 @@
-define("util/build/transforms/report",["../buildControl","../fileUtils","../fs"],function(t,e,n){return function(i,r){return i.reports.forEach(function(i){var r=e.computePath(e.catPath(i.dir,i.filename),t.destBasePath),o=i.content;"function"==typeof o&&(o=o(t)),t.waiting++,e.ensureDirectory(e.getFilepath(r)),n.writeFile(r,o,"utf8",function(e){t.passGate()})}),0}});

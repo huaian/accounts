@@ -54,5 +54,9 @@
   <div class="weui_btn_area" style="margin-top:2em;">
     <a class="weui_btn weui_btn_primary js_button_login" href="javascript:">登录</a>
   </div>
+  <div class="align-center color-grey font-small">
+    <span v-if="showEnv">环境：{{envCode}} &nbsp;&nbsp; 版本号：{{version}}</span>
+    <div v-on:click="showEnvListActionSheet"> &nbsp;&nbsp;</div>
+  </div>
 </div>
 </script>

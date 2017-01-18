@@ -32,7 +32,7 @@ define([
 
 			{
 				name: 'appConfig',
-				location: appPrefix + './app/config',
+				location: appPrefix + './app/appConfig',
 				main:'main'
 			},
 
@@ -49,6 +49,11 @@ define([
 			{
 				name: 'viewUtils',
 				location:appPrefix + './app/viewUtils',
+			},
+
+			{
+				name: 'appViewUtils',
+				location:appPrefix + './app/appViewUtils',
 			},
 
 			{

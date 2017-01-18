@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr">
+<html dir="ltr" debug='true'>
 <head>
   <meta charset="UTF-8">
   <title>Ionic App</title>
@@ -109,19 +109,20 @@
       }
     })(),
     async: true,
-    popup:false,
+    popup:true,
     //baseUrl:'./',
     baseUrl:(function(){//设置默认寻址路径 指向项目根目录
       if(location.pathname.indexOf('app') >= 0){//开发环境
-        kaiPrefx = '../../../../';//需要以/结尾 相对于项目的根目录计算路径
+        //kaiPrefx = '../../../../';//需要以/结尾 相对于项目的根目录计算路径
         srcParentDirectory = '../';
+        kaiPrefx = srcParentDirectory;//需要以/结尾 相对于项目的根目录计算路径
         appPrefix = srcParentDirectory;
         return './';//
       }else{//打包后的环境
         //appPrefix = './app/';
-        //appParentDirectory = 'http://192.168.1.6:3000/';
-        //srcParentDirectory = './';
-        srcParentDirectory = 'http://121.42.51.73:3000/';
+        //srcParentDirectory = 'http://192.168.1.9:3000/';
+        //srcParentDirectory = 'http://121.42.51.73:3000/';
+        srcParentDirectory = './';
         /*
         kaiPrefx = './';//需要以/结尾
         appPrefix = './';//需要以/结尾
@@ -138,7 +139,9 @@
     selectorEngine: 'lite',
     tlmSiblingOfDojo:true,
     has: {
-      "dojo-firebug": false,
+      "debugAtAllCosts": true,
+
+      "dojo-firebug": true,
       "dojo-amd-factory-scan":true,
       "dojo-debug-messages": true,
       "dojo-guarantee-console":true,

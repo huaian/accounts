@@ -1,1 +1,0 @@
-define([],function(){"use strict";var e={verifyCodeType:{simple:"001",login:"002"}};return e});

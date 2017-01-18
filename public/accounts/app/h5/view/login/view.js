@@ -1,7 +1,7 @@
 /*登录*/
 define([
   'page/viewFactory',
-  'viewUtils/login',
+  'appViewUtils/login',
   './events/events',
   //'dataHelper/login',//TBD
   'cutil/c.util.validate',
@@ -108,6 +108,12 @@ function (
         isValidCellphoneNumber:function(cellphoneNumber){
           return validate.isMobile(cellphoneNumber);
         },
+        isValidUserName:function(){
+
+        },
+        isValidPassword:function(){
+          
+        }
       }
     }
   });

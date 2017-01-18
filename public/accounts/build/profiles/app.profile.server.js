@@ -9,8 +9,19 @@
 *
 * Look to `util/build/buildControlDefault.js` for more information on available options and their default values.
 */
-var kaiPrefx = '/var/lib/jenkins/jobs/kai-cuishou-sit/workspace/';//小呆的目录多了一级
-//var kaiPrefx = '../kai/';//小呆的目录多了一级
+var projectName = '';
+var kaiPrefx;
+process.argv.forEach(function (val, index, array) {
+    console.log(index + ': ' + val);
+    if(index == 8){
+      kaiPrefx = val;//小贷的目录多了一级
+      if(kaiPrefx.charAt(kaiPrefx.length - 1) !== '/'){
+        kaiPrefx = kaiPrefx + '/';
+      }
+    }
+    console.log(kaiPrefx);
+});
+//var kaiPrefx = '/var/lib/jenkins/jobs/kai-sit-2/workspace/';//小贷的目录多了一级 指定kai的位置
 var profile = {
 	//releaseDir: "./app",    //相对于basePath路径，现在basePath已经定位到js文件夹下
 	//releaseName: "lib",    //在releaseDir文件加下，此处是app文件夹下创建个lib文件夹
@@ -18,8 +29,7 @@ var profile = {
 	// `basePath` is relative to the directory containing this profile file; in this case, it is being set to the
 	// src/ directory, which is the same place as the `baseUrl` directory in the loader configuration. (If you change
 	// this, you will also need to update run.js.)
-	//需要改变路径，如果文件夹路径不对的话
-	basePath: '../..',//,//相对于profile.js文件的路径，例如我喜欢把profile.js文件放在util->buildScript->profiles文件夹下
+	basePath: '../..',//相对于profile.js文件的路径，例如我喜欢把profile.js文件放在util->buildScript->profiles文件夹下
 
 	// This is the directory within the release directory where built packages will be placed. The release directory
 	// itself is defined by `build.sh`. You should probably not use this; it is a legacy option dating back to Dojo
@@ -74,9 +84,8 @@ var profile = {
 
 	{
 		name: 'appConfig',
-		location: './app/config',
-		//destLocation:'./' + "/app/config"
-		destLocation:'./'  + "/app/config"
+		location: './app/appConfig',
+		destLocation:'./'  + "/app/appConfig"
 	},
 
 	{
@@ -117,6 +126,12 @@ var profile = {
 	},
 
 	{
+		name: 'appViewUtils',
+		location: './app/appViewUtils',
+		destLocation:'./' + "/app/appViewUtils"
+	},
+
+	{
 		name: 'pc',
 		location: './app/pc',
 		destLocation:'./'   + "/app/pc"
@@ -138,6 +153,12 @@ var profile = {
 		name: 'appRestStore',
 		location: './app/appRestStore',
 		destLocation:'./' + "/app/appRestStore"
+	},
+
+	{
+		name:'appLocalStore',
+		location: './app/appLocalStore',
+		destLocation:'./' + "/app/appLocalStore"
 	},
 
 	{
@@ -257,6 +278,7 @@ var profile = {
 		destLocation:"./kai/0.1/scripts/plugin"
 	},
 
+	/*
 	{
 		name     : 'put-selector',
 		location : kaiPrefx + '0.1/scripts/put-selector',
@@ -264,6 +286,7 @@ var profile = {
 		lib: '.',
 		destLocation: './kai/0.1/scripts/put-selector',
 	},
+	*/
 
 	{
 		name:'topic',
@@ -276,12 +299,13 @@ var profile = {
 		location: kaiPrefx + '0.1/scripts/ui',
 		destLocation:"./kai/0.1/scripts/ui"
 	},
-
+	/*
 	{
 		name:'util',
 		location:kaiPrefx + '0.1/scripts/util',
 		destLocation:"./kai/0.1/scripts/util"
 	},
+	*/
 
 	{
 		name:'cutil',
@@ -301,6 +325,7 @@ var profile = {
 		destLocation:"./kai/0.1/scripts/widgets"
 	},
 
+	/*
 	{
 		name     : 'xstyle',
 		location : kaiPrefx + '0.1/scripts/xstyle',
@@ -308,6 +333,7 @@ var profile = {
 		lib: '.',
 		destLocation: './kai/0.1/scripts/xstyle',
 	},
+	*/
 
 	{
 		name     : 'bootstrap',
@@ -329,24 +355,31 @@ var profile = {
 		destLocation: './kai/0.1/scripts/kaiView'
 	},
 
+	/*服务类*/
+	{
+		name     : 'service',
+		location : kaiPrefx + '0.1/scripts/service',
+		destLocation: './kai/0.1/scripts/service'
+	}
+
 	/*
 	{
 	location: '0.1/scripts/3rdlibs/dbootstrap-0.1.1',
 	name: 'dbootstrap',
 	destLocation:"0.1/scripts/3rdlibs/dbootstrap-0.1.1"
-},
-*/
-/*
-{
-name     : 'doh',
-location : '0.1/scripts/3rdlibs/dojo-1.10.4/util/doh',
-main : 'main',
-lib: '.',
-destLocation:"0.1/scripts/3rdlibs/dojo-1.10.4/util/doh"
-},
-*/
-],
-//end of packages
+	},
+	*/
+	/*
+	{
+	name     : 'doh',
+	location : '0.1/scripts/3rdlibs/dojo-1.10.4/util/doh',
+	main : 'main',
+	lib: '.',
+	destLocation:"0.1/scripts/3rdlibs/dojo-1.10.4/util/doh"
+	},
+	*/
+	],
+	//end of packages
 
 // Strips all calls to console functions within the code. You can also set this to "warn" to strip everything
 // but console.error, and any other truthy value to strip everything but console.warn and console.error.
@@ -370,164 +403,108 @@ layers: {
 		// a bunch of stuff we do not want or need. We want the initial script load to be as small and quick t,o
 		// load as possible, so we configure it as a custom, bootable base.
 		include: [
-			"dojo/store/Memory",
-			"dojo/topic",
-			"dojo/_base/lang",
-			"dojo/_base/declare",
-			"dojo/_base/array",
-			'dojo/Deferred',
-			"dojo/aspect",
-			"dojo/on",
-			"dojo/parser",
-			"dojo/dom-construct",
-			"dojo/dom",
-			"dojo/domReady",
-			///*
-			"dojo/cookie", // cookie
-			"dojo/promise/all",
-			"dojo/dom", // dom.isDescendant
-			"dojo/dom-class", // domClass.add domClass.remove domClass.replace domClass.toggle
-			"dojo/dom-geometry", // domGeometry.setMarginBox domGeometry.position
-			"dojo/dom-style", // domStyle.set
-			"dojo/errors/create", // createError
-			"dojo/fx", // fxUtils.wipeIn fxUtils.wipeOut
-			"dojo/has",
-			"dojo/_base/kernel", // kernel.deprecated
-			"dojo/keys", // arrows etc.
-			"dojo/_base/lang", // lang.getObject lang.mixin lang.hitch
-			"dojo/on", // on(), on.selector()
-			"dojo/topic",
-			"dojo/touch",
-			"dojo/when",
-			"dojo/_base/Deferred",
-			"dojo/data/util/sorter",
-			"dojo/dnd/autoscroll",
-			"dojo/request/handlers",
-			"dojo/request/default",
-			"dojo/errors/RequestError",
-			"dojo/errors/RequestTimeoutError",
-			"dojo/dnd/Mover",
-			"dojo/dnd/common",
-			"dojo/request/util",
-			"dojo/request/xhr",
-			"dojo/request/watch",
-			"dojo/_base/json",
-			"dojo/_base/html",
-			"dojo/dnd/TimedMoveable",
-			"dojo/dnd/Moveable",
-			"dojo/_base/xhr",
-			"dojo/i18n",
-			"dojo/date/locale",
-			"dojo/data/ObjectStore",
-			"dojo/store/JsonRest",
-			//dijit
-			"dijit/registry",
-			"dijit/_WidgetBase",
-			"dijit/tree/ObjectStoreModel",
-			"dijit/Dialog",
-			"dijit/Tree",
-			"dijit/form/Form",
-			"dijit/form/TextBox",
-			"dijit/form/CheckBox",
-			"dijit/ConfirmDialog",
-			"dijit/form/Textarea",
-			"dijit/layout/LinkPane",
-			"dijit/layout/TabContainer",
-			"dijit/layout/ContentPane",
-			"dijit/layout/BorderContainer",
-			"dijit/layout/AccordionContainer",
-			"dijit/form/RadioButton",
-			"dijit/form/DateTextBox",
-			"dijit/form/ValidationTextBox",
-			"dijit/_WidgetBase",
-			"dijit/_TemplatedMixin",
-			"dijit/_WidgetsInTemplateMixin",
-			"dijit/form/NumberSpinner",
-			"dijit/Toolbar",
-			"dijit/Fieldset",
-			"dijit/form/Button",
-			"dijit/form/FilteringSelect",
-			"dijit/form/DataList",
-			"dijit/layout/Container",
-			"dijit/form/Select",
-			"dijit/form/TimeTextBox",
-			//dojox
-			"dojox/validate",
-			"dojox/validate/web",
-			"dojox/layout/ExpandoPane",
-			"dojox/encoding/digests/MD5",
-			"dojox/layout/ResizeHandle",
-			"dojox/form/nls/zh/CheckedMultiSelect",
-			//dstore
-			"dstore/Rest",
-			"dstore/Cache",
-			"dstore/Trackable",
-			//dgrid
-			"dgrid/Grid",
-			"dgrid/extensions/Pagination",
-			"dgrid/Selection",
-			'dgrid/extensions/ColumnResizer',
-			"dgrid/Editor",
-			"dgrid/Keyboard",
-			"dgrid/extensions/ColumnHider",
-			"dgrid/Selector",
-			//Custom
-			"jquery",
-			//vendors
-			"plugin/vendor/jquery.ui.widget",
-			'plugin/jquery.fileupload',
-			//'react/react-dom',
-			//
-			"custom/dstore/createAsyncStore",
-			"topic/c.topic",
-			"plugin/text",
-			"plugin/vendor/require-css/css",
-			"data/model/c.appBase.model",
-			"data/model/dataHandler",
-			"data/model/c.model",
-			"data/model/c.abstract.model",
-			///*
-			"data/model/dataHandlerFactory",
-			"custom/dgrid/cdgrid",
-			"custom/dijit/form/DateTextBox",
-			"custom/helper/dijitHelper",
-			"custom/dijit/LocationSelector",
-			"custom/dstore/Trackable",
-			"custom/dstore/Rest",
-			"custom/dstore/Request",
-			"custom/dstore/RestStore",
-			"custom/dijit/CheckTreeSelector",
-			"custom/dijit/confirm_dialog",
-			//
-			"cutil/c.util.route",
-			"cutil/c.util.dgrid",
-			"cutil/c.util.data",
-			"cutil/c.util.config",
-			//
-			"3rdlibs/libs",//pc libs
-			"page/viewFactory",
-			"controller/initializer",
-			"plugin/vendor/require-css/css",
-			"plugin/highlight/highlight",
-			//UI
-			"ui/loading/ui.loading",
-			"ui/alert/ui.alert",
-			"ui/ui.mask",
-			"ui/tip/ui.tip",
-			"ui/inputclear/ui.inputclear",
-			//Kaiview
-			"kaiView/pc/view/index",
-			"kaiView/pc/widget/dijit/code_dialog",
-			"kaiView/pc/data/index",
-			"kaiView/pc/widget/dijit/interface_states_dialog",
-			"kaiView/pc/events/index",
-			"kaiView/pc/widget/dijit/change_password_dialog",
-			"kaiView/pc/viewUtils/index",
+      "dojo/store/Memory",//必须
+      "dojo/_base/lang",//必须
+      "dojo/_base/declare",//必须
+      "dojo/_base/array",//必须
+      'dojo/Deferred',//必须
+      "cutil/c.util.route",//解析view配置生成路由 必须
+      "cutil/c.util.config",//项目配置解析 必须
+      "custom/dstore/Rest",//必须
+      "plugin/vendor/require-css/css",//动态加载css 必须
+      "custom/dstore/Trackable",//必须
+      "3rdlibs/libs",//第三方库 backbonejs 必须
+      "page/viewFactory",//必须
+      'data/model/c.abstract.model',//必须
+      //可选
+      "dojo/aspect",//可选
+      "dojo/on",//可选
+      "dojo/parser",//可选
+      "dojo/dom-construct",//可选
+      "dojo/dom",//可选
+      "dojo/domReady",//可选
+      "dojo/cookie", //可选
+      //dijit
+      //"dojo/topic",//发送 topic 可选
+      "dijit/form/Form",//如果没有用到dijit表单 可选
+      /*
+      "dijit/registry",
+      "dijit/_WidgetBase",
+      "dijit/tree/ObjectStoreModel",
+      "dijit/Dialog",
+      "dijit/Tree",
+      "dijit/form/TextBox",
+      "dijit/form/CheckBox",
+      "dijit/ConfirmDialog",
+      "dijit/form/Textarea",
+      "dijit/layout/LinkPane",
+      "dijit/layout/TabContainer",
+      "dijit/layout/ContentPane",
+      "dijit/layout/BorderContainer",
+      "dijit/layout/AccordionContainer",
+      "dijit/form/RadioButton",
+      "dijit/form/DateTextBox",
+      "dijit/form/ValidationTextBox",
+      "dijit/_WidgetBase",
+      "dijit/_TemplatedMixin",
+      "dijit/_WidgetsInTemplateMixin",
+      "dijit/form/NumberSpinner",
+      "dijit/Toolbar",
+      "dijit/Fieldset",
+      "dijit/form/Button",
+      "dijit/form/FilteringSelect",
+      "dijit/form/DataList",
+      "dijit/layout/Container",
+      "dijit/form/Select",
+      "dijit/form/TimeTextBox",
+      */
+      //dijit end
+      //kai related
+      "service/web/c.geo.helper",//地址定位 可选
+      "common/c.ajax",//封装ajax请求 可选
+      "cutil/c.util.path",//解析url参数 可选
+      "cutil/c.util.validate",//表单验证方法 可选
+      "cutil/c.util.data",//数据处理工具 可选
+      //dstore
+      "dstore/Cache",//必须
+      "custom/dgrid/cdgrid",//pc的列表 dgrid列表 可选
+      "dgrid/util/touch",//pc的列表 在移动端的兼容
+      'data/model/c.abstract.model',//可选
+      "data/restStore/factory",//可选
+      "appRestStore/location",//省市区联动 可选
 		],
 		customBase: true,
 		boot: true,
 		includeLocales: [ 'zh' ]
 	},
+
+  //h5公共页面
+  /**
+  @description 应用层的合并文件
+  */
+  'h5/page/appBaseViewExtension':{
+    include: [
+      //common
+      //"plugin/custom/imagescanutil",//图片上传插件 可选
+      //"data/model/c.model",//如果使用rest store可以不添加
+      //custom start
+      //'appViewUtils/IDReader',//读卡器 可选
+      //custom end
+      //index
+      //"appRestStore/account",//登录
+      //kai中的login
+      "kaiView/h5/view/login/view",//kaiView中的登录页面 可选
+      //kai中的index
+      "kaiView/h5/view/index/view",//kaiView中的首页 可选
+      //h5登录页面
+      "h5/view/login/view", //登录页面 如果需要跳转登录需要 @note 后面有个view，真实引用view.js 可选
+      //列表搜索页面
+      //"h5/view/task_inquire/view", //默认首页 如果需要跳转登录需要 @note 后面有个view，真实引用view.js
+      //华联pad添加 从angular2过度到kai页面 可选
+      "kaiView/h5/view/center_controller/view"//可选
+    ],
+    includeLocales: [ 'zh' ]
+  },
 
 	// In this demo application, we load `app/main` on the client-side, so here we build a separate layer containing
 	// that code. (Practically speaking, you would probably just want to roll everything into the `dojo/dojo` layer,
@@ -537,14 +514,11 @@ layers: {
 	///*
 	'appMain/main': {
 		include:[
-			"appConfig/interface",
-			"appConfig/pageConfig",
-			"appConfig/project",
-			"appConfig/views",
-			"pc/store/restStores",
-			"pc/model/models",
-			"pc/page/appBaseViewExtension",
-			//"pc/store/stores",
+			"appConfig/interface",//接口配置 必须
+			"appConfig/pageConfig",//麻袋打点配置 必须
+			"appConfig/project",//项目级别的配置 必须
+			"appConfig/views",//页面配置 必须
+      "appConfig/const",//所用常量配置 必须
 		],
 		dependencies: [],
 		includeLocales: [ 'zh' ]

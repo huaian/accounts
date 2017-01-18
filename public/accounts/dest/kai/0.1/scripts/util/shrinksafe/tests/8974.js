@@ -1,1 +1,0 @@
-define("util/shrinksafe/tests/8974",["dojo","dijit","dojox"],function(t,i,e){result="",function(){var t=-1;result=t}()});

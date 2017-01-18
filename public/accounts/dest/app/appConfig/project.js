@@ -1,0 +1,1 @@
+define("appConfig/project",[],function(){"use strict";var i={projectName:"pc",title:"管理系统",loginUrl:dojoConfig.isH5?"h5/view/login":"pc/view/login",indexUrl:dojoConfig.isH5?"h5/view/index":"pc/view/index",isH5:dojoConfig.isH5,isOffline:!1,enableRoute:!0,appStoreLifeTime:"0.42D",useRest:!0};return i});

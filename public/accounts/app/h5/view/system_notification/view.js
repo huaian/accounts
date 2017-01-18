@@ -4,8 +4,8 @@
 define([
   'appRestStore/system_notification',
   'page/viewFactory',
-  'viewUtils/index',
-  'viewUtils/system_notification',
+  'appViewUtils/index',
+  'appViewUtils/system_notification',
   './events/events',
   'cutil/c.util.validate',
 ],

@@ -1,1 +1,0 @@
-function timestamp(){var e=new Date;return e.getFullYear()+"-"+(e.getMonth()+1)+"-"+e.getDate()+"-"+e.getHours()+":"+e.getMinutes()+":"+e.getSeconds()}var profile={basePath:".",buildTimestamp:timestamp()};

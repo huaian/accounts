@@ -1,1 +1,0 @@
-define("util/build/fs",["./rhino/fs"],function(e){var n=e.readFileSync;e.readFileSync=function(e,r){var i=n(e,r);return"utf8"==r&&(i=i.replace(/^\uFEFF/,"")),i};var r=e.readFile;return e.readFile=function(e,n,i){r(e,n,function(e,r){r&&"utf8"==n&&(r=r.replace(/^\uFEFF/,"")),i(e,r)})},e});

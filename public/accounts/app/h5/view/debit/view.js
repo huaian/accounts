@@ -10,11 +10,11 @@ document.body.innerHTML = greeter(user);
 */
 define([
     "dojo/date/locale",
-    'viewUtils/index',
+    'appViewUtils/index',
     'appRestStore/expenses',
     'appRestStore/dict',
     'page/viewFactory',
-    'viewUtils/expenses',
+    'appViewUtils/expenses',
     './events/events',
     'cutil/c.util.validate',
 ], function (locale, indexViewUtils, expensesRestStores, dictRestStores, CommonPageFactory, viewUtils, Events, validate) {

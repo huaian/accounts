@@ -1,1 +1,0 @@
-define("util/build/plugins/loadInit",[],function(){return{start:function(e,u,n){return[n.amdResources["dojo/require"],n.amdResources[n.getSrcModuleInfo(e,u).mid]]}}});

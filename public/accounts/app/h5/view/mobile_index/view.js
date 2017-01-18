@@ -1,12 +1,14 @@
 /*登录*/
 define([
+  'kaiView/h5/view/mobile_index/view',
   'page/viewFactory',
-  'viewUtils/index',
-  'viewUtils/mobile_index',
+  'appViewUtils/index',
+  'appViewUtils/mobile_index',
   './events/events',
   'cutil/c.util.validate',
 ],
 function (
+  kaiViewMobileIndex,
   CommonPageFactory,
   indexViewUtils,
   viewUtils,
@@ -15,8 +17,8 @@ function (
 ) {
 
   "use strict";
-  var baseview = CommonPageFactory.create('appBaseView');
-  var View = baseview.extend({
+  //var baseview = CommonPageFactory.create('appBaseView');
+  var View = kaiViewMobileIndex.extend({
     //是否显示title
     showHeader:false,
 
@@ -62,7 +64,7 @@ function (
 
     prepareViewUtils:function(){
       var self = this;
-      self.viewUtils = _.extend(viewUtils,indexViewUtils);
+      self.viewUtils = _.extend({},indexViewUtils,viewUtils);
     },
 
     prepareDataHelper:function(){
@@ -86,6 +88,7 @@ function (
         },
         methods: {
           gotoStatisticsSearch:function(event){
+            alert('go to statistics search');
             self.forward('h5/view/statistics_search');
           },
           gotoStatistics:function(event){
@@ -115,6 +118,12 @@ function (
           gotoSystemNotification:function(event){
             self.model.trigger('gotoSystemNotification',event);//前往系统通知页面
           },
+          gotoDiscuss:function(event){
+            self.model.trigger('gotoDiscuss',event);//前往系统通知页面
+          },
+          gotoRecommendedShops:function(event){
+            self.gotoPage('h5/view/recommendedShops',event);
+          }
         }
       };
     },

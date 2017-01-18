@@ -1,1 +1,0 @@
-define("util/shrinksafe/tests/escapeunicode",["dojo","dijit","dojox"],function(e,i,o){"α";"_\x00_�_￾_￿_"});

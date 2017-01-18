@@ -2,7 +2,7 @@
 @description rest请求接口
 */
 define([
-  "dojo/_base/lang",
+  //"dojo/_base/lang",
   //"data/store/c.common.store",
   'dojo/_base/declare',
   "custom/dstore/Rest",
@@ -12,7 +12,7 @@ define([
   "appConfig/interface"
 ],
 function (
-  lang,
+  //lang,
   //CommonStore,
   declare,
   Rest,
@@ -24,7 +24,7 @@ function (
   "use strict";
   //var headStore = CommonStore.HeadStore.getInstance();//headStore
   var CRest = declare([ Rest,Trackable]);//不使用缓存
-  var CacheableRest = declare([ Rest, Cache, Trackable]);//可缓存的Rest
+  //var CacheableRest = declare([ Rest, Cache, Trackable]);//可缓存的Rest
 
   var urlPrefix;
 
@@ -40,5 +40,6 @@ function (
     target: urlPrefix + '/statistics/',
     authRequired:true
   });
+  alert('_stores');
   return _stores;
 });

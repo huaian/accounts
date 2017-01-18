@@ -4,8 +4,8 @@
   dir: "../dest",
     //fileExclusionRegExp:'/^demo_(\w)+.js|demo_(\w)+.html/',
     // |demo_
-    fileExclusionRegExp:'/^\.|kaiDocs|_test|node_modules|build.text|static_html|sass|config.rb|.sass-cache|test_json|nightwatch|webdriverio|README|build-report|Gruntfile|\.md|package.json/',
     //fileExclusionRegExp: /^[\w,-]*.css$|^[\w,-]*.min.css$|^(node_modules)\.js/,
+    fileExclusionRegExp:/^[\w,-]+\.ts$|kaiDocs|node_modules|build.txt|static_html|sass|config.rb|.sass-cache|test_json|nightwatch|webdriverio|README|build-report|_test|Gruntfile|\.md|package.json/,
     /*modules: [
         {
             name: "main",

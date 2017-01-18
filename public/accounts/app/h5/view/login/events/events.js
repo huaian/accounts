@@ -4,7 +4,7 @@
  */
  define([
    "dojo/on",
-   'viewUtils/login',
+   'appViewUtils/login',
    'cutil/c.util.validate',
  ], function (
    on,

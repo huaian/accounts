@@ -1,1 +1,1 @@
-define(["common/c.class.inherit","topic/c.topic"],function(e,i){"use strict";var n={};return n.indexLevelTabChangeRequire=new e.Class(i,{__propertys__:function(){this.topicName="/pc/view/index/require_tab_change"}}),n});
+define("h5/topic/topics",["common/c.class.inherit","topic/c.topic"],function(e,i){"use strict";var c={};return c.indexLevelTabChangeRequire=new e.Class(i,{__propertys__:function(){this.topicName="/pc/view/index/require_tab_change"}}),c});

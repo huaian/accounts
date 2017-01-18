@@ -1,1 +1,0 @@
-define("util/less/lib/less/tree/comment",["dojo","dijit","dojox"],function(t,e,n){!function(t){t.Comment=function(t,e){this.value=t,this.silent=!!e},t.Comment.prototype={toCSS:function(t){return t.compress?"":this.value},eval:function(){return this}}}(require("../tree"))});

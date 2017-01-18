@@ -1,1 +1,0 @@
-define("util/doh/plugins/hello",["doh/runner"],function(n){var l=n.run,u=!1;n.run=function(){u||(n.debug("doh.plugins.hello plugin says Hello!"),u=!0),l.apply(n,arguments)}});

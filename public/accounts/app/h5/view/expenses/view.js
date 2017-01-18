@@ -3,11 +3,11 @@
 */
 define([
    "dojo/date/locale",
-  'viewUtils/index',
+  'appViewUtils/index',
   'appRestStore/expenses',
   'appRestStore/dict',
   'page/viewFactory',
-  'viewUtils/expenses',
+  'appViewUtils/expenses',
   './events/events',
   'cutil/c.util.validate',
 ],

@@ -1,1 +1,0 @@
-define("util/docscripts/tests/doctests",["dojo","dijit","dojox","dojo/require!util/docscripts/tests/basic"],function(s,t,i){s.provide("util.docscripts.tests.doctests"),s.require("util.docscripts.tests.basic")});

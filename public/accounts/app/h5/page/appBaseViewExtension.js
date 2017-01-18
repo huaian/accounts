@@ -2,12 +2,14 @@
 base view for h5
 */
 define([
-  'viewUtils/index',
+  'kaiView/viewUtils/index',
+  'appViewUtils/index',
   "page/c.page.view",
   "data/store/c.common.store",
   "cutil/c.util.common"
 ],
 function(
+  kaiViewIndexViewUtils,
   indexViewUtils,
   PageView,
   CommonStore,
@@ -43,7 +45,7 @@ function(
     },
   };//extension end
 
-  _.extend(extension,indexViewUtils,
+  _.extend(extension,kaiViewIndexViewUtils,indexViewUtils,
     {
       /**
 

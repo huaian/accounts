@@ -1,7 +1,7 @@
 /*登录*/
 define([
   'page/viewFactory',
-  'viewUtils/index',
+  'appViewUtils/index',
   './events/events',
   //'dataHelper/login',//TBD
   'cutil/c.util.validate',

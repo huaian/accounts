@@ -1,0 +1,1 @@
+define("appViewUtils/expenses_list",["appRestStore/expenses","dojo/_base/lang","cutil/c.util.common","cutil/c.util.validate"],function(e,t,n,s){"use strict";var i={deleteExpense:function(t){var n=this;e.expenses.remove(t).then(function(e){n.showToast({text:"删除成功",callback:function(){n.reload()}})})}};return i});

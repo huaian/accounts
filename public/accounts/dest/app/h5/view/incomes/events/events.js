@@ -1,1 +1,1 @@
-define(["dojo/on","viewUtils/login","cutil/c.util.validate"],function(i,n,t){"use strict";var e={subscribeTopics:function(){},bindEvents:function(){var i=this;i.bind({})}};return{eventBinder:e}});
+define("h5/view/incomes/events/events",["dojo/on","appViewUtils/login","cutil/c.util.validate"],function(i,n,e){"use strict";var t={subscribeTopics:function(){},bindEvents:function(){var i=this;i.bind({})}};return{eventBinder:t}});

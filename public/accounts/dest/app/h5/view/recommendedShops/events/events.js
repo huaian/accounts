@@ -1,0 +1,1 @@
+define("h5/view/recommendedShops/events/events",["dojo/on","appViewUtils/login","cutil/c.util.validate"],function(e,i,n){"use strict";var t={subscribeTopics:function(){},bindEvents:function(){var e=this;e.bind({})}};return{eventBinder:t}});

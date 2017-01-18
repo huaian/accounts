@@ -1,26 +1,28 @@
 /*外访任务列表*/
 define([
-  'appRestStore/statistics',
+  //'appRestStore/statistics',
   'page/viewFactory',
-  'viewUtils/index',
-  'viewUtils/statistics',
+  'appViewUtils/index',
+  'appViewUtils/statistics',
   './events/events',
   //'dataHelper/login',//TBD
-  'cutil/c.util.validate',
+  //'cutil/c.util.validate',
+  /*
   "dojox/charting/Chart",
   "dojox/charting/plot2d/Pie",
   "dojox/charting/action2d/Tooltip",
   "dojox/charting/themes/Tom",
   "dojox/charting/widget/Legend"
+  */
 ],
 function (
-  restStores,
+  //restStores,
   CommonPageFactory,
   indexViewUtils,
   viewUtils,
-  Events,
+  Events//,
   //dataHelper,//TBD
-  validate
+  //validate
 ) {
 
   "use strict";
@@ -32,11 +34,12 @@ function (
     /*可以冒泡的事件可以绑定在这里 delegate*/
     events: {
       //'click .js_button_sendVerifyCode': _.debounce(viewUtils.sendVerifyCode,250,true,function(){}),
-      'click .mobile_back': _.debounce(viewUtils.goBack,250,true,function(){})//返回上一级
+      //'click .mobile_back': _.debounce(viewUtils.goBack,250,true,function(){})//返回上一级
     },
 
     onCreate: function () {//初次加载时候使用
       var self = this;
+      alert('onCreate');
     },
 
     els:{
@@ -48,6 +51,7 @@ function (
 
     onShow: function () {//在再显示时候调用 在 create之后调用
       var self = this;
+      alert('onShow');
   },
 
   onHide: function () {//view is hidden
@@ -56,11 +60,14 @@ function (
 
   init: function () {
     var self = this;
+    alert('onInit');
   },
 
   prepareViewData: function () {
     var self = this;
+    alert('prepareViewData');
     if(self.viewName.indexOf('statistics_search') >= 0){
+
     }else{
       self.model.trigger('fetchData');
     }
@@ -75,7 +82,7 @@ function (
 
   prepareViewUtils:function(){
     var self = this;
-    self.viewUtils = _.extend(viewUtils,indexViewUtils);
+    self.viewUtils = _.extend({},viewUtils,indexViewUtils);
   },
 
   prepareDataHelper:function(){

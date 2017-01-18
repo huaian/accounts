@@ -1,1 +1,1 @@
-define(["appRestStore/account","kaiView/h5/view/register/view"],function(e,r){"use strict";var t=r.extend({_registerComm:e.register,showHeader:!0});return t});
+define("h5/view/register/view",["appRestStore/account","kaiView/h5/view/register/view"],function(e,r){"use strict";var i=r.extend({_registerComm:e.register,showHeader:!0});return i});

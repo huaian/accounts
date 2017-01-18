@@ -1,1 +1,0 @@
-var testResourceRe=/^doh\/tests/,list={"doh/doh.profile":1,"doh/package.json":1,"doh/tests":1,"doh/_parseURLargs":1},copyOnly=function(e){return e in list},profile={resourceTags:{test:function(e,t){return testResourceRe.test(t)},copyOnly:function(e,t){return copyOnly(t)},amd:function(e,t){return!testResourceRe.test(t)&&!copyOnly(t)&&/\.js$/.test(e)}}};

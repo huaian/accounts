@@ -1,0 +1,172 @@
+//----------------------------
+$prefix-for-webkit: true !default;
+$prefix-for-mozilla: true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera: true !default;
+$prefix-for-spec: true !default;
+$transition-delay-time: 0ms !default;
+$transition-timing-function: ease !default;
+$animation-delay-time: 0ms !default;
+$animation-timing-function: ease !default;
+$animation-iteration-count: 1 !default;
+
+// prefixer
+//----------------------------
+@mixin css3-hack($property, $value) {
+    @if $prefix-for-webkit == true {
+        -webkit-#{$property}: $value;
+    }
+    @if $prefix-for-mozilla == true {
+        -moz-#{$property}: $value;
+    }
+    @if $prefix-for-microsoft == true {
+        -ms-#{$property}: $value;
+    }
+    @if $prefix-for-opera == true {
+        -o-#{$property}: $value;
+    }
+    @if $prefix-for-spec == true {
+        #{$property}: $value;
+    }
+}
+
+@mixin css3-border-radius($param) {
+    @include css3-hack(border-radius, $param);
+}
+
+@mixin css3-gra($begin, $end) {
+    @if $prefix-for-webkit == true {
+        background-image: -webkit-gradient(linear, left top, left bottom, from($begin), to($end));
+        background-image: -webkit-linear-gradient(left top, $begin, $end);
+    }
+    @if $prefix-for-mozilla == true {
+        background-image: -moz-linear-gradient(left top, $begin, $end);
+    }
+    @if $prefix-for-microsoft == true {
+        background-image: -ms-linear-gradient(left top, $begin, $end);
+    }
+    @if $prefix-for-opera == true {
+        background-image: -o-linear-gradient(left top, $begin, $end);
+    }
+    @if $prefix-for-spec == true {
+        background-image: linear-gradient(left top, $begin, $end);
+    }
+}
+
+@mixin css3-gra-v($begin, $end) {
+  @if $prefix-for-webkit == true {
+    background-image: -webkit-gradient(linear,top,bottom, from($begin), to($end));
+    background-image: -webkit-linear-gradient(top, $begin, $end);
+  }
+  @if $prefix-for-mozilla == true {
+    background-image: -moz-linear-gradient(top, $begin, $end);
+  }
+  @if $prefix-for-microsoft == true {
+    background-image: -ms-linear-gradient(top, $begin, $end);
+  }
+  @if $prefix-for-opera == true {
+    background-image: -o-linear-gradient(top, $begin, $end);
+  }
+  @if $prefix-for-spec == true {
+    background-image: linear-gradient(top, $begin, $end);
+  }
+}
+
+@mixin css3-translate($x, $y) {
+    @include css3-hack(transform, translate($x, $y));
+}
+
+@mixin css3-transform-origin($x, $y) {
+    @include css3-hack(transform-origin, $x $y);
+}
+
+@mixin css3-rotate($degrees) {
+    @include css3-hack(transform, rotate($degrees));
+}
+
+@mixin css3-scale($x) {
+    @include css3-hack(transform, scale($x));
+}
+
+@mixin css3-transition($duration, $delay: $transition-delay-time, $speed: $transition-timing-function) {
+    @include css3-hack(transition, $duration $speed $delay);
+}
+
+@mixin css3-animation($name, $duration, $delay: $animation-delay-time, $count: $animation-iteration-count, $speed: $animation-timing-function) {
+    @include css3-hack(animation, $name $duration $speed $delay $count);
+}
+
+@mixin css3-midia($res-min, $res-max){
+  $query: "";
+  @if $res-min != "" {
+    $query: " and (min-width: " + $res-min + ")";
+  }
+  @if $res-max != "" {
+    $query: $query + " and (max-width: " + $res-max + ") ";
+  }
+  $query: " only screen" + $query;
+  @media #{$query} {
+        @content;
+    }
+}
+
+@mixin css3-textshadow($param) {
+    @include css3-hack(text-shadow, $param);
+}
+
+@mixin css3-boxshadow($param) {
+    @include css3-hack(box-shadow, $param);
+}
+
+@mixin css3-boxsizing($param){
+    @include css3-hack(box-sizing, $param);
+}
+
+@mixin css3-flexbox {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+}
+
+@mixin css3-flexboxChild($num: 1) {
+    -webkit-box-flex: $num;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: $num;
+    /* OLD - Firefox 19- */
+    -webkit-flex: $num;
+    /* Chrome */
+    -ms-flex: $num;
+    /* IE 10 */
+    flex: $num;
+}
+
+@mixin css3-flexboxColumn {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    /* column, row-reverse, column-reverse */
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin boxShadow($param) {
+    @include css3-hack(box-shadow, $param);
+}
+
+@mixin horizontalCenter {
+    @include css3-hack(box-align, center);
+    @include css3-hack(justify-content, center);
+}
+
+@mixin verticalCenter {
+    @include css3-hack(box-pack, center);
+    @include css3-hack(align-items, center);
+}

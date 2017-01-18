@@ -1,1 +1,0 @@
-define("util/shrinksafe/tests/5303",["dojo","dijit","dojox"],function(n,o,t){result="",function(){CallMe=function(n){n()};var n=function(){o(),CallMe(function(){o()})},o=function(){result+="hello world"};n()}()});

@@ -1,1 +1,0 @@
-define("util/build/removeComments",["dojo/has"],function(e){return function(e){return e.replace(/(\/\*([\s\S]*?)\*\/|\/\/(.*)$)/gm,"")}});
