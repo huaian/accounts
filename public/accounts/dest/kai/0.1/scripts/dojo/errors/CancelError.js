@@ -1,1 +1,0 @@
-define("dojo/errors/CancelError",["./create"],function(r){return r("CancelError",null,null,{dojoType:"cancel"})});

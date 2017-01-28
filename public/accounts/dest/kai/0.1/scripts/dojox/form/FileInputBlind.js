@@ -1,1 +1,0 @@
-define("dojox/form/FileInputBlind",["dojo/_base/lang","dojox/form/FileInputAuto"],function(o,n){return o.setObject("dojox.form.FileInputBlind",n),n});

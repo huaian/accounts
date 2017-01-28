@@ -1,1 +1,0 @@
-define("dojox/mvc/_atBindingExtension",["dojo/_base/config","dojo/has","dijit/_WidgetBase","./atBindingExtension"],function(e,i,n,o){i.add("mvc-extension-per-widget",(e.mvc||{}).extensionPerWidget),i("mvc-extension-per-widget")||o(n.prototype)});

@@ -1,1 +1,0 @@
-define("plugin/c.safari.plugin",[],function(){window.shown=!1,window.onpageshow=function(n){window.shown&&window.location.reload(),window.shown=!0},window.onunload=function(){}});

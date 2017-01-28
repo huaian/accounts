@@ -1,1 +1,0 @@
-define("dojo/errors/RequestError",["./create"],function(r){return r("RequestError",function(r,e){this.response=e})});

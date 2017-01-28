@@ -1,1 +1,0 @@
-define("dojox/store/db/has",["dojo/has","dojo/sniff"],function(d){return d.add("indexeddb",!!(window.indexedDB||window.webkitIndexedDB||window.mozIndexedDB)),d});

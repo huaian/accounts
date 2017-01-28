@@ -1,1 +1,0 @@
-define("dojox/charting/plot2d/Areas",["dojo/_base/declare","./Default"],function(o,t){return o("dojox.charting.plot2d.Areas",t,{constructor:function(){this.opt.lines=!0,this.opt.areas=!0}})});

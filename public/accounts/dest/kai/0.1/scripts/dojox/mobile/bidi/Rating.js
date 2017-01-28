@@ -1,1 +1,0 @@
-define("dojox/mobile/bidi/Rating",["dojo/_base/declare","dojo/dom-style","../_css3"],function(o,e,t){return o(null,{_setCustomTransform:function(o){return e.set(o,t.add({"float":"right"},{transform:"scaleX(-1)"})),o}})});

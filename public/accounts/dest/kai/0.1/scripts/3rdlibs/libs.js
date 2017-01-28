@@ -1,1 +1,0 @@
-define("3rdlibs/libs",["3rdlibs/backbone"],function(){});
