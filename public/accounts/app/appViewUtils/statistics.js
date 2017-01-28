@@ -3,28 +3,21 @@
 */
 define([////////
   // Require the theme of our choosing
-  //"dojox/charting/themes/Claro",
+  "dojox/charting/themes/Claro",
   "appRestStore/statistics",
-  //"dojo/_base/lang",
-  //'cutil/c.util.common',
-  //'cutil/c.util.validate',
   // Require the basic 2d chart resource
-  /*
+  ///*
   "dojox/charting/Chart",
   "dojox/charting/plot2d/Pie",
   "dojox/charting/action2d/Tooltip",
   "dojox/charting/themes/Tom",
   "dojox/charting/widget/Legend",
-  */
+  //*/
   'css!res/style/main_pc',/*css for kernel pc*/
 ],
 function (
   claroTheme,
   restStores//,
-  //lang,
-  //utilCommon
-  //,
-  //validate
 ) {
   "use strict";
   var viewUtils = {
