@@ -63,7 +63,7 @@ function (
       var expenseId = self.getQueryObj().expenseid;//记录id
       self.viewData.dictData = self.viewData.dictData || {
       };
-      self.viewData.formData = self.viewData.formData || {
+      self.viewData.formData = self.viewData.formData || {//重置上次显示的数据
         date:'',
         type:'',
         amount:'',
