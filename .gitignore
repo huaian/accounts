@@ -4,3 +4,4 @@ dist
 *.scssc
 .sass-cache
 *.pngc
+npm-debug.log
