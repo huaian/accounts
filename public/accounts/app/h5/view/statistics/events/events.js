@@ -27,7 +27,7 @@ define([
       });
     }
   };
-  alert('events');
+  // alert('events');
   return {
     eventBinder: eventBinder,
   };

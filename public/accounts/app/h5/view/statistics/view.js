@@ -39,7 +39,7 @@ function (
 
     onCreate: function () {//初次加载时候使用
       var self = this;
-      alert('onCreate');
+      // alert('onCreate');
     },
 
     els:{
@@ -51,7 +51,7 @@ function (
 
     onShow: function () {//在再显示时候调用 在 create之后调用
       var self = this;
-      alert('onShow');
+      // alert('onShow');
   },
 
   onHide: function () {//view is hidden
@@ -60,12 +60,12 @@ function (
 
   init: function () {
     var self = this;
-    alert('onInit');
+    // alert('onInit');
   },
 
   prepareViewData: function () {
     var self = this;
-    alert('prepareViewData');
+    // alert('prepareViewData');
     if(self.viewName.indexOf('statistics_search') >= 0){
 
     }else{

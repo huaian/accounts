@@ -1,1 +1,1 @@
-define("h5/view/statistics/events/events",[],function(){"use strict";var n={subscribeTopics:function(){},bindEvents:function(){var n=this;n.bind({})}};return{eventBinder:n}});
+define([],function(){"use strict";var n={subscribeTopics:function(){},bindEvents:function(){var n=this;n.bind({})}};return{eventBinder:n}});

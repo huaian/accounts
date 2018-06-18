@@ -88,7 +88,7 @@ function (
         },
         methods: {
           gotoStatisticsSearch:function(event){
-            alert('go to statistics search');
+            // alert('go to statistics search');
             self.forward('h5/view/statistics_search');
           },
           gotoStatistics:function(event){

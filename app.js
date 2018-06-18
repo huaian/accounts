@@ -24,7 +24,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static('public/accounts/dest'));//设置静态文件根目录
+app.use(express.static('public/accounts/dest/app'));//设置静态文件根目录
 //app.use(express.static('public/accounts/app'));//设置静态文件根目录
 //app.use(express.static('public/accounts/'));//设置静态文件根目录
 //custom use

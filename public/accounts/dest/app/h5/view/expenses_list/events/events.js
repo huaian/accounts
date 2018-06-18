@@ -1,1 +1,1 @@
-define("h5/view/expenses_list/events/events",["dojo/on","appViewUtils/login","cutil/c.util.validate"],function(e,i,n){"use strict";var t={subscribeTopics:function(){},bindEvents:function(){var e=this;e.bind({})}};return{eventBinder:t}});
+define(["dojo/on","appViewUtils/login","cutil/c.util.validate"],function(i,n,t){"use strict";var e={subscribeTopics:function(){},bindEvents:function(){var i=this;i.bind({})}};return{eventBinder:e}});

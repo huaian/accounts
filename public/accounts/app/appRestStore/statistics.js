@@ -40,6 +40,6 @@ function (
     target: urlPrefix + '/statistics/',
     authRequired:true
   });
-  alert('_stores');
+  // alert('_stores');
   return _stores;
 });

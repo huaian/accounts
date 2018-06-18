@@ -1,1 +1,76 @@
-@charset "UTF-8";.mascotList {background-image: url("../img/mascotList.png"); background-size: 5.65rem 49.325rem; background-repeat: no-repeat; background-color: #fbf9fe;}.sub_viewport {min-height: 28.4rem;}.main_form {margin-top: 0px;}.button_red {color: #f74e61;} .button_red .icon {vertical-align: top; font-size: 1.1em; margin-right: 0.1em;}.mobile_index .icon {vertical-align: top; font-size: 1.9em;}.mobile_index p {margin-top: 1em;}.small_font {font-size: .8em;}.smaller_font {font-size: .9em;}.bottom_announce {position: absolute; bottom: 0px;}.descript {margin-left: 2em; color: #999;}.notification {padding: 2em; color: #666;} .notification .noti_title {font-weight: bold; text-align: center; font-size: 1.4em; margin-bottom: 1.3em;} .notification .main_text {color: #333; font-size: 1.1em;} .notification .noti_name {text-align: right; margin-top: 2em;}
+@charset "UTF-8";
+/* line 19, ../sass/h5.scss */
+.mascotList {
+  background-image: url("../img/mascotList.png");
+  background-size: 5.65rem 49.325rem;
+  background-repeat: no-repeat;
+  background-color: #fbf9fe; }
+
+/* line 25, ../sass/h5.scss */
+.sub_viewport {
+  min-height: 28.4rem; }
+
+/*project global css style*/
+/*pages style*/
+/*pages style*/
+/* line 4, ../sass/pages/_cuishou_mobile.scss */
+.main_form {
+  margin-top: 0px; }
+
+/* line 7, ../sass/pages/_cuishou_mobile.scss */
+.button_red {
+  color: #f74e61; }
+  /* line 9, ../sass/pages/_cuishou_mobile.scss */
+  .button_red .icon {
+    vertical-align: top;
+    font-size: 1.1em;
+    margin-right: 0.1em; }
+
+/*主页*/
+/* line 17, ../sass/pages/_cuishou_mobile.scss */
+.mobile_index .icon {
+  vertical-align: top;
+  font-size: 1.9em; }
+/* line 21, ../sass/pages/_cuishou_mobile.scss */
+.mobile_index p {
+  margin-top: 1em; }
+
+/* line 25, ../sass/pages/_cuishou_mobile.scss */
+.small_font {
+  font-size: .8em; }
+
+/* line 28, ../sass/pages/_cuishou_mobile.scss */
+.smaller_font {
+  font-size: .9em; }
+
+/* line 31, ../sass/pages/_cuishou_mobile.scss */
+.bottom_announce {
+  position: absolute;
+  bottom: 0px; }
+
+/* line 35, ../sass/pages/_cuishou_mobile.scss */
+.descript {
+  margin-left: 2em;
+  color: #999; }
+
+/*系统通知*/
+/* line 41, ../sass/pages/_cuishou_mobile.scss */
+.notification {
+  padding: 2em;
+  color: #666; }
+  /* line 44, ../sass/pages/_cuishou_mobile.scss */
+  .notification .noti_title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 1.3em; }
+  /* line 50, ../sass/pages/_cuishou_mobile.scss */
+  .notification .main_text {
+    color: #333;
+    font-size: 1.1em; }
+  /* line 54, ../sass/pages/_cuishou_mobile.scss */
+  .notification .noti_name {
+    text-align: right;
+    margin-top: 2em; }
+
+/*z-index style*/

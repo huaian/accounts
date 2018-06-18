@@ -1,1 +1,1 @@
-define("h5/view/sign_in/view",["common/c.geo","appRestStore/account","kaiView/h5/view/sign_in/view"],function(e,i,n){"use strict";var t=n.extend({_registerComm:i.register});return t});
+define(["common/c.geo","appRestStore/account","kaiView/h5/view/sign_in/view"],function(e,i,t){"use strict";var n=t.extend({_registerComm:i.register});return n});

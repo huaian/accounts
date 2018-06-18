@@ -32,43 +32,43 @@ define([
 
 			{
 				name: 'appConfig',
-				location: appPrefix + './app/appConfig',
+				location: appPrefix + './appConfig',
 				main:'main'
 			},
 
 			{
 				name: 'appRestStore',
-				location: appPrefix + './app/appRestStore',
+				location: appPrefix + './appRestStore',
 			},
 
 			{
 				name: 'dataHelper',
-				location: appPrefix + './app/dataHelper',
+				location: appPrefix + './dataHelper',
 			},
 
 			{
 				name: 'viewUtils',
-				location:appPrefix + './app/viewUtils',
+				location:appPrefix + './viewUtils',
 			},
 
 			{
 				name: 'appViewUtils',
-				location:appPrefix + './app/appViewUtils',
+				location:appPrefix + './appViewUtils',
 			},
 
 			{
 				name: 'pc',
-				location: appPrefix + './app/pc',
+				location: appPrefix + './pc',
 			},
 
 			{
 				name: 'h5',
-				location: appPrefix + './app/h5',
+				location: appPrefix + './h5',
 			},
 
 			{
 				name: 'appMain',
-				location: appPrefix + './app/appMain',
+				location: appPrefix + './appMain',
 			}
 		]
 	});

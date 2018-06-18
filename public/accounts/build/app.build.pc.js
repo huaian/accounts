@@ -1,5 +1,6 @@
 ({
-	appDir: "../dist/app",
+  //appDir: "../dist/app",
+	appDir: "../app",
   baseUrl: "kai/0.1/scripts",
   dir: "../dest/app",
     //fileExclusionRegExp:'/^demo_(\w)+.js|demo_(\w)+.html/',

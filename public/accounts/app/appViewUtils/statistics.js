@@ -133,6 +133,6 @@ function (
       self['expenseLegend'] && self['expenseLegend'].refresh();
     }
   };
-  alert('viewUtils');
+  // alert('viewUtils');
   return viewUtils;
 });

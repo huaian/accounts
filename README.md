@@ -1,8 +1,11 @@
-//启动
+#开发
+
+#启动
 Run steps:
 0. cd accounts
-1. npm install//install node modules
-2. npm start//start nodejs server command
+1. npm install //install node modules
+2. npm start //start nodejs server command
+
 or
 3.  $ [sudo] npm install forever -g
 forever start ./bin/www
@@ -14,7 +17,6 @@ app.js define routes
 安装nodejs链接mongodb的driver(在express没有mongodb的情况下):
 1.npm install mongodb --save
 2.npm install bson --save
-3.Error: collection name must be a String
 
 //Data level
 创建mogodb:
@@ -27,6 +29,7 @@ app.js define routes
 
 启动mongodb(本地):
 4. ./mongod --dbpath=../data/db/ --logpath ../log/dbName --fork
+
 测试启动是否正常:
 5. ./mongo
 6. use dbName

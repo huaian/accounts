@@ -8,8 +8,8 @@
 		"url": "http://10.1.5.1:8080/git/summary/APP!kai.git"
 	},
 	"devDependencies": {
-		"intern": "2.0.3",
-		"stylus": "0.48.1"
+		"intern": "4.2.0",
+		"stylus": "0.54.5" 
 	},
 	"bugs": "",
 	"keywords": [ "JavaScript", "Dojo"],
