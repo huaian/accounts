@@ -112,7 +112,7 @@
     appPrefix:appPrefix,
     //baseUrl:'./',
     baseUrl:(function(){//设置默认寻址路径 指向项目根目录
-      if(location.pathname.indexOf('app') >= 0){//开发环境
+      if(location.pathname.indexOf('app') >= 0 && !(location.pathname.indexOf('dest') >= 0)){//开发环境
         kaiPrefx = '../../../../';//需要以/结尾 相对于项目的根目录计算路径
         appPrefix = '../';
         //kaiPrefx = srcParentDirectory;//需要以/结尾 相对于项目的根目录计算路径
