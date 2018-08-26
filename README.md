@@ -38,3 +38,8 @@ app.js define routes
 9. db.users.find()
 //
 show collections 查看所有集合
+
+set cookie: 
+https://www.cnblogs.com/lgphp/p/3913077.html
+
+
