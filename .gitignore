@@ -5,3 +5,4 @@ dist
 .sass-cache
 *.pngc
 npm-debug.log
+public/accounts/dest/
