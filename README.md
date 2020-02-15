@@ -45,3 +45,42 @@ https://blog.csdn.net/luo200618/article/details/72789759
 https://blog.csdn.net/pretent/article/details/45204909
 
 
+# production 
+root@instance-tbbjrcnc:/# touch ?/var/run/mongodb/mongod.pid
+root@instance-tbbjrcnc:/# chown -R mongodb:mongodb /var/run/mongodb/mongod.pid
+即可启动成功。
+
+1.找到mongod.lock文件，并删除mongod.lock
+
+ 
+
+2.以修复方式启动mongodb
+
+/usr/bin/mongod -f /etc/mongod.conf --repair
+
+
+rm -rf /var/lib/mongo/mongod.lock
+
+
+songrenqingdeMacBook-Pro:bin songrenqing$ lsof -i :27017
+COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+mongod  61316 songrenqing   11u  IPv4 0xacda8b230bc07883      0t0  TCP localhost:27017 (LISTEN)
+songrenqingdeMacBook-Pro:bin songrenqing$ kill -9 61316
+或者使用其它的进程ID，之前是27017，现在指定27018，就不会发生冲突
+————————————————
+
+restart nodejs app
+
+pm2 restar www
+
+# mention that last repair 
+should --repair start again
+
+
+/usr/local/mongodb/bin/mongod -f /opt/config/mongod.conf
+
+
+
+
+
+
