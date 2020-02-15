@@ -103,3 +103,14 @@ ERROR: Cannot write pid file to /var/run/mongodb/mongoc.pid: No such file or dir
  /usr/local/mongodb/bin/mongod -f /opt/config/mongod                                                                                        .conf
 http://118.24.221.219:3000/#h5/view/incomes_lis
 
+
+reference:
+https://blog.csdn.net/songrenqing/article/details/80629832
+
+https://blog.csdn.net/sinat_30397435/article/details/50774175
+
+# close mongod b
+先通过shell连上服务器：
+mongo
+use admin
+db.shutdownServer()
