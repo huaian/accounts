@@ -82,5 +82,24 @@ should --repair start again
 
 
 
+问题描述：（mongod和s也有同样的情况）
+/usr/bin/mongod -f /etc/mongoc.conf 
+about to fork child process, waiting until server is ready for connections.
+forked process: 911
+ERROR: child process failed, exited with error number 1
 
+查看mongoc日志如下：
+ERROR: Cannot write pid file to /var/run/mongodb/mongoc.pid: No such file or directory
+
+
+
+日志说的很明白了，无法写入pid文件到/var/run/mongodb/mongoc.pid下。
+
+查看/var/run/下面会发现没有mongodb目录，所以建一个mongodb目录就可以了，启动的时候会自动在这个目录下生成pid文件。
+
+然后再启动：
+
+
+ /usr/local/mongodb/bin/mongod -f /opt/config/mongod                                                                                        .conf
+http://118.24.221.219:3000/#h5/view/incomes_lis
 
