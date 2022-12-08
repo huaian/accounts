@@ -10,7 +10,7 @@
     "bson": "*",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "jade": "^1.11.0",
     "marklogic": "^1.0.6",
     "mime": "^1.3.4",
