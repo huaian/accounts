@@ -17,22 +17,32 @@ Code = require('mongodb').Code,
 assert = require('assert');
 var crypto = require('crypto');
 var mongoConnect = require('../../../utils/mongoConnect');
+const dbName = 'accounts';
 //dict data
 //var db = new Db('accounts', new Server('localhost', 27017));
 var url = 'mongodb://localhost:27017/accounts';
-router.get('/:dictCode',function(req, res, next){
+router.get('/:dictCode',async function(req, res, next){
   if (!req.user || !req.user.userName) {
     next(new Error("Permission denied."));
     return;
   }
+    const client = await new MongoClient(url);
+  try {
+    console.log('Connected successfully to server');
+    await client.connect();
+  } catch (e) {
+    console.error(e);
+  }
+  var db = client.db(dbName);
   var dictCode = req.params.dictCode;
   var userName = req.user.userName;
   //db.open(function(err, db) {
-    mongoConnect.then(function(db) {
+    // mongoConnect.then(function(db) {
       console.log(db);
     // Fetch a collection to insert document into
     var collection = db.collection(dictCode);//查询用户表
-    collection.find({}).toArray(function(err, items) {
+    const items = await collection.find({}).toArray() 
+    // (function(err, items) {
       if(_.isArray(items)){//
         res.json(
           {
@@ -55,8 +65,8 @@ router.get('/:dictCode',function(req, res, next){
         );
       }
       //db.close();
-    });
-  });
+    // });
+  // });
 });
 
 module.exports = router;

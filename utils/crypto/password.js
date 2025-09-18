@@ -15,7 +15,7 @@ Grid = require('mongodb').Grid,
 Code = require('mongodb').Code,
 //BSON = require('mongodb').pure().BSON,
 assert = require('assert');
-var db = new Db('accounts', new Server('localhost', 27017));
+// var db = new Db('accounts', new Server('localhost', 27017));
 var crypto = require('crypto');
 /**
 将密码生成MD5摘要存储

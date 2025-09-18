@@ -42,7 +42,8 @@ define([
     },
     //product enviornment
     {
-      host:'121.42.51.73:3000',
+      // host:'121.42.51.73:3000',
+      host:'127.0.0.1:3000',
       protocol:'http',
       //domain:(function(){return location.host})(),
       //domain: '10.2.130.145:3000',

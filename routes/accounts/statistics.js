@@ -8,6 +8,9 @@ var router = express.Router();
 var os = require('os');
 var _ = require('underscore');
 var sha1 = require('sha1');//加密 生成jsapi调用签名
+var url = 'mongodb://localhost:27017/accounts';
+const dbName = 'accounts';
+
 //app js
 var Db = require('mongodb').Db,
   MongoClient = require('mongodb').MongoClient,
@@ -35,7 +38,7 @@ console.log(arg.aa);//返回001
 console.log(arg.bb);//返回002
 */
 //ADD
-router.get('/', function (req, res, next) {
+router.get('/', async function (req, res, next) {
   //check auth
   if (!req.user || !req.user.userName) {
     next(new Error("Permission denied."));
@@ -64,7 +67,18 @@ router.get('/', function (req, res, next) {
       endDate = new Date(current.getFullYear(), current.getMonth() + 1);//下个月的时间开始
     }
   }
-  mongoConnect.then(function (db) {//request
+
+    const client = await new MongoClient(url);
+  try {
+    console.log('Connected successfully to server');
+    await client.connect();
+  } catch (e) {
+    console.error(e);
+  }
+  var db = client.db(dbName);
+  // mongoConnect.then(function (db) {//request
+
+
     var collection = db.collection('incomes');//incomes
     console.log('collection');
     var incomesCursor = collection.aggregate(
@@ -187,7 +201,7 @@ router.get('/', function (req, res, next) {
         });
         //*/
       });
-  });
+  // });
 });
 
 module.exports = router;
