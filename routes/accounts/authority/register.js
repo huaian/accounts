@@ -19,7 +19,7 @@ router.post('/',async function(req, res, next){
   var userName = req.body.loginId;
   var password = req.body.password;
   // MongoClient.connect(url, function(err, client) {
-  const client = await new MongoClient(url, {useNewUrlParser: true});
+  const client = await new MongoClient(url);
   await client.connect();
     // if (err) {
     //   console.error('Failed to connect to MongoDB:', err);
