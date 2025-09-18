@@ -1,0 +1,1 @@
+define("dojox/image",["./image/_base"],function(e){return e});

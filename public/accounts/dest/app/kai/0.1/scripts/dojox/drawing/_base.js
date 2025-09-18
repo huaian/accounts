@@ -1,0 +1,1 @@
+define("dojox/drawing/_base",["dojo","./annotations/Label","./Drawing"],function(n,o,a){return n.experimental("dojox.drawing"),a});

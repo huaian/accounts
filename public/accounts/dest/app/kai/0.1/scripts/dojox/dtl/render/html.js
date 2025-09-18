@@ -1,0 +1,1 @@
+define("dojox/dtl/render/html",["dojo/_base/lang","../render/dom","../_base"],function(e,r,d){var n=e.getObject("render.html",!0,d);return n.Render=r.Render,n});

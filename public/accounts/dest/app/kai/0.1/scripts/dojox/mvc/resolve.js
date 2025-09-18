@@ -1,0 +1,1 @@
+define("dojox/mvc/resolve",["dojo/_base/lang","dijit/registry","dojo/Stateful"],function(e,t){var r=function(r,o){if("string"==typeof r){var c=r.match(/^(expr|rel|widget):(.*)$/)||[];try{r="rel"==c[1]?e.getObject(c[2]||"",!1,o):"widget"==c[1]?t.byId(c[2]):e.getObject(c[2]||r,!1,o)}catch(i){}}return r};return e.setObject("dojox.mvc.resolve",r)});

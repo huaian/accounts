@@ -1,0 +1,1 @@
+define("dojo/_base/config",["../has","require"],function(a,e){var n,o={},r=e.rawConfig;for(n in r)o[n]=r[n];if(!o.locale&&"undefined"!=typeof navigator){var i=navigator.language||navigator.userLanguage;i&&(o.locale=i.toLowerCase())}return o});

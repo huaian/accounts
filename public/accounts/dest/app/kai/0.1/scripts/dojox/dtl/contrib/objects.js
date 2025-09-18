@@ -1,0 +1,1 @@
+define("dojox/dtl/contrib/objects",["dojo/_base/lang","../_base"],function(e,t){var o=e.getObject("contrib.objects",!0,t);return e.mixin(o,{key:function(e,t){return e[t]}}),t.register.filters("dojox.dtl.contrib",{objects:["key"]}),o});

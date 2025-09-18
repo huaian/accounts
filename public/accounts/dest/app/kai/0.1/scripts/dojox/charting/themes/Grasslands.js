@@ -1,0 +1,1 @@
+define("dojox/charting/themes/Grasslands",["../SimpleTheme","./common"],function(e,s){return s.Grasslands=new e({colors:["#70803a","#dde574","#788062","#b1cc5d","#eff2c2"]}),s.Grasslands});

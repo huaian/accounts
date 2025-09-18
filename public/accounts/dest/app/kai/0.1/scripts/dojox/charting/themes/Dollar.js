@@ -1,0 +1,1 @@
+define("dojox/charting/themes/Dollar",["../SimpleTheme","./common"],function(o,e){return e.Dollar=new o({colors:["#A4CE67","#739363","#6B824A","#343434","#636563"]}),e.Dollar});
